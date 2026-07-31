@@ -8,26 +8,16 @@
 {% endif %}
 
 {% assign type = site.data.types[member.role] %}
-
-{% if member.links["home-page"] %}
-  {% assign profile_url = member.links["home-page"] %}
-  {% assign external_profile = true %}
-{% else %}
-  {% assign profile_url = member.url | relative_url %}
-  {% assign external_profile = false %}
-{% endif %}
+{% assign homepage = member.links["home-page"] %}
+{% assign orcid = member.links.orcid %}
+{% assign scholar = member.links["google-scholar"] %}
+{% assign github = member.links.github %}
 
 <div class="portrait-wrapper">
 
-  <a
-    href="{{ profile_url }}"
+  <div
     class="portrait"
     data-style="{{ include.style }}"
-    aria-label="{{ member.name | default: "member link" | regex_strip }}"
-    {% if external_profile %}
-      target="_blank"
-      rel="noopener noreferrer"
-    {% endif %}
   >
     {% if type %}
       {% include icon.html icon=type.icon %}
@@ -58,14 +48,14 @@
         {{ member.affiliation }}
       </span>
     {% endif %}
-  </a>
+  </div>
 
-  {% if member.links %}
+  {% if homepage or orcid or scholar or github %}
     <div class="portrait-links">
 
-      {% if member.links["home-page"] %}
+      {% if homepage %}
         <a
-          href="{{ member.links["home-page"] }}"
+          href="{{ homepage }}"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="{{ member.name }} website"
@@ -75,9 +65,9 @@
         </a>
       {% endif %}
 
-      {% if member.links.orcid %}
+      {% if orcid %}
         <a
-          href="https://orcid.org/{{ member.links.orcid }}"
+          href="https://orcid.org/{{ orcid }}"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="{{ member.name }} ORCID"
@@ -87,9 +77,9 @@
         </a>
       {% endif %}
 
-      {% if member.links["google-scholar"] %}
+      {% if scholar %}
         <a
-          href="https://scholar.google.com/citations?user={{ member.links["google-scholar"] }}"
+          href="https://scholar.google.com/citations?user={{ scholar }}"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="{{ member.name }} Google Scholar"
@@ -99,9 +89,19 @@
         </a>
       {% endif %}
 
-      {% if member.links.github %}
+      {% if github %}
         <a
-          href="https://github.com/{{ member.links.github }}"
+          href="https://github.com/{{ github }}"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="{{ member.name }} GitHub
+          aria-label="{{ member.name }} GitHub"
+          title="GitHub"
+        >
+          {% include icon.html icon="fa-brands fa-github" %}
+        </a>
+      {% endif %}
+
+    </div>
+  {% endif %}
+
+</div>
