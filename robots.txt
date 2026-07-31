@@ -1,0 +1,1 @@
+Sitemap: https://mclabtoronto.github.io/lab-website/sitemap.xml
