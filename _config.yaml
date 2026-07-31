@@ -67,6 +67,8 @@ exclude:
   - README.md
   - LICENSE.md
   - CITATION.cff
+  - MCLab_Website_Documentation.Rmd
+  - MCLab_Website_Documentation.html
 
 # configure jekyll spaceship
 jekyll-spaceship:
