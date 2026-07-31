@@ -1,9 +1,9 @@
 ---
 ---
 
-# MCLabToronto's Website
+# MCLab
 
-An engaging 1-3 sentence description of your lab.
+The MCLab is a multidisciplinary and collaborative research team committed to advancing a rigorous, neuroaffirmative understanding of neurodiversity.
 
 {% include section.html %}
 
