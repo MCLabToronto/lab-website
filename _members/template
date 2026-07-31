@@ -1,0 +1,32 @@
+---
+# Full name
+name:
+
+# Profile photo
+image: images/members/firstname-lastname.jpg
+
+# Member role (choose ONE):
+#   pi
+#   postdoc
+#   phd
+#   master
+#   staff
+#   alumni
+role:
+
+# Short research description (2–4 sentences)
+description: >
+
+links:
+  # Personal or institutional website
+  home-page:
+
+  # ORCID ID (e.g. 0000-0002-4655-3773)
+  orcid:
+
+  # Google Scholar ID (e.g. tfJPoc4AAAAJ)
+  google-scholar:
+
+  # GitHub username only (e.g. octocat)
+  github:
+---

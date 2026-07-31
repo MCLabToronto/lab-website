@@ -1,5 +1,5 @@
 {% if include.lookup %}
-  {% assign member = site.members 
+  {% assign member = site.members
     | where_exp: "member", "member.slug == include.lookup"
     | first
   %}
@@ -9,14 +9,25 @@
 
 {% assign type = site.data.types[member.role] %}
 
+{% if member.links["home-page"] %}
+  {% assign profile_url = member.links["home-page"] %}
+  {% assign external_profile = true %}
+{% else %}
+  {% assign profile_url = member.url | relative_url %}
+  {% assign external_profile = false %}
+{% endif %}
+
 <div class="portrait-wrapper">
+
   <a
-    {% if page.slug != member.slug %}
-      href="{{ member.url | relative_url | uri_escape }}"
-    {% endif %}
+    href="{{ profile_url }}"
     class="portrait"
     data-style="{{ include.style }}"
     aria-label="{{ member.name | default: "member link" | regex_strip }}"
+    {% if external_profile %}
+      target="_blank"
+      rel="noopener noreferrer"
+    {% endif %}
   >
     {% if type %}
       {% include icon.html icon=type.icon %}
@@ -25,7 +36,7 @@
     <img
       src="{{ member.image | relative_url | uri_escape }}"
       class="portrait-image"
-      alt="member portrait"
+      alt="Portrait of {{ member.name }}"
       loading="lazy"
       {% include fallback.html %}
     >
@@ -48,4 +59,49 @@
       </span>
     {% endif %}
   </a>
-</div>
+
+  {% if member.links %}
+    <div class="portrait-links">
+
+      {% if member.links["home-page"] %}
+        <a
+          href="{{ member.links["home-page"] }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="{{ member.name }} website"
+          title="Website"
+        >
+          {% include icon.html icon="fa-solid fa-globe" %}
+        </a>
+      {% endif %}
+
+      {% if member.links.orcid %}
+        <a
+          href="https://orcid.org/{{ member.links.orcid }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="{{ member.name }} ORCID"
+          title="ORCID"
+        >
+          {% include icon.html icon="fa-brands fa-orcid" %}
+        </a>
+      {% endif %}
+
+      {% if member.links["google-scholar"] %}
+        <a
+          href="https://scholar.google.com/citations?user={{ member.links["google-scholar"] }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="{{ member.name }} Google Scholar"
+          title="Google Scholar"
+        >
+          {% include icon.html icon="fa-solid fa-graduation-cap" %}
+        </a>
+      {% endif %}
+
+      {% if member.links.github %}
+        <a
+          href="https://github.com/{{ member.links.github }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="{{ member.name }} GitHub

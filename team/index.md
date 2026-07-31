@@ -9,6 +9,8 @@ nav:
 
 The MCLab brings together researchers and trainees with diverse backgrounds, expertise, and perspectives.
 
+{% include figure.html image="images/team.JPG" %}
+
 {% include section.html %}
 
 ## Lab Head
