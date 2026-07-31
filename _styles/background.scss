@@ -5,6 +5,7 @@
   position: relative;
   background: var(--background);
   color: var(--text);
+  isolation: isolate;
   z-index: 1;
 }
 
@@ -16,6 +17,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  opacity: 0.25;
+  opacity: 0.4;
   z-index: -1;
 }
