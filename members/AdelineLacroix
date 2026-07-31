@@ -615,6 +615,15 @@
         </a>
       
     
+      
+        <a
+          href="/lab-website/resources/"
+          data-tooltip=""
+        >
+          Resources
+        </a>
+      
+    
   </nav>
 </header>
 
@@ -670,10 +679,9 @@
     
 
     
-  </div>
 
-  
-    <div class="portrait-links">
+    
+      <div class="portrait-links" aria-label="Links for Adeline Lacroix">
 
       
         <a href="https://adeline-lacroix.github.io" target="_blank" rel="noopener noreferrer" aria-label="Adeline Lacroix website" title="Website">
@@ -699,8 +707,10 @@
         </a>
       
 
-    </div>
-  
+      </div>
+    
+
+  </div>
 
 </div>
 

@@ -611,6 +611,15 @@
         </a>
       
     
+      
+        <a
+          href="/lab-website/resources/"
+          data-tooltip=""
+        >
+          Resources
+        </a>
+      
+    
   </nav>
 </header>
 
@@ -663,9 +672,10 @@
     
 
     
-  </div>
 
-  
+    
+
+  </div>
 
 </div>
 
