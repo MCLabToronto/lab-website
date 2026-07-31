@@ -1628,6 +1628,124 @@ border-radius: 0px;
 
 
 
+<style>
+:root {
+  --doc-ink: #344054;
+  --doc-heading: #24364b;
+  --doc-muted: #667085;
+  --doc-accent: #5f83a6;
+  --doc-accent-soft: #eef4f8;
+  --doc-border: #dce5ec;
+  --doc-background: #f6f8fa;
+}
+
+html { background: var(--doc-background); }
+
+body {
+  color: var(--doc-ink);
+  background: var(--doc-background);
+  font-family: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.main-container {
+  max-width: 1120px;
+  margin: 24px auto 48px;
+  padding: 42px 56px 60px;
+  background: #ffffff;
+  border: 1px solid var(--doc-border);
+  border-radius: 14px;
+  box-shadow: 0 10px 32px rgba(36, 54, 75, 0.07);
+}
+
+h1, h2, h3, h4, h5, h6,
+.title, .subtitle, .author, .date {
+  color: var(--doc-heading);
+  font-family: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+h1 { margin-top: 1.4em; padding-bottom: 0.22em; }
+h2 { margin-top: 1.7em; }
+h3 { margin-top: 1.45em; }
+
+.title {
+  margin-top: 0;
+  font-size: 2.55em;
+  line-height: 1.15;
+}
+
+.subtitle {
+  color: var(--doc-accent);
+  font-size: 1.35em;
+  font-weight: 500;
+}
+
+.author, .date {
+  color: var(--doc-muted);
+  font-size: 0.98em;
+  font-weight: 500;
+}
+
+p, li { max-width: 78ch; }
+a { color: #46779f; }
+a:hover, a:focus { color: #2f5878; }
+
+blockquote {
+  margin: 1.5em 0;
+  padding: 16px 22px;
+  color: var(--doc-ink);
+  background: var(--doc-accent-soft);
+  border-left: 4px solid #7fa2c0;
+  border-radius: 0 8px 8px 0;
+  font-size: 1em;
+  font-style: normal;
+}
+
+blockquote p:last-child { margin-bottom: 0; }
+
+pre {
+  border: 1px solid var(--doc-border);
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+table { border-color: var(--doc-border); }
+
+.tocify {
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 5px 18px rgba(36, 54, 75, 0.08);
+}
+
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+  background: var(--doc-accent);
+  border-color: var(--doc-accent);
+}
+
+@media (max-width: 767px) {
+  body { font-size: 15px; }
+
+  .main-container {
+    margin: 0;
+    padding: 24px 20px 40px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .title { font-size: 2em; }
+}
+</style>
+
 </head>
 
 <body>

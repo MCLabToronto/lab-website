@@ -24,6 +24,124 @@ knitr::opts_chunk$set(
 )
 ```
 
+<style>
+:root {
+  --doc-ink: #344054;
+  --doc-heading: #24364b;
+  --doc-muted: #667085;
+  --doc-accent: #5f83a6;
+  --doc-accent-soft: #eef4f8;
+  --doc-border: #dce5ec;
+  --doc-background: #f6f8fa;
+}
+
+html { background: var(--doc-background); }
+
+body {
+  color: var(--doc-ink);
+  background: var(--doc-background);
+  font-family: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.main-container {
+  max-width: 1120px;
+  margin: 24px auto 48px;
+  padding: 42px 56px 60px;
+  background: #ffffff;
+  border: 1px solid var(--doc-border);
+  border-radius: 14px;
+  box-shadow: 0 10px 32px rgba(36, 54, 75, 0.07);
+}
+
+h1, h2, h3, h4, h5, h6,
+.title, .subtitle, .author, .date {
+  color: var(--doc-heading);
+  font-family: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+h1 { margin-top: 1.4em; padding-bottom: 0.22em; }
+h2 { margin-top: 1.7em; }
+h3 { margin-top: 1.45em; }
+
+.title {
+  margin-top: 0;
+  font-size: 2.55em;
+  line-height: 1.15;
+}
+
+.subtitle {
+  color: var(--doc-accent);
+  font-size: 1.35em;
+  font-weight: 500;
+}
+
+.author, .date {
+  color: var(--doc-muted);
+  font-size: 0.98em;
+  font-weight: 500;
+}
+
+p, li { max-width: 78ch; }
+a { color: #46779f; }
+a:hover, a:focus { color: #2f5878; }
+
+blockquote {
+  margin: 1.5em 0;
+  padding: 16px 22px;
+  color: var(--doc-ink);
+  background: var(--doc-accent-soft);
+  border-left: 4px solid #7fa2c0;
+  border-radius: 0 8px 8px 0;
+  font-size: 1em;
+  font-style: normal;
+}
+
+blockquote p:last-child { margin-bottom: 0; }
+
+pre {
+  border: 1px solid var(--doc-border);
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+table { border-color: var(--doc-border); }
+
+.tocify {
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 5px 18px rgba(36, 54, 75, 0.08);
+}
+
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+  background: var(--doc-accent);
+  border-color: var(--doc-accent);
+}
+
+@media (max-width: 767px) {
+  body { font-size: 15px; }
+
+  .main-container {
+    margin: 0;
+    padding: 24px 20px 40px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .title { font-size: 2em; }
+}
+</style>
+
 # Purpose
 
 This document explains how MCLab members can maintain the laboratory website safely and collaboratively. It is intended for both first-time contributors and regular editors. The source file is editable in RStudio and can be rendered as an HTML document with a floating table of contents.
@@ -34,7 +152,7 @@ The website repository is hosted in the **MCLabToronto** GitHub organization. Th
 
 Use this guide to:
 
-- set up Git and GitHub access on macOS;
+- set up Git and GitHub access on macOS or Windows;
 - understand what visitors see versus how the repository is organized;
 - update people, publications, news, text, and images;
 - collaborate through branches and pull requests;
@@ -59,7 +177,7 @@ The repository contains source content, configuration, templates, styling, scrip
 |---|---|---|
 | `index.md` | Home-page source | Its rendered content is visible |
 | `about/`, `research/`, `projects/`, `team/`, `blog/`, `resources/`, `contact/` | Sources for major pages | Their rendered pages are visible |
-| `publications/index` | Single publications page, organized by year | Its rendered content is visible |
+| `publications/index.md` | Single publications page, organized by year | Its rendered content is visible |
 | `_members/` | One YAML/Markdown record per person | Rendered into People profiles/pages |
 | `_posts/` | Dated news items | Rendered into the News section |
 | `images/` | Site images; member portraits are in `images/members/` | Images may be visible when referenced |
@@ -74,9 +192,9 @@ Folders beginning with an underscore usually have a special role in Jekyll. Do n
 
 > **Screenshot placeholder — repository:** Insert a screenshot of the repository file list on GitHub or in RStudio's Files pane here.
 
-# First-time setup on macOS
+# First-time setup on macOS and Windows
 
-Complete this section once on each Mac used to edit the website.
+Complete this section once on each computer used to edit the website. The GitHub account, organization membership, Git concepts, repository content, and daily workflow are the same on macOS and Windows. The main differences concern installation, the terminal application, and secure storage of credentials.
 
 ## Create a GitHub account
 
@@ -93,7 +211,7 @@ Accept the invitation and confirm that the repository is visible. The account mu
 
 > **Screenshot placeholder — organization invitation:** Insert a screenshot showing where to accept the MCLabToronto invitation.
 
-## Install Git
+## macOS: install Git
 
 Open **Terminal** (Applications > Utilities > Terminal) and check whether Git is installed:
 
@@ -121,7 +239,7 @@ Check the settings:
 git config --global --list
 ```
 
-## Configure SSH access
+## macOS: configure SSH access
 
 SSH allows Git to authenticate securely without requesting a password for every operation.
 
@@ -201,6 +319,76 @@ The repository already contains `lab-website.Rproj`. It can be opened directly. 
 Confirm that the Files pane shows repository items such as `_members`, `_posts`, `images`, and `_config.yaml`. The Git pane should also be available once Git is detected.
 
 > **Screenshot placeholder — RStudio:** Insert a screenshot of “Existing Directory” and another showing the open project with its Git pane.
+
+## Windows setup differences
+
+On Windows, the GitHub account, MCLabToronto invitation, repository address, branch workflow, and RStudio steps are the same. Use the following Windows-specific setup instead of the macOS Git and Keychain commands above.
+
+### Install Git for Windows
+
+1. Download **Git for Windows** from <https://git-scm.com/download/win>.
+2. Run the installer. The default choices are appropriate for most contributors.
+3. Keep **Git Bash** enabled. It provides a terminal in which most commands in this guide work exactly as written.
+4. Open Git Bash and verify the installation:
+
+```{bash}
+git --version
+```
+
+Configure the contributor identity in Git Bash:
+
+```{bash}
+git config --global user.name "Your Full Name"
+git config --global user.email "your-email@example.com"
+git config --global init.defaultBranch main
+```
+
+### Configure SSH on Windows
+
+In Git Bash, check for an existing key and create one only if needed:
+
+```{bash}
+ls -al ~/.ssh
+ssh-keygen -t ed25519 -C "your-email@example.com"
+```
+
+Accept the default file location and use a secure passphrase. Start the agent and add the key for the current Git Bash session:
+
+```{bash}
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
+Copy the public key to the Windows clipboard:
+
+```{bash}
+clip < ~/.ssh/id_ed25519.pub
+```
+
+Add it on GitHub under **Settings > SSH and GPG keys > New SSH key**, then test it:
+
+```{bash}
+ssh -T git@github.com
+```
+
+Windows does not use the macOS Keychain. Git for Windows includes Windows-compatible credential tools, and SSH keys can be managed with the Windows `ssh-agent` service if persistent loading is desired. A contributor who is unsure should use Git Bash and ask the website administrator for help rather than copying or sharing a private key. Only the `.pub` file may be added to GitHub.
+
+### Clone and open the project on Windows
+
+In Git Bash, a convenient location is the `Documents/GitHub` folder:
+
+```{bash}
+cd ~/Documents
+mkdir -p GitHub
+cd GitHub
+git clone git@github.com:MCLabToronto/lab-website.git
+cd lab-website
+git status
+```
+
+Then open `lab-website.Rproj`, or use **File > New Project > Existing Directory** in RStudio and select the cloned `lab-website` folder. After setup, the daily Git commands below are the same on macOS and Windows when entered in Terminal or Git Bash.
+
+> **Screenshot placeholder — Windows:** Insert screenshots of Git for Windows, Git Bash, the SSH key setup, and the project open in RStudio on Windows.
 
 # Daily workflow
 
@@ -304,7 +492,7 @@ Most main pages are Markdown files with YAML front matter at the top. The curren
 | Research | content under `research/` |
 | Projects | `projects/index.md` and `_data/projects.yaml` |
 | People | `team/index.md` plus `_members/` |
-| Publications | `publications/index` |
+| Publications | `publications/index.md` |
 | News | `blog/index.md` plus `_posts/` |
 | Resources | `resources/Index` |
 | Contact | `contact/index.md` |
@@ -381,9 +569,9 @@ Validate the opening and closing `---`, indentation, colon placement, and spelli
 
 # Add a publication
 
-The current website uses **one publications page**, `publications/index`, with publications grouped manually under year headings. Do not create a separate page for each year unless the lab intentionally changes the architecture.
+The current website uses **one publications page**, `publications/index.md`, with publications grouped manually under year headings. Do not create a separate page for each year unless the lab intentionally changes the architecture.
 
-1. Open `publications/index`.
+1. Open `publications/index.md`.
 2. Find the newest year heading or add it above older years.
 3. Add the reference as a Markdown list item.
 4. Italicize journal or title elements consistently with existing entries.
@@ -403,7 +591,7 @@ Keep reverse chronological order: newest year first and, preferably, newest item
 
 The repository also contains citation automation and data under `_cite/` and `_data/`. Those template mechanisms exist even though the current public publications page is maintained as a single year-organized page. Do not edit generated citation data unless the selected maintenance workflow specifically requires it.
 
-> **Screenshot placeholder — publication:** Insert before-and-after screenshots of the relevant year in `publications/index` and the rendered Publications page.
+> **Screenshot placeholder — publication:** Insert before-and-after screenshots of the relevant year in `publications/index.md` and the rendered Publications page.
 
 # Add a news item
 
