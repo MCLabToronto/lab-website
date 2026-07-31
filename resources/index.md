@@ -1,5 +1,5 @@
 ---
-  title: Resources
+title: Resources
 nav:
   order: 6
 tooltip: Explore our resources

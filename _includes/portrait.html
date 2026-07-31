@@ -48,10 +48,9 @@
         {{ member.affiliation }}
       </span>
     {% endif %}
-  </div>
 
-  {% if homepage or orcid or scholar or github %}
-    <div class="portrait-links">
+    {% if homepage or orcid or scholar or github %}
+      <div class="portrait-links" aria-label="Links for {{ member.name }}">
 
       {% if homepage %}
         <a
@@ -101,7 +100,9 @@
         </a>
       {% endif %}
 
-    </div>
-  {% endif %}
+      </div>
+    {% endif %}
+
+  </div>
 
 </div>

@@ -9,14 +9,6 @@ nav:
 
 The MCLab brings together researchers and trainees with diverse backgrounds, expertise, and perspectives.
 
-<div style="max-width: 500px; margin: 30px auto;">
-  <img
-    src="{{ 'images/team.JPG' | relative_url }}"
-    alt="MCLab team"
-    style="width: 100%; height: auto; border-radius: 4px;"
-  >
-</div>
-
 {% include section.html %}
 
 ## Lab Head

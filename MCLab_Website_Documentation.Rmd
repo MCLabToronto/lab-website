@@ -152,7 +152,7 @@ The website repository is hosted in the **MCLabToronto** GitHub organization. Th
 
 Use this guide to:
 
-- set up Git and GitHub access on macOS or Windows;
+- set up Git and GitHub access on macOS, Linux, or Windows;
 - understand what visitors see versus how the repository is organized;
 - update people, publications, news, text, and images;
 - collaborate through branches and pull requests;
@@ -192,18 +192,18 @@ Folders beginning with an underscore usually have a special role in Jekyll. Do n
 
 > **Screenshot placeholder — repository:** Insert a screenshot of the repository file list on GitHub or in RStudio's Files pane here.
 
-# First-time setup on macOS and Windows
+# First-time setup
 
-Complete this section once on each computer used to edit the website. The GitHub account, organization membership, Git concepts, repository content, and daily workflow are the same on macOS and Windows. The main differences concern installation, the terminal application, and secure storage of credentials.
+Complete this section once on each computer used to edit the website. The GitHub account, organization membership, Git concepts, repository content, and daily workflow are the same on macOS, Linux, and Windows. The main differences concern installation, the terminal application, and secure storage of credentials.
 
-## Create a GitHub account
+**Shared prerequisite: create a GitHub account**
 
 1. Go to <https://github.com> and create an account, preferably using a professional email address.
 2. Verify the email address.
 3. Enable two-factor authentication and save the recovery codes securely.
 4. Send the GitHub username to a website administrator.
 
-## Join the MCLabToronto organization
+**Shared prerequisite: join the MCLabToronto organization**
 
 An owner of **MCLabToronto** must invite the contributor. The invitation may arrive by email and is also normally visible at <https://github.com/orgs/MCLabToronto/invitation>.
 
@@ -211,7 +211,9 @@ Accept the invitation and confirm that the repository is visible. The account mu
 
 > **Screenshot placeholder — organization invitation:** Insert a screenshot showing where to accept the MCLabToronto invitation.
 
-## macOS: install Git
+## Setup on macOS
+
+### Install Git
 
 Open **Terminal** (Applications > Utilities > Terminal) and check whether Git is installed:
 
@@ -239,7 +241,7 @@ Check the settings:
 git config --global --list
 ```
 
-## macOS: configure SSH access
+### Configure SSH access
 
 SSH allows Git to authenticate securely without requesting a password for every operation.
 
@@ -293,7 +295,7 @@ The first connection may ask whether to trust GitHub's host key. Verify the fing
 
 > **Screenshot placeholder — SSH key:** Insert screenshots of the GitHub “New SSH key” page and a successful Terminal test.
 
-## Clone the repository
+### Clone the repository
 
 Choose a parent folder, such as `~/Documents/GitHub`, then clone with the SSH address:
 
@@ -307,7 +309,7 @@ git status
 
 Cloning creates a complete local working copy with its Git history. Do not download a ZIP for routine collaboration because a ZIP is not connected to the Git repository.
 
-## Open the repository in RStudio
+### Open the repository in RStudio
 
 The repository already contains `lab-website.Rproj`. It can be opened directly. If using RStudio's directory workflow:
 
@@ -320,7 +322,91 @@ Confirm that the Files pane shows repository items such as `_members`, `_posts`,
 
 > **Screenshot placeholder — RStudio:** Insert a screenshot of “Existing Directory” and another showing the open project with its Git pane.
 
-## Windows setup differences
+## Setup on Linux
+
+On Linux, the GitHub account, MCLabToronto invitation, repository address, branch workflow, and RStudio workflow are the same. Package installation varies by distribution.
+
+### Install Git and the SSH client
+
+On Ubuntu, Debian, Linux Mint, or a related distribution:
+
+```{bash}
+sudo apt update
+sudo apt install git openssh-client
+```
+
+On Fedora or a related distribution:
+
+```{bash}
+sudo dnf install git openssh-clients
+```
+
+On Arch Linux or Manjaro:
+
+```{bash}
+sudo pacman -S git openssh
+```
+
+Verify Git and configure the contributor identity:
+
+```{bash}
+git --version
+git config --global user.name "Your Full Name"
+git config --global user.email "your-email@example.com"
+git config --global init.defaultBranch main
+```
+
+### Configure SSH access
+
+Check whether an appropriate GitHub key already exists before creating a new one:
+
+```{bash}
+ls -al ~/.ssh
+ssh-keygen -t ed25519 -C "your-email@example.com"
+```
+
+Accept the default file location and use a secure passphrase. Start `ssh-agent` and add the private key for the current session:
+
+```{bash}
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
+Display the public key:
+
+```{bash}
+cat ~/.ssh/id_ed25519.pub
+```
+
+Copy the entire displayed line and add it on GitHub under **Settings > SSH and GPG keys > New SSH key**. Never copy, upload, or share the private file `~/.ssh/id_ed25519`.
+
+Test the GitHub connection:
+
+```{bash}
+ssh -T git@github.com
+```
+
+Some Linux desktop environments provide a keyring that can remember the SSH passphrase. The exact integration varies by distribution and desktop environment. It is also acceptable to add the key to `ssh-agent` after signing in.
+
+### Clone and open the project
+
+Choose a suitable folder and clone the repository:
+
+```{bash}
+mkdir -p ~/Documents/GitHub
+cd ~/Documents/GitHub
+git clone git@github.com:MCLabToronto/lab-website.git
+cd lab-website
+git status
+```
+
+Install the current Linux version of RStudio Desktop appropriate for the distribution, then open `lab-website.Rproj`. Alternatively, select **File > New Project > Existing Directory** and choose the cloned `lab-website` folder.
+
+After setup, the daily Git commands in the next section are the same on Linux, macOS, and Windows.
+
+> **Screenshot placeholder — Linux:** Insert screenshots of Git installation, the SSH test, and the project open in RStudio on Linux.
+
+## Setup on Windows
 
 On Windows, the GitHub account, MCLabToronto invitation, repository address, branch workflow, and RStudio steps are the same. Use the following Windows-specific setup instead of the macOS Git and Keychain commands above.
 
@@ -386,7 +472,7 @@ cd lab-website
 git status
 ```
 
-Then open `lab-website.Rproj`, or use **File > New Project > Existing Directory** in RStudio and select the cloned `lab-website` folder. After setup, the daily Git commands below are the same on macOS and Windows when entered in Terminal or Git Bash.
+Then open `lab-website.Rproj`, or use **File > New Project > Existing Directory** in RStudio and select the cloned `lab-website` folder. After setup, the daily Git commands below are the same on macOS, Linux, and Windows when entered in Terminal or Git Bash.
 
 > **Screenshot placeholder — Windows:** Insert screenshots of Git for Windows, Git Bash, the SSH key setup, and the project open in RStudio on Windows.
 
@@ -488,13 +574,13 @@ Most main pages are Markdown files with YAML front matter at the top. The curren
 | Public page | Main source |
 |---|---|
 | Home | `index.md` |
-| About | `about/Index` |
+| About | `about/index.md` |
 | Research | content under `research/` |
 | Projects | `projects/index.md` and `_data/projects.yaml` |
 | People | `team/index.md` plus `_members/` |
 | Publications | `publications/index.md` |
 | News | `blog/index.md` plus `_posts/` |
-| Resources | `resources/Index` |
+| Resources | `resources/index.md` |
 | Contact | `contact/index.md` |
 
 The YAML block between the opening and closing `---` controls metadata such as the page title and navigation order. The content below it is Markdown mixed, where necessary, with Liquid/HTML template code.

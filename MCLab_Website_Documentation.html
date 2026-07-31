@@ -1628,124 +1628,6 @@ border-radius: 0px;
 
 
 
-<style>
-:root {
-  --doc-ink: #344054;
-  --doc-heading: #24364b;
-  --doc-muted: #667085;
-  --doc-accent: #5f83a6;
-  --doc-accent-soft: #eef4f8;
-  --doc-border: #dce5ec;
-  --doc-background: #f6f8fa;
-}
-
-html { background: var(--doc-background); }
-
-body {
-  color: var(--doc-ink);
-  background: var(--doc-background);
-  font-family: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.7;
-}
-
-.main-container {
-  max-width: 1120px;
-  margin: 24px auto 48px;
-  padding: 42px 56px 60px;
-  background: #ffffff;
-  border: 1px solid var(--doc-border);
-  border-radius: 14px;
-  box-shadow: 0 10px 32px rgba(36, 54, 75, 0.07);
-}
-
-h1, h2, h3, h4, h5, h6,
-.title, .subtitle, .author, .date {
-  color: var(--doc-heading);
-  font-family: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
-}
-
-h1, h2, h3 {
-  font-weight: 650;
-  letter-spacing: -0.02em;
-}
-
-h1 { margin-top: 1.4em; padding-bottom: 0.22em; }
-h2 { margin-top: 1.7em; }
-h3 { margin-top: 1.45em; }
-
-.title {
-  margin-top: 0;
-  font-size: 2.55em;
-  line-height: 1.15;
-}
-
-.subtitle {
-  color: var(--doc-accent);
-  font-size: 1.35em;
-  font-weight: 500;
-}
-
-.author, .date {
-  color: var(--doc-muted);
-  font-size: 0.98em;
-  font-weight: 500;
-}
-
-p, li { max-width: 78ch; }
-a { color: #46779f; }
-a:hover, a:focus { color: #2f5878; }
-
-blockquote {
-  margin: 1.5em 0;
-  padding: 16px 22px;
-  color: var(--doc-ink);
-  background: var(--doc-accent-soft);
-  border-left: 4px solid #7fa2c0;
-  border-radius: 0 8px 8px 0;
-  font-size: 1em;
-  font-style: normal;
-}
-
-blockquote p:last-child { margin-bottom: 0; }
-
-pre {
-  border: 1px solid var(--doc-border);
-  border-radius: 8px;
-  box-shadow: none;
-}
-
-table { border-color: var(--doc-border); }
-
-.tocify {
-  border: 0;
-  border-radius: 10px;
-  box-shadow: 0 5px 18px rgba(36, 54, 75, 0.08);
-}
-
-.list-group-item.active,
-.list-group-item.active:hover,
-.list-group-item.active:focus {
-  background: var(--doc-accent);
-  border-color: var(--doc-accent);
-}
-
-@media (max-width: 767px) {
-  body { font-size: 15px; }
-
-  .main-container {
-    margin: 0;
-    padding: 24px 20px 40px;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-  }
-
-  .title { font-size: 2em; }
-}
-</style>
-
 </head>
 
 <body>
@@ -1786,6 +1668,104 @@ table { border-color: var(--doc-border); }
 </div>
 
 
+<style>
+:root {
+--doc-ink: #344054;
+--doc-heading: #24364b;
+--doc-muted: #667085;
+--doc-accent: #5f83a6;
+--doc-accent-soft: #eef4f8;
+--doc-border: #dce5ec;
+--doc-background: #f6f8fa;
+}
+html { background: var(--doc-background); }
+body {
+color: var(--doc-ink);
+background: var(--doc-background);
+font-family: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 1.7;
+}
+.main-container {
+max-width: 1120px;
+margin: 24px auto 48px;
+padding: 42px 56px 60px;
+background: #ffffff;
+border: 1px solid var(--doc-border);
+border-radius: 14px;
+box-shadow: 0 10px 32px rgba(36, 54, 75, 0.07);
+}
+h1, h2, h3, h4, h5, h6,
+.title, .subtitle, .author, .date {
+color: var(--doc-heading);
+font-family: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+h1, h2, h3 {
+font-weight: 650;
+letter-spacing: -0.02em;
+}
+h1 { margin-top: 1.4em; padding-bottom: 0.22em; }
+h2 { margin-top: 1.7em; }
+h3 { margin-top: 1.45em; }
+.title {
+margin-top: 0;
+font-size: 2.55em;
+line-height: 1.15;
+}
+.subtitle {
+color: var(--doc-accent);
+font-size: 1.35em;
+font-weight: 500;
+}
+.author, .date {
+color: var(--doc-muted);
+font-size: 0.98em;
+font-weight: 500;
+}
+p, li { max-width: 78ch; }
+a { color: #46779f; }
+a:hover, a:focus { color: #2f5878; }
+blockquote {
+margin: 1.5em 0;
+padding: 16px 22px;
+color: var(--doc-ink);
+background: var(--doc-accent-soft);
+border-left: 4px solid #7fa2c0;
+border-radius: 0 8px 8px 0;
+font-size: 1em;
+font-style: normal;
+}
+blockquote p:last-child { margin-bottom: 0; }
+pre {
+border: 1px solid var(--doc-border);
+border-radius: 8px;
+box-shadow: none;
+}
+table { border-color: var(--doc-border); }
+.tocify {
+border: 0;
+border-radius: 10px;
+box-shadow: 0 5px 18px rgba(36, 54, 75, 0.08);
+}
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+background: var(--doc-accent);
+border-color: var(--doc-accent);
+}
+@media (max-width: 767px) {
+body { font-size: 15px; }
+.main-container {
+margin: 0;
+padding: 24px 20px 40px;
+border: 0;
+border-radius: 0;
+box-shadow: none;
+}
+.title { font-size: 2em; }
+}
+</style>
 <div id="purpose" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Purpose</h1>
 <p>This document explains how MCLab members can maintain the laboratory
@@ -1798,7 +1778,7 @@ GitHub organization. The public website is currently available at:</p>
 <p><a href="https://mclabtoronto.github.io/lab-website" class="uri">https://mclabtoronto.github.io/lab-website</a></p>
 <p>Use this guide to:</p>
 <ul>
-<li>set up Git and GitHub access on macOS;</li>
+<li>set up Git and GitHub access on macOS or Windows;</li>
 <li>understand what visitors see versus how the repository is
 organized;</li>
 <li>update people, publications, news, text, and images;</li>
@@ -1860,7 +1840,7 @@ generate the public site.</p>
 <td>Their rendered pages are visible</td>
 </tr>
 <tr class="odd">
-<td><code>publications/index</code></td>
+<td><code>publications/index.md</code></td>
 <td>Single publications page, organized by year</td>
 <td>Its rendered content is visible</td>
 </tr>
@@ -1922,10 +1902,14 @@ pane here.</p>
 </blockquote>
 </div>
 </div>
-<div id="first-time-setup-on-macos" class="section level1" number="3">
+<div id="first-time-setup-on-macos-and-windows" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> First-time setup on
-macOS</h1>
-<p>Complete this section once on each Mac used to edit the website.</p>
+macOS and Windows</h1>
+<p>Complete this section once on each computer used to edit the website.
+The GitHub account, organization membership, Git concepts, repository
+content, and daily workflow are the same on macOS and Windows. The main
+differences concern installation, the terminal application, and secure
+storage of credentials.</p>
 <div id="create-a-github-account" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> Create a GitHub
 account</h2>
@@ -1954,8 +1938,9 @@ Insert a screenshot showing where to accept the MCLabToronto
 invitation.</p>
 </blockquote>
 </div>
-<div id="install-git" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Install Git</h2>
+<div id="macos-install-git" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> macOS: install
+Git</h2>
 <p>Open <strong>Terminal</strong> (Applications &gt; Utilities &gt;
 Terminal) and check whether Git is installed:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code></pre></div>
@@ -1972,8 +1957,8 @@ connected to the GitHub account, or a GitHub-provided private
 <p>Check the settings:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> <span class="at">--list</span></span></code></pre></div>
 </div>
-<div id="configure-ssh-access" class="section level2" number="3.4">
-<h2><span class="header-section-number">3.4</span> Configure SSH
+<div id="macos-configure-ssh-access" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> macOS: configure SSH
 access</h2>
 <p>SSH allows Git to authenticate securely without requesting a password
 for every operation.</p>
@@ -2048,6 +2033,76 @@ screenshot of “Existing Directory” and another showing the open project
 with its Git pane.</p>
 </blockquote>
 </div>
+<div id="windows-setup-differences" class="section level2" number="3.7">
+<h2><span class="header-section-number">3.7</span> Windows setup
+differences</h2>
+<p>On Windows, the GitHub account, MCLabToronto invitation, repository
+address, branch workflow, and RStudio steps are the same. Use the
+following Windows-specific setup instead of the macOS Git and Keychain
+commands above.</p>
+<div id="install-git-for-windows" class="section level3" number="3.7.1">
+<h3><span class="header-section-number">3.7.1</span> Install Git for
+Windows</h3>
+<ol style="list-style-type: decimal">
+<li>Download <strong>Git for Windows</strong> from <a href="https://git-scm.com/download/win" class="uri">https://git-scm.com/download/win</a>.</li>
+<li>Run the installer. The default choices are appropriate for most
+contributors.</li>
+<li>Keep <strong>Git Bash</strong> enabled. It provides a terminal in
+which most commands in this guide work exactly as written.</li>
+<li>Open Git Bash and verify the installation:</li>
+</ol>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code></pre></div>
+<p>Configure the contributor identity in Git Bash:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">&quot;Your Full Name&quot;</span></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">&quot;your-email@example.com&quot;</span></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> init.defaultBranch main</span></code></pre></div>
+</div>
+<div id="configure-ssh-on-windows" class="section level3" number="3.7.2">
+<h3><span class="header-section-number">3.7.2</span> Configure SSH on
+Windows</h3>
+<p>In Git Bash, check for an existing key and create one only if
+needed:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-al</span> ~/.ssh</span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> ed25519 <span class="at">-C</span> <span class="st">&quot;your-email@example.com&quot;</span></span></code></pre></div>
+<p>Accept the default file location and use a secure passphrase. Start
+the agent and add the key for the current Git Bash session:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="bu">eval</span> <span class="st">&quot;</span><span class="va">$(</span><span class="fu">ssh-agent</span> <span class="at">-s</span><span class="va">)</span><span class="st">&quot;</span></span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a><span class="fu">ssh-add</span> ~/.ssh/id_ed25519</span></code></pre></div>
+<p>Copy the public key to the Windows clipboard:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="ex">clip</span> <span class="op">&lt;</span> ~/.ssh/id_ed25519.pub</span></code></pre></div>
+<p>Add it on GitHub under <strong>Settings &gt; SSH and GPG keys &gt;
+New SSH key</strong>, then test it:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-T</span> git@github.com</span></code></pre></div>
+<p>Windows does not use the macOS Keychain. Git for Windows includes
+Windows-compatible credential tools, and SSH keys can be managed with
+the Windows <code>ssh-agent</code> service if persistent loading is
+desired. A contributor who is unsure should use Git Bash and ask the
+website administrator for help rather than copying or sharing a private
+key. Only the <code>.pub</code> file may be added to GitHub.</p>
+</div>
+<div id="clone-and-open-the-project-on-windows" class="section level3" number="3.7.3">
+<h3><span class="header-section-number">3.7.3</span> Clone and open the
+project on Windows</h3>
+<p>In Git Bash, a convenient location is the
+<code>Documents/GitHub</code> folder:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="bu">cd</span> ~/Documents</span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> GitHub</span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a><span class="bu">cd</span> GitHub</span>
+<span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:MCLabToronto/lab-website.git</span>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a><span class="bu">cd</span> lab-website</span>
+<span id="cb18-6"><a href="#cb18-6" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<p>Then open <code>lab-website.Rproj</code>, or use <strong>File &gt;
+New Project &gt; Existing Directory</strong> in RStudio and select the
+cloned <code>lab-website</code> folder. After setup, the daily Git
+commands below are the same on macOS and Windows when entered in
+Terminal or Git Bash.</p>
+<blockquote>
+<p><strong>Screenshot placeholder — Windows:</strong> Insert screenshots
+of Git for Windows, Git Bash, the SSH key setup, and the project open in
+RStudio on Windows.</p>
+</blockquote>
+</div>
+</div>
 </div>
 <div id="daily-workflow" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Daily workflow</h1>
@@ -2057,8 +2112,8 @@ and review, commit, push the branch, then open a pull request.</p>
 <div id="update-the-local-copy-with-git-pull" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> 1. Update the local
 copy with <code>git pull</code></h2>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="fu">git</span> switch main</span>
-<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="fu">git</span> pull origin main</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="fu">git</span> switch main</span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a><span class="fu">git</span> pull origin main</span></code></pre></div>
 <p><code>git pull origin main</code> contacts GitHub, downloads commits
 that are not yet local, and integrates them into the currently
 checked-out branch. Starting with an up-to-date <code>main</code>
@@ -2072,7 +2127,7 @@ stop and ask you to resolve the situation.</p>
 <div id="create-a-working-branch" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> 2. Create a working
 branch</h2>
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">git</span> switch <span class="at">-c</span> update-adeline-profile</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="fu">git</span> switch <span class="at">-c</span> update-adeline-profile</span></code></pre></div>
 <p>Use a short, meaningful branch name such as
 <code>add-jane-profile</code>, <code>news-conference-2026</code>, or
 <code>update-publications</code>. One branch should address one coherent
@@ -2086,19 +2141,19 @@ agreed by the team.</p>
 <div id="inspect-changes-with-git-status" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> 3. Inspect changes
 with <code>git status</code></h2>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div>
 <p><code>git status</code> is a safe, read-only command. It reports the
 current branch, modified files, new untracked files, and changes already
 staged for the next commit. Run it before and after every important Git
 step.</p>
 <p>For a line-by-line review:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">git</span> diff</span>
-<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a><span class="fu">git</span> diff <span class="at">--staged</span></span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="fu">git</span> diff</span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a><span class="fu">git</span> diff <span class="at">--staged</span></span></code></pre></div>
 </div>
 <div id="select-changes-with-git-add" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> 4. Select changes
 with <code>git add</code></h2>
-<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="fu">git</span> add _members/jane-doe.md images/members/jane-doe.jpg</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="fu">git</span> add _members/jane-doe.md images/members/jane-doe.jpg</span></code></pre></div>
 <p><code>git add</code> places the current version of selected files in
 the staging area for the next commit. It does not upload anything and
 does not permanently save a commit. Prefer explicit file paths because
@@ -2110,7 +2165,7 @@ same commit.</p>
 <div id="record-changes-with-git-commit--m" class="section level2" number="4.5">
 <h2><span class="header-section-number">4.5</span> 5. Record changes
 with <code>git commit -m</code></h2>
-<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Add Jane Doe to People page&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Add Jane Doe to People page&quot;</span></span></code></pre></div>
 <p>A commit records the staged snapshot in the local history. The
 message after <code>-m</code> should be concise, specific, and written
 as an action. A commit still exists only on the local computer until it
@@ -2120,11 +2175,11 @@ is pushed.</p>
 <h2><span class="header-section-number">4.6</span> 6. Upload the branch
 with <code>git push</code></h2>
 <p>For the first push of a new branch:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin update-adeline-profile</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin update-adeline-profile</span></code></pre></div>
 <p><code>git push</code> sends local commits to GitHub. The
 <code>-u</code> option links the local branch to its remote counterpart,
 so later pushes can normally be shortened to:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div>
 </div>
 <div id="open-and-merge-a-pull-request" class="section level2" number="4.7">
 <h2><span class="header-section-number">4.7</span> 7. Open and merge a
@@ -2144,9 +2199,9 @@ again; the pull request updates automatically.</li>
 <li>Merge only after review and successful checks.</li>
 </ol>
 <p>After merging, update and clean up locally:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="fu">git</span> switch main</span>
-<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a><span class="fu">git</span> pull origin main</span>
-<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-d</span> update-adeline-profile</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="fu">git</span> switch main</span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a><span class="fu">git</span> pull origin main</span>
+<span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-d</span> update-adeline-profile</span></code></pre></div>
 <blockquote>
 <p><strong>Screenshot placeholder — pull request:</strong> Insert
 screenshots of the “Compare &amp; pull request” button, successful
@@ -2189,7 +2244,7 @@ The current site includes:</p>
 </tr>
 <tr class="even">
 <td>Publications</td>
-<td><code>publications/index</code></td>
+<td><code>publications/index.md</code></td>
 </tr>
 <tr class="odd">
 <td>News</td>
@@ -2222,28 +2277,28 @@ template</h2>
 <p>Member records live in <code>_members/</code>. Start from
 <code>_members/template</code>, make a new file with a unique, readable
 name, and complete the YAML fields.</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a><span class="co"># Full name</span></span>
-<span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Jane Doe</span></span>
-<span id="cb21-4"><a href="#cb21-4" tabindex="-1"></a></span>
-<span id="cb21-5"><a href="#cb21-5" tabindex="-1"></a><span class="co"># Profile photo</span></span>
-<span id="cb21-6"><a href="#cb21-6" tabindex="-1"></a><span class="fu">image</span><span class="kw">:</span><span class="at"> images/members/jane-doe.jpg</span></span>
-<span id="cb21-7"><a href="#cb21-7" tabindex="-1"></a></span>
-<span id="cb21-8"><a href="#cb21-8" tabindex="-1"></a><span class="co"># Member role (choose ONE): pi, postdoc, phd, master, or staff</span></span>
-<span id="cb21-9"><a href="#cb21-9" tabindex="-1"></a><span class="fu">role</span><span class="kw">:</span><span class="at"> phd</span></span>
-<span id="cb21-10"><a href="#cb21-10" tabindex="-1"></a></span>
-<span id="cb21-11"><a href="#cb21-11" tabindex="-1"></a><span class="co"># Short research description (2–4 sentences)</span></span>
-<span id="cb21-12"><a href="#cb21-12" tabindex="-1"></a><span class="fu">description</span><span class="kw">: </span><span class="ch">&gt;</span></span>
-<span id="cb21-13"><a href="#cb21-13" tabindex="-1"></a>  Jane studies an example research topic using collaborative and</span>
-<span id="cb21-14"><a href="#cb21-14" tabindex="-1"></a>  interdisciplinary methods. Her work focuses on a concise description</span>
-<span id="cb21-15"><a href="#cb21-15" tabindex="-1"></a>  written for a general audience.</span>
-<span id="cb21-16"><a href="#cb21-16" tabindex="-1"></a></span>
-<span id="cb21-17"><a href="#cb21-17" tabindex="-1"></a><span class="fu">links</span><span class="kw">:</span></span>
-<span id="cb21-18"><a href="#cb21-18" tabindex="-1"></a><span class="at">  </span><span class="fu">home-page</span><span class="kw">:</span><span class="at"> https://example.org</span></span>
-<span id="cb21-19"><a href="#cb21-19" tabindex="-1"></a><span class="at">  </span><span class="fu">orcid</span><span class="kw">:</span><span class="at"> 0000-0000-0000-0000</span></span>
-<span id="cb21-20"><a href="#cb21-20" tabindex="-1"></a><span class="at">  </span><span class="fu">google-scholar</span><span class="kw">:</span><span class="at"> ExampleScholarID</span></span>
-<span id="cb21-21"><a href="#cb21-21" tabindex="-1"></a><span class="at">  </span><span class="fu">github</span><span class="kw">:</span><span class="at"> example-username</span></span>
-<span id="cb21-22"><a href="#cb21-22" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a><span class="co"># Full name</span></span>
+<span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Jane Doe</span></span>
+<span id="cb28-4"><a href="#cb28-4" tabindex="-1"></a></span>
+<span id="cb28-5"><a href="#cb28-5" tabindex="-1"></a><span class="co"># Profile photo</span></span>
+<span id="cb28-6"><a href="#cb28-6" tabindex="-1"></a><span class="fu">image</span><span class="kw">:</span><span class="at"> images/members/jane-doe.jpg</span></span>
+<span id="cb28-7"><a href="#cb28-7" tabindex="-1"></a></span>
+<span id="cb28-8"><a href="#cb28-8" tabindex="-1"></a><span class="co"># Member role (choose ONE): pi, postdoc, phd, master, or staff</span></span>
+<span id="cb28-9"><a href="#cb28-9" tabindex="-1"></a><span class="fu">role</span><span class="kw">:</span><span class="at"> phd</span></span>
+<span id="cb28-10"><a href="#cb28-10" tabindex="-1"></a></span>
+<span id="cb28-11"><a href="#cb28-11" tabindex="-1"></a><span class="co"># Short research description (2–4 sentences)</span></span>
+<span id="cb28-12"><a href="#cb28-12" tabindex="-1"></a><span class="fu">description</span><span class="kw">: </span><span class="ch">&gt;</span></span>
+<span id="cb28-13"><a href="#cb28-13" tabindex="-1"></a>  Jane studies an example research topic using collaborative and</span>
+<span id="cb28-14"><a href="#cb28-14" tabindex="-1"></a>  interdisciplinary methods. Her work focuses on a concise description</span>
+<span id="cb28-15"><a href="#cb28-15" tabindex="-1"></a>  written for a general audience.</span>
+<span id="cb28-16"><a href="#cb28-16" tabindex="-1"></a></span>
+<span id="cb28-17"><a href="#cb28-17" tabindex="-1"></a><span class="fu">links</span><span class="kw">:</span></span>
+<span id="cb28-18"><a href="#cb28-18" tabindex="-1"></a><span class="at">  </span><span class="fu">home-page</span><span class="kw">:</span><span class="at"> https://example.org</span></span>
+<span id="cb28-19"><a href="#cb28-19" tabindex="-1"></a><span class="at">  </span><span class="fu">orcid</span><span class="kw">:</span><span class="at"> 0000-0000-0000-0000</span></span>
+<span id="cb28-20"><a href="#cb28-20" tabindex="-1"></a><span class="at">  </span><span class="fu">google-scholar</span><span class="kw">:</span><span class="at"> ExampleScholarID</span></span>
+<span id="cb28-21"><a href="#cb28-21" tabindex="-1"></a><span class="at">  </span><span class="fu">github</span><span class="kw">:</span><span class="at"> example-username</span></span>
+<span id="cb28-22"><a href="#cb28-22" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
 <p>The roles currently displayed by <code>team/index.md</code> are:</p>
 <ul>
 <li><code>pi</code> — Lab Head;</li>
@@ -2307,24 +2362,24 @@ screenshots of a member file, its portrait in
 <div id="add-a-publication" class="section level1" number="7">
 <h1><span class="header-section-number">7</span> Add a publication</h1>
 <p>The current website uses <strong>one publications page</strong>,
-<code>publications/index</code>, with publications grouped manually
+<code>publications/index.md</code>, with publications grouped manually
 under year headings. Do not create a separate page for each year unless
 the lab intentionally changes the architecture.</p>
 <ol style="list-style-type: decimal">
-<li>Open <code>publications/index</code>.</li>
+<li>Open <code>publications/index.md</code>.</li>
 <li>Find the newest year heading or add it above older years.</li>
 <li>Add the reference as a Markdown list item.</li>
 <li>Italicize journal or title elements consistently with existing
 entries.</li>
 <li>Add the DOI as a clickable HTTPS link when available.</li>
 </ol>
-<div class="sourceCode" id="cb22"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="fu">## 2026</span></span>
-<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a></span>
-<span id="cb22-3"><a href="#cb22-3" tabindex="-1"></a><span class="ss">- </span>Doe, J., &amp; Smith, A. (2026). *Title of the article*. *Journal Name, 12*(3), 100–110. <span class="co">[</span><span class="ot">https://doi.org/10.xxxx/example</span><span class="co">](https://doi.org/10.xxxx/example)</span></span>
-<span id="cb22-4"><a href="#cb22-4" tabindex="-1"></a></span>
-<span id="cb22-5"><a href="#cb22-5" tabindex="-1"></a><span class="fu">## 2025</span></span>
-<span id="cb22-6"><a href="#cb22-6" tabindex="-1"></a></span>
-<span id="cb22-7"><a href="#cb22-7" tabindex="-1"></a><span class="ss">- </span>Existing older publication...</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="fu">## 2026</span></span>
+<span id="cb29-2"><a href="#cb29-2" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" tabindex="-1"></a><span class="ss">- </span>Doe, J., &amp; Smith, A. (2026). *Title of the article*. *Journal Name, 12*(3), 100–110. <span class="co">[</span><span class="ot">https://doi.org/10.xxxx/example</span><span class="co">](https://doi.org/10.xxxx/example)</span></span>
+<span id="cb29-4"><a href="#cb29-4" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="#cb29-5" tabindex="-1"></a><span class="fu">## 2025</span></span>
+<span id="cb29-6"><a href="#cb29-6" tabindex="-1"></a></span>
+<span id="cb29-7"><a href="#cb29-7" tabindex="-1"></a><span class="ss">- </span>Existing older publication...</span></code></pre></div>
 <p>Keep reverse chronological order: newest year first and, preferably,
 newest item first within a year. Confirm author names, year, title,
 journal, volume, issue, pages/article number, and DOI against the final
@@ -2337,7 +2392,8 @@ the selected maintenance workflow specifically requires it.</p>
 <blockquote>
 <p><strong>Screenshot placeholder — publication:</strong> Insert
 before-and-after screenshots of the relevant year in
-<code>publications/index</code> and the rendered Publications page.</p>
+<code>publications/index.md</code> and the rendered Publications
+page.</p>
 </blockquote>
 </div>
 <div id="add-a-news-item" class="section level1" number="8">
@@ -2348,15 +2404,15 @@ must start with an ISO date:</p>
 <p>For example:</p>
 <pre class="text"><code>2026-09-15-autism-conference-presentation.md</code></pre>
 <p>Use front matter consistent with the current posts:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> MCLab presents at the 2026 Autism Research Conference</span></span>
-<span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a><span class="fu">image</span><span class="kw">:</span><span class="at"> images/conference-2026.jpg</span></span>
-<span id="cb25-4"><a href="#cb25-4" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> adeline-lacroix</span></span>
-<span id="cb25-5"><a href="#cb25-5" tabindex="-1"></a><span class="fu">tags</span><span class="kw">:</span><span class="at"> conference, presentation, autism</span></span>
-<span id="cb25-6"><a href="#cb25-6" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb25-7"><a href="#cb25-7" tabindex="-1"></a></span>
-<span id="cb25-8"><a href="#cb25-8" tabindex="-1"></a><span class="at">MCLab members presented their recent work at the 2026 Autism Research</span></span>
-<span id="cb25-9"><a href="#cb25-9" tabindex="-1"></a><span class="at">Conference. Add a concise, accessible account of the event here.</span></span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb32-2"><a href="#cb32-2" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> MCLab presents at the 2026 Autism Research Conference</span></span>
+<span id="cb32-3"><a href="#cb32-3" tabindex="-1"></a><span class="fu">image</span><span class="kw">:</span><span class="at"> images/conference-2026.jpg</span></span>
+<span id="cb32-4"><a href="#cb32-4" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> adeline-lacroix</span></span>
+<span id="cb32-5"><a href="#cb32-5" tabindex="-1"></a><span class="fu">tags</span><span class="kw">:</span><span class="at"> conference, presentation, autism</span></span>
+<span id="cb32-6"><a href="#cb32-6" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb32-7"><a href="#cb32-7" tabindex="-1"></a></span>
+<span id="cb32-8"><a href="#cb32-8" tabindex="-1"></a><span class="at">MCLab members presented their recent work at the 2026 Autism Research</span></span>
+<span id="cb32-9"><a href="#cb32-9" tabindex="-1"></a><span class="at">Conference. Add a concise, accessible account of the event here.</span></span></code></pre></div>
 <p>The date in the filename controls post chronology. The
 <code>author</code> should correspond to a valid member identifier
 expected by the template; inspect existing working posts and member
@@ -2364,7 +2420,7 @@ filenames before choosing it. The image path must exist. Tags are
 comma-separated in the current examples.</p>
 <p>Use meaningful link text rather than pasting long URLs into the
 prose:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a>Read the <span class="co">[</span><span class="ot">conference programme</span><span class="co">](https://example.org/programme)</span> for details.</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a>Read the <span class="co">[</span><span class="ot">conference programme</span><span class="co">](https://example.org/programme)</span> for details.</span></code></pre></div>
 <blockquote>
 <p><strong>Screenshot placeholder — news:</strong> Insert screenshots of
 a correctly named <code>_posts</code> file and its rendered News
@@ -2390,16 +2446,16 @@ exactly.</li>
 preview.</li>
 </ol>
 <p>Example Markdown:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="al">![Descriptive alternative text]({{ &#39;images/new-image.jpg&#39; | relative_url }})</span></span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a><span class="al">![Descriptive alternative text]({{ &#39;images/new-image.jpg&#39; | relative_url }})</span></span></code></pre></div>
 <p>Example HTML/Liquid, useful when the displayed width must be
 controlled:</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;max-width: 850px; margin: 30px auto;&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span></span>
-<span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a><span class="ot">    src</span><span class="op">=</span><span class="st">&quot;{{ &#39;images/team.JPG&#39; | relative_url }}&quot;</span></span>
-<span id="cb28-4"><a href="#cb28-4" tabindex="-1"></a><span class="ot">    alt</span><span class="op">=</span><span class="st">&quot;MCLab team&quot;</span></span>
-<span id="cb28-5"><a href="#cb28-5" tabindex="-1"></a><span class="ot">    style</span><span class="op">=</span><span class="st">&quot;width: 100%; height: auto; border-radius: 4px;&quot;</span></span>
-<span id="cb28-6"><a href="#cb28-6" tabindex="-1"></a><span class="ot">  </span><span class="dt">&gt;</span></span>
-<span id="cb28-7"><a href="#cb28-7" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;max-width: 850px; margin: 30px auto;&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb35-2"><a href="#cb35-2" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span></span>
+<span id="cb35-3"><a href="#cb35-3" tabindex="-1"></a><span class="ot">    src</span><span class="op">=</span><span class="st">&quot;{{ &#39;images/team.JPG&#39; | relative_url }}&quot;</span></span>
+<span id="cb35-4"><a href="#cb35-4" tabindex="-1"></a><span class="ot">    alt</span><span class="op">=</span><span class="st">&quot;MCLab team&quot;</span></span>
+<span id="cb35-5"><a href="#cb35-5" tabindex="-1"></a><span class="ot">    style</span><span class="op">=</span><span class="st">&quot;width: 100%; height: auto; border-radius: 4px;&quot;</span></span>
+<span id="cb35-6"><a href="#cb35-6" tabindex="-1"></a><span class="ot">  </span><span class="dt">&gt;</span></span>
+<span id="cb35-7"><a href="#cb35-7" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
 <p>Always include useful alternative text. Compress very large
 photographs before committing them. Be careful with
 <code>team.JPG</code>: changing <code>.JPG</code> to <code>.jpg</code>
@@ -2473,11 +2529,11 @@ cached content or images.</li>
 pull-request preview.</li>
 </ol>
 <p>Useful comparison commands:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="fu">git</span> status</span>
-<span id="cb29-2"><a href="#cb29-2" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">--show-current</span></span>
-<span id="cb29-3"><a href="#cb29-3" tabindex="-1"></a><span class="fu">git</span> log <span class="at">-1</span> <span class="at">--oneline</span></span>
-<span id="cb29-4"><a href="#cb29-4" tabindex="-1"></a><span class="fu">git</span> fetch origin</span>
-<span id="cb29-5"><a href="#cb29-5" tabindex="-1"></a><span class="fu">git</span> status <span class="at">-sb</span></span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb36-2"><a href="#cb36-2" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">--show-current</span></span>
+<span id="cb36-3"><a href="#cb36-3" tabindex="-1"></a><span class="fu">git</span> log <span class="at">-1</span> <span class="at">--oneline</span></span>
+<span id="cb36-4"><a href="#cb36-4" tabindex="-1"></a><span class="fu">git</span> fetch origin</span>
+<span id="cb36-5"><a href="#cb36-5" tabindex="-1"></a><span class="fu">git</span> status <span class="at">-sb</span></span></code></pre></div>
 </div>
 <div id="jekyll-or-liquid-build-error" class="section level2" number="11.2">
 <h2><span class="header-section-number">11.2</span> Jekyll or Liquid
@@ -2498,14 +2554,14 @@ consequences of the first problem.</p>
 <li>references to an image that was not committed.</li>
 </ul>
 <p>Inspect the precise change:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a><span class="fu">git</span> diff</span>
-<span id="cb30-2"><a href="#cb30-2" tabindex="-1"></a><span class="fu">git</span> diff <span class="at">--check</span></span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" tabindex="-1"></a><span class="fu">git</span> diff</span>
+<span id="cb37-2"><a href="#cb37-2" tabindex="-1"></a><span class="fu">git</span> diff <span class="at">--check</span></span></code></pre></div>
 <p>If Ruby and Bundler are installed locally, reproduce the production
 build from the repository root:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a><span class="ex">bundle</span> install</span>
-<span id="cb31-2"><a href="#cb31-2" tabindex="-1"></a><span class="ex">bundle</span> exec jekyll build</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a><span class="ex">bundle</span> install</span>
+<span id="cb38-2"><a href="#cb38-2" tabindex="-1"></a><span class="ex">bundle</span> exec jekyll build</span></code></pre></div>
 <p>For a local server:</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a><span class="ex">bundle</span> exec jekyll serve</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" tabindex="-1"></a><span class="ex">bundle</span> exec jekyll serve</span></code></pre></div>
 <p>Then open the local address reported in Terminal. Stop the server
 with <strong>Control-C</strong>. Local build tooling is helpful but not
 required for ordinary edits because the pull-request workflow provides a
@@ -2514,14 +2570,14 @@ preview.</p>
 <div id="ssh-authentication-fails" class="section level2" number="11.3">
 <h2><span class="header-section-number">11.3</span> SSH authentication
 fails</h2>
-<div class="sourceCode" id="cb33"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-T</span> git@github.com</span>
-<span id="cb33-2"><a href="#cb33-2" tabindex="-1"></a><span class="fu">ssh-add</span> <span class="at">-l</span></span>
-<span id="cb33-3"><a href="#cb33-3" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-T</span> git@github.com</span>
+<span id="cb40-2"><a href="#cb40-2" tabindex="-1"></a><span class="fu">ssh-add</span> <span class="at">-l</span></span>
+<span id="cb40-3"><a href="#cb40-3" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre></div>
 <p>Confirm that the public key is attached to the correct GitHub
 account, the private key is loaded, and the remote begins with
 <code>git@github.com:</code>. If Git uses an HTTPS remote, either
 authenticate over HTTPS or deliberately change it to SSH:</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a><span class="fu">git</span> remote set-url origin git@github.com:MCLabToronto/lab-website.git</span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" tabindex="-1"></a><span class="fu">git</span> remote set-url origin git@github.com:MCLabToronto/lab-website.git</span></code></pre></div>
 </div>
 <div id="push-is-rejected" class="section level2" number="11.4">
 <h2><span class="header-section-number">11.4</span> Push is
@@ -2530,10 +2586,10 @@ rejected</h2>
 branch is protected. Do not force-push to <code>main</code>.</p>
 <p>For a normal working branch, first save/commit the current work,
 update <code>main</code>, and integrate it carefully:</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a><span class="fu">git</span> switch main</span>
-<span id="cb35-2"><a href="#cb35-2" tabindex="-1"></a><span class="fu">git</span> pull origin main</span>
-<span id="cb35-3"><a href="#cb35-3" tabindex="-1"></a><span class="fu">git</span> switch your-branch-name</span>
-<span id="cb35-4"><a href="#cb35-4" tabindex="-1"></a><span class="fu">git</span> merge main</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="fu">git</span> switch main</span>
+<span id="cb42-2"><a href="#cb42-2" tabindex="-1"></a><span class="fu">git</span> pull origin main</span>
+<span id="cb42-3"><a href="#cb42-3" tabindex="-1"></a><span class="fu">git</span> switch your-branch-name</span>
+<span id="cb42-4"><a href="#cb42-4" tabindex="-1"></a><span class="fu">git</span> merge main</span></code></pre></div>
 <p>Resolve any conflicts, test the files, then commit the resolution and
 push. If branch protection requires a pull request, open one rather than
 pushing directly to <code>main</code>.</p>
@@ -2545,10 +2601,10 @@ pushing directly to <code>main</code>.</p>
 <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>. Read both versions, keep the
 correct combined content, remove all markers, then stage and commit the
 resolved file.</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a><span class="fu">git</span> status</span>
-<span id="cb36-2"><a href="#cb36-2" tabindex="-1"></a><span class="fu">git</span> add path/to/resolved-file</span>
-<span id="cb36-3"><a href="#cb36-3" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Resolve merge conflict&quot;</span></span>
-<span id="cb36-4"><a href="#cb36-4" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb43-2"><a href="#cb43-2" tabindex="-1"></a><span class="fu">git</span> add path/to/resolved-file</span>
+<span id="cb43-3"><a href="#cb43-3" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Resolve merge conflict&quot;</span></span>
+<span id="cb43-4"><a href="#cb43-4" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div>
 <p>Ask another maintainer for review if the conflict affects templates,
 workflows, configuration, or unfamiliar code.</p>
 </div>
