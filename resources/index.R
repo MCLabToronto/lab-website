@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en" data-dark="false">
+  <head>
+  <!--
+  put your analytics (e.g. Google Analytics) tracking code here
+-->
+
+  <!--
+  put your search engine verification (e.g. Google Search Console) tag here
+-->
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Resources | MCLab</title>
+
+<link rel="icon" href="/lab-website/images/icon.png">
+
+<meta name="title" content="Resources">
+<meta name="description" content="The MCLab is a multidisciplinary and collaborative research team committed to advancing a rigorous, neuroaffirmative understanding of neurodiversity.">
+
+<meta property="og:title" content="Resources">
+<meta property="og:site_title" content="MCLab">
+<meta property="og:description" content="The MCLab is a multidisciplinary and collaborative research team committed to advancing a rigorous, neuroaffirmative understanding of neurodiversity.">
+<meta property="og:url" content="https://mclabtoronto.github.io/lab-website">
+<meta property="og:image" content="/lab-website/images/share.jpg">
+<meta property="og:locale" content="en_US">
+
+<meta property="twitter:title" content="Resources">
+<meta property="twitter:description" content="The MCLab is a multidisciplinary and collaborative research team committed to advancing a rigorous, neuroaffirmative understanding of neurodiversity.">
+<meta property="twitter:url" content="https://mclabtoronto.github.io/lab-website">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:image" content="/lab-website/images/share.jpg">
+
+
+  <meta property="og:type" content="website">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "WebSite",
+    
+    "name": "Resources",
+    "description": "The MCLab is a multidisciplinary and collaborative research team committed to advancing a rigorous, neuroaffirmative understanding of neurodiversity.",
+    "headline": "Resources",
+    "publisher": {
+      "@type": "Organization",
+      "logo": { "@type": "ImageObject", "url": "/lab-website/images/icon.png" }
+    },
+    "url": "https://mclabtoronto.github.io/lab-website"
+  }
+</script>
+
+<link rel="alternate" type="application/rss+xml" href="https://mclabtoronto.github.io/lab-website/feed.xml">
+
+  <!-- Google Fonts -->
+<!-- automatically get url from fonts used in theme file -->
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?display=swap&&family=Barlow:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&family=Roboto+Mono:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600" rel="stylesheet">
+
+<!-- Font Awesome icons (load asynchronously due to size) -->
+
+<link
+  href="https://use.fontawesome.com/releases/v6.7.0/css/all.css"
+  rel="stylesheet"
+  media="none"
+  onload="this.removeAttribute('media'); this.onload = null;"
+/>
+<noscript>
+  <link href="https://use.fontawesome.com/releases/v6.7.0/css/all.css" rel="stylesheet">
+</noscript>
+
+  <!-- third party styles -->
+<!-- https://stylishthemes.github.io/Syntax-Themes/pygments/ -->
+<link 
+  href="https://cdn.jsdelivr.net/gh/StylishThemes/Syntax-Themes/pygments/css-github/pygments-tomorrow-night-eighties.css"
+  rel="stylesheet"
+/>
+
+<!-- include all sass in styles folder -->
+
+
+  
+    <link
+      href="/lab-website/_styles/-theme.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/alert.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/all.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/anchor.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/background.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/body.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/bold.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/button.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/card.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/checkbox.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/citation.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/code.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/cols.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/dark-toggle.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/details.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/feature.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/figure.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/float.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/font.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/footer.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/form.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/grid.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/header.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/heading.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/highlight.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/icon.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/image.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/link.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/list.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/main.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/paragraph.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/portrait.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/post-excerpt.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/post-info.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/post-nav.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/quote.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/rule.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/search-box.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/search-info.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/section.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/table.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/tags.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/textbox.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/tooltip.css"
+      rel="stylesheet"
+    />
+  
+
+  
+    <link
+      href="/lab-website/_styles/util.css"
+      rel="stylesheet"
+    />
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+<!-- include all css in styles folder -->
+
+
+
+  <!-- third party scripts -->
+<script src="https://unpkg.com/@popperjs/core@2" defer></script>
+<script src="https://unpkg.com/tippy.js@6" defer></script>
+<script src="https://unpkg.com/mark.js@8" defer></script>
+
+<!-- include all js in scripts folder -->
+
+
+  <script src="/lab-website/_scripts/anchors.js"></script>
+
+  <script src="/lab-website/_scripts/dark-mode.js"></script>
+
+  <script src="/lab-website/_scripts/fetch-tags.js"></script>
+
+  <script src="/lab-website/_scripts/search.js"></script>
+
+  <script src="/lab-website/_scripts/site-search.js"></script>
+
+  <script src="/lab-website/_scripts/table-wrap.js"></script>
+
+  <script src="/lab-website/_scripts/tooltip.js"></script>
+
+
+</head>
+
+  <body>
+    
+
+
+
+
+
+
+
+<header
+  class="background"
+  style="--image: url('/lab-website/images/background.jpg')"
+  
+    data-dark="true"
+  
+  
+>
+  <a href="/lab-website/" class="home">
+    
+      <span class="logo">
+        
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="-40 -60 80 100">
+  <style>
+    .bubble {
+      animation: float 2s ease-out both infinite var(--delay);
+    }
+    @keyframes float {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        transform: translateY(0);
+        opacity: 0;
+      }
+      75% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-40px);
+      }
+    }
+  </style>
+  <g fill="currentColor" opacity="0.5">
+    <circle class="bubble" cx="0" cy="-10" r="3" style="--delay: 0.1s" />
+    <circle class="bubble" cx="0" cy="-10" r="3" style="--delay: 0.4s" />
+    <circle class="bubble" cx="0" cy="-10" r="3" style="--delay: 1.1s" />
+  </g>
+  <path
+    fill="#38bdf8"
+    d="
+      M 0 -22.5
+      L -19.5 -11.25
+      L -19.5 11.25
+      L 0 22.5
+      L 19.5 11.25
+      L 19.5 -11.25
+      z
+    "
+  />
+  <path
+    fill="#bae6fd"
+    d="
+      M 0 -22.5
+      L -19.5 -11.25
+      L 0 0
+      L 19.5 -11.25
+      z
+    "
+  />
+  <path
+    fill="none"
+    stroke="currentColor"
+    stroke-width="5"
+    d="
+      M -18 -53
+      L -10 -53
+      L -10 -29.2
+      L -30.3 -17.5
+      L -30.3 17.5
+      L 0 35
+      L 30.3 17.5
+      L 30.3 -17.5
+      L 10 -29.2
+      L 10 -53
+      L 18 -53
+    "
+  />
+</svg>
+
+        
+      </span>
+    
+    
+      <span class="title-text" data-tooltip="Home">
+        
+          <span class="title">MCLab</span>
+        
+        
+      </span>
+    
+  </a>
+
+  <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
+
+  <nav>
+    
+    
+      
+        <a
+          href="/lab-website/about/"
+          data-tooltip="About the MCLab"
+        >
+          About
+        </a>
+      
+    
+      
+        <a
+          href="/lab-website/research/"
+          data-tooltip="Explore our research"
+        >
+          Research
+        </a>
+      
+    
+      
+        <a
+          href="/lab-website/team/"
+          data-tooltip="Meet our team"
+        >
+          People
+        </a>
+      
+    
+      
+        <a
+          href="/lab-website/publications/"
+          data-tooltip="Browse our publications"
+        >
+          Publications
+        </a>
+      
+    
+      
+        <a
+          href="/lab-website/blog/"
+          data-tooltip="Latest news from the MCLab"
+        >
+          News
+        </a>
+      
+    
+  </nav>
+</header>
+
+    <main>
+      <!--
+  modify main content of page:
+  - add section breaks
+  - attach section properties
+  - filter out blank sections
+-->
+
+
+
+
+
+
+  
+  
+  
+
+  <section
+    class="background"
+    data-size="page"
+    
+    
+  >
+    # <i class="icon fa-solid fa-folder-open"></i> Resources
+  
+  Resources, tools, and materials developed or recommended by the MCLab.
+  </section>
+
+  
+  
+  
+
+  <section
+    class="background"
+    data-size="page"
+    
+    
+  >
+    <!--
+  <background></background>
+  <dark></dark>
+  <size></size>
+-->
+
+
+Content coming soon.
+  </section>
+
+
+    </main>
+    
+
+
+<footer
+  class="background"
+  style="--image: url('/lab-website/images/background.jpg')"
+  
+    data-dark="true"
+  
+  data-size="wide"
+>
+  <!--
+    <div>
+      Extra details like contact info or address
+    </div>
+  -->
+
+  <div>
+    
+      
+      
+      
+
+
+
+  <div class="button-wrapper">
+    <a
+      class="button"
+      href="https://github.com/MCLabToronto"
+      
+        data-tooltip="GitHub"
+      
+      data-style="bare"
+      
+      aria-label="GitHub"
+    >
+      <i class="icon fa-brands fa-github"></i>
+      
+    </a>
+  </div>
+
+
+    
+  </div>
+
+  <div>
+    &copy; 2026
+    MCLab
+    &nbsp; | &nbsp; Built with
+    <a href="https://github.com/greenelab/lab-website-template">
+      Lab Website Template
+    </a>
+  </div>
+
+  <input
+    type="checkbox"
+    class="dark-toggle"
+    data-tooltip="Dark mode"
+    aria-label="toggle dark mode"
+    oninput="onDarkToggleChange(event)"
+  >
+</footer>
+
+  </body>
+</html>
