@@ -11,12 +11,12 @@ The MCLab is a multidisciplinary and collaborative research team committed to ad
 
 {% capture text %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+We study neurodiversity through multidisciplinary, collaborative, and neuroaffirmative research. Our work brings together complementary perspectives to better understand diverse developmental experiences and needs.
 
 {%
   include button.html
   link="research"
-  text="See our publications"
+  text="Explore our research"
   icon="fa-solid fa-arrow-right"
   flip=true
   style="bare"
@@ -34,7 +34,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {% capture text %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Our projects combine methods such as neuroimaging, cognitive neuroscience, participatory research, and large-scale data analysis. We aim to produce rigorous knowledge with meaningful scientific and community impact.
 
 {%
   include button.html
@@ -59,7 +59,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {% capture text %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+The MCLab brings together researchers and trainees with varied expertise, backgrounds, and lived perspectives. We value collaboration, curiosity, inclusion, and respectful engagement across disciplines.
 
 {%
   include button.html
