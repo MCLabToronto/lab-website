@@ -9,7 +9,7 @@ nav:
 
 The MCLab brings together researchers and trainees with diverse backgrounds, expertise, and perspectives.
 
-<div style="max-width: 850px; margin: 30px auto;">
+<div style="max-width: 500px; margin: 30px auto;">
   <img
     src="{{ 'images/team.JPG' | relative_url }}"
     alt="MCLab team"

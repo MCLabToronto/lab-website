@@ -1,0 +1,657 @@
+---
+title: "MCLab Website Documentation"
+subtitle: "Editing, collaboration, and deployment guide"
+author: "MCLabToronto"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    number_sections: true
+    code_folding: show
+    theme: readable
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  eval = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  comment = ""
+)
+```
+
+# Purpose
+
+This document explains how MCLab members can maintain the laboratory website safely and collaboratively. It is intended for both first-time contributors and regular editors. The source file is editable in RStudio and can be rendered as an HTML document with a floating table of contents.
+
+The website repository is hosted in the **MCLabToronto** GitHub organization. The public website is currently available at:
+
+<https://mclabtoronto.github.io/lab-website>
+
+Use this guide to:
+
+- set up Git and GitHub access on macOS;
+- understand what visitors see versus how the repository is organized;
+- update people, publications, news, text, and images;
+- collaborate through branches and pull requests;
+- understand automatic deployment; and
+- diagnose common problems.
+
+> **Important:** The repository architecture described here reflects the current version of the website. It may evolve following suggestions from members of the lab. Some template folders and files support the website internally but do not correspond to pages or content that visitors can see publicly.
+
+# Public website structure versus repository architecture
+
+These two structures are related, but they are not the same.
+
+## Public website structure
+
+The public structure is the set of pages and navigation items seen by visitors in a browser. At present, it includes the home page and sections such as About, Research, Projects, People, Publications, News, Resources, and Contact. A visitor does not need to know how these pages are assembled.
+
+## Repository architecture
+
+The repository contains source content, configuration, templates, styling, scripts, and automation. Jekyll combines these elements to generate the public site.
+
+| Repository path | Main purpose | Publicly visible as-is? |
+|---|---|---|
+| `index.md` | Home-page source | Its rendered content is visible |
+| `about/`, `research/`, `projects/`, `team/`, `blog/`, `resources/`, `contact/` | Sources for major pages | Their rendered pages are visible |
+| `publications/index` | Single publications page, organized by year | Its rendered content is visible |
+| `_members/` | One YAML/Markdown record per person | Rendered into People profiles/pages |
+| `_posts/` | Dated news items | Rendered into the News section |
+| `images/` | Site images; member portraits are in `images/members/` | Images may be visible when referenced |
+| `_config.yaml` | Global Jekyll settings, collections, and defaults | No |
+| `_includes/` and `_layouts/` | Reusable HTML/Liquid components and page layouts | No; only their generated output |
+| `_styles/` and `_scripts/` | Appearance and browser behaviour | No; their effects are visible |
+| `_data/` and `_cite/` | Structured data and citation tooling | No; generated publication data may be used |
+| `.github/workflows/` | GitHub Actions for building, previews, and deployment | No |
+| `Gemfile` and `Gemfile.lock` | Ruby/Jekyll dependencies | No |
+
+Folders beginning with an underscore usually have a special role in Jekyll. Do not delete template files simply because they are not displayed in the navigation.
+
+> **Screenshot placeholder — repository:** Insert a screenshot of the repository file list on GitHub or in RStudio's Files pane here.
+
+# First-time setup on macOS
+
+Complete this section once on each Mac used to edit the website.
+
+## Create a GitHub account
+
+1. Go to <https://github.com> and create an account, preferably using a professional email address.
+2. Verify the email address.
+3. Enable two-factor authentication and save the recovery codes securely.
+4. Send the GitHub username to a website administrator.
+
+## Join the MCLabToronto organization
+
+An owner of **MCLabToronto** must invite the contributor. The invitation may arrive by email and is also normally visible at <https://github.com/orgs/MCLabToronto/invitation>.
+
+Accept the invitation and confirm that the repository is visible. The account must have suitable repository permission to push a branch or open a pull request. If the invitation has expired, ask an organization owner to resend it.
+
+> **Screenshot placeholder — organization invitation:** Insert a screenshot showing where to accept the MCLabToronto invitation.
+
+## Install Git
+
+Open **Terminal** (Applications > Utilities > Terminal) and check whether Git is installed:
+
+```{bash}
+git --version
+```
+
+If macOS prompts for the Command Line Tools, accept the installation. Git can also be installed with Homebrew, if Homebrew is already used on the computer:
+
+```{bash}
+brew install git
+```
+
+Set the name and email that will appear on commits. Use an email connected to the GitHub account, or a GitHub-provided private `noreply` address.
+
+```{bash}
+git config --global user.name "Your Full Name"
+git config --global user.email "your-email@example.com"
+git config --global init.defaultBranch main
+```
+
+Check the settings:
+
+```{bash}
+git config --global --list
+```
+
+## Configure SSH access
+
+SSH allows Git to authenticate securely without requesting a password for every operation.
+
+First, check for an existing key:
+
+```{bash}
+ls -al ~/.ssh
+```
+
+If an appropriate key such as `id_ed25519` and `id_ed25519.pub` already exists and is used for GitHub, do not overwrite it. Otherwise, create a new Ed25519 key:
+
+```{bash}
+ssh-keygen -t ed25519 -C "your-email@example.com"
+```
+
+Press Return to accept the default path. Use a secure passphrase.
+
+Start the SSH agent and add the private key to the macOS Keychain:
+
+```{bash}
+eval "$(ssh-agent -s)"
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+```
+
+Create or edit `~/.ssh/config` so it contains the following entry:
+
+```text
+Host github.com
+  HostName github.com
+  User git
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+```
+
+Copy the public key:
+
+```{bash}
+pbcopy < ~/.ssh/id_ed25519.pub
+```
+
+On GitHub, open **Settings > SSH and GPG keys > New SSH key**, give the key a descriptive title, paste it, and save it.
+
+Test the connection:
+
+```{bash}
+ssh -T git@github.com
+```
+
+The first connection may ask whether to trust GitHub's host key. Verify the fingerprint against GitHub's documentation before accepting it. A successful test identifies the GitHub username and notes that GitHub does not provide shell access.
+
+> **Screenshot placeholder — SSH key:** Insert screenshots of the GitHub “New SSH key” page and a successful Terminal test.
+
+## Clone the repository
+
+Choose a parent folder, such as `~/Documents/GitHub`, then clone with the SSH address:
+
+```{bash}
+mkdir -p ~/Documents/GitHub
+cd ~/Documents/GitHub
+git clone git@github.com:MCLabToronto/lab-website.git
+cd lab-website
+git status
+```
+
+Cloning creates a complete local working copy with its Git history. Do not download a ZIP for routine collaboration because a ZIP is not connected to the Git repository.
+
+## Open the repository in RStudio
+
+The repository already contains `lab-website.Rproj`. It can be opened directly. If using RStudio's directory workflow:
+
+1. Open RStudio.
+2. Select **File > New Project > Existing Directory**.
+3. Browse to `~/Documents/GitHub/lab-website`.
+4. Select **Create Project**.
+
+Confirm that the Files pane shows repository items such as `_members`, `_posts`, `images`, and `_config.yaml`. The Git pane should also be available once Git is detected.
+
+> **Screenshot placeholder — RStudio:** Insert a screenshot of “Existing Directory” and another showing the open project with its Git pane.
+
+# Daily workflow
+
+Always synchronize before editing. The recommended collaboration workflow is: pull the latest `main`, create a branch, edit and review, commit, push the branch, then open a pull request.
+
+## 1. Update the local copy with `git pull`
+
+```{bash}
+git switch main
+git pull origin main
+```
+
+`git pull origin main` contacts GitHub, downloads commits that are not yet local, and integrates them into the currently checked-out branch. Starting with an up-to-date `main` reduces conflicts and prevents work from being based on obsolete files.
+
+Do not run `git pull` with unsaved work that you do not understand. First save files and inspect `git status`. If local uncommitted changes would conflict with incoming work, Git may stop and ask you to resolve the situation.
+
+## 2. Create a working branch
+
+```{bash}
+git switch -c update-adeline-profile
+```
+
+Use a short, meaningful branch name such as `add-jane-profile`, `news-conference-2026`, or `update-publications`. One branch should address one coherent change.
+
+Branches and pull requests are the **recommended workflow for lab colleagues** because they isolate changes, enable review and preview, and protect the live site. Direct pushes to `main` should be reserved for maintainers and simple changes when explicitly agreed by the team.
+
+## 3. Inspect changes with `git status`
+
+```{bash}
+git status
+```
+
+`git status` is a safe, read-only command. It reports the current branch, modified files, new untracked files, and changes already staged for the next commit. Run it before and after every important Git step.
+
+For a line-by-line review:
+
+```{bash}
+git diff
+git diff --staged
+```
+
+## 4. Select changes with `git add`
+
+```{bash}
+git add _members/jane-doe.md images/members/jane-doe.jpg
+```
+
+`git add` places the current version of selected files in the staging area for the next commit. It does not upload anything and does not permanently save a commit. Prefer explicit file paths because they help prevent unrelated changes from being included. Use `git add .` only after carefully reviewing `git status` and confirming that every change belongs in the same commit.
+
+## 5. Record changes with `git commit -m`
+
+```{bash}
+git commit -m "Add Jane Doe to People page"
+```
+
+A commit records the staged snapshot in the local history. The message after `-m` should be concise, specific, and written as an action. A commit still exists only on the local computer until it is pushed.
+
+## 6. Upload the branch with `git push`
+
+For the first push of a new branch:
+
+```{bash}
+git push -u origin update-adeline-profile
+```
+
+`git push` sends local commits to GitHub. The `-u` option links the local branch to its remote counterpart, so later pushes can normally be shortened to:
+
+```{bash}
+git push
+```
+
+## 7. Open and merge a pull request
+
+1. Open the repository on GitHub.
+2. Select **Compare & pull request**, or open **Pull requests > New pull request**.
+3. Set the base branch to `main` and the compare branch to the working branch.
+4. Give the pull request a clear title and explain what changed.
+5. Check the automated workflow results and the generated preview when available.
+6. Request review from a colleague or maintainer.
+7. Make corrections on the same local branch, commit them, and push again; the pull request updates automatically.
+8. Merge only after review and successful checks.
+
+After merging, update and clean up locally:
+
+```{bash}
+git switch main
+git pull origin main
+git branch -d update-adeline-profile
+```
+
+> **Screenshot placeholder — pull request:** Insert screenshots of the “Compare & pull request” button, successful checks, preview link, and merge button.
+
+# Website pages
+
+Most main pages are Markdown files with YAML front matter at the top. The current site includes:
+
+| Public page | Main source |
+|---|---|
+| Home | `index.md` |
+| About | `about/Index` |
+| Research | content under `research/` |
+| Projects | `projects/index.md` and `_data/projects.yaml` |
+| People | `team/index.md` plus `_members/` |
+| Publications | `publications/index` |
+| News | `blog/index.md` plus `_posts/` |
+| Resources | `resources/Index` |
+| Contact | `contact/index.md` |
+
+The YAML block between the opening and closing `---` controls metadata such as the page title and navigation order. The content below it is Markdown mixed, where necessary, with Liquid/HTML template code.
+
+File and folder names are case-sensitive on GitHub. Preserve the repository's current names exactly unless a deliberate migration is planned.
+
+# Add or modify a member
+
+## Current member template
+
+Member records live in `_members/`. Start from `_members/template`, make a new file with a unique, readable name, and complete the YAML fields.
+
+```yaml
+---
+# Full name
+name: Jane Doe
+
+# Profile photo
+image: images/members/jane-doe.jpg
+
+# Member role (choose ONE): pi, postdoc, phd, master, or staff
+role: phd
+
+# Short research description (2–4 sentences)
+description: >
+  Jane studies an example research topic using collaborative and
+  interdisciplinary methods. Her work focuses on a concise description
+  written for a general audience.
+
+links:
+  home-page: https://example.org
+  orcid: 0000-0000-0000-0000
+  google-scholar: ExampleScholarID
+  github: example-username
+---
+```
+
+The roles currently displayed by `team/index.md` are:
+
+- `pi` — Lab Head;
+- `postdoc` — Postdoctoral Fellows;
+- `phd` — PhD Students;
+- `master` — Master's Students; and
+- `staff` — Research Staff.
+
+Role values must be lowercase and exactly match one of these codes. Although the underlying template may contain or support other values such as `alumni`, a role appears publicly only when the People page contains a corresponding filtered section.
+
+## Add the portrait
+
+1. Prepare a clear square or easily cropped portrait, ideally in JPG or PNG format.
+2. Use a lowercase descriptive filename such as `jane-doe.jpg`; avoid spaces and accents.
+3. Place it in `images/members/`.
+4. Set `image:` to the exact relative path and match the filename's capitalization.
+
+The current portrait design crops images to a circle. Keep the face reasonably centered and avoid placing important content near the corners.
+
+## Complete links correctly
+
+- `home-page` requires the complete URL, including `https://`.
+- `orcid` requires the ORCID identifier, not necessarily the full URL.
+- `google-scholar` requires the scholar ID, not the entire profile URL.
+- `github` requires the username only.
+- Leave a value empty if the person does not have that profile; do not invent placeholder links in a live record.
+
+## Modify an existing member
+
+Edit the person's existing file rather than creating a duplicate. If the portrait is replaced but keeps the same filename, browser caching may temporarily display the old image. A new descriptive filename and matching YAML update make the change unambiguous.
+
+Validate the opening and closing `---`, indentation, colon placement, and spelling of `role`. YAML errors can stop the site build.
+
+> **Screenshot placeholder — member update:** Insert screenshots of a member file, its portrait in `images/members/`, and the resulting People card.
+
+# Add a publication
+
+The current website uses **one publications page**, `publications/index`, with publications grouped manually under year headings. Do not create a separate page for each year unless the lab intentionally changes the architecture.
+
+1. Open `publications/index`.
+2. Find the newest year heading or add it above older years.
+3. Add the reference as a Markdown list item.
+4. Italicize journal or title elements consistently with existing entries.
+5. Add the DOI as a clickable HTTPS link when available.
+
+```markdown
+## 2026
+
+- Doe, J., & Smith, A. (2026). *Title of the article*. *Journal Name, 12*(3), 100–110. [https://doi.org/10.xxxx/example](https://doi.org/10.xxxx/example)
+
+## 2025
+
+- Existing older publication...
+```
+
+Keep reverse chronological order: newest year first and, preferably, newest item first within a year. Confirm author names, year, title, journal, volume, issue, pages/article number, and DOI against the final publication record.
+
+The repository also contains citation automation and data under `_cite/` and `_data/`. Those template mechanisms exist even though the current public publications page is maintained as a single year-organized page. Do not edit generated citation data unless the selected maintenance workflow specifically requires it.
+
+> **Screenshot placeholder — publication:** Insert before-and-after screenshots of the relevant year in `publications/index` and the rendered Publications page.
+
+# Add a news item
+
+News items are Markdown files in `_posts/`. The filename must start with an ISO date:
+
+```text
+YYYY-MM-DD-short-descriptive-title.md
+```
+
+For example:
+
+```text
+2026-09-15-autism-conference-presentation.md
+```
+
+Use front matter consistent with the current posts:
+
+```yaml
+---
+title: MCLab presents at the 2026 Autism Research Conference
+image: images/conference-2026.jpg
+author: adeline-lacroix
+tags: conference, presentation, autism
+---
+
+MCLab members presented their recent work at the 2026 Autism Research
+Conference. Add a concise, accessible account of the event here.
+```
+
+The date in the filename controls post chronology. The `author` should correspond to a valid member identifier expected by the template; inspect existing working posts and member filenames before choosing it. The image path must exist. Tags are comma-separated in the current examples.
+
+Use meaningful link text rather than pasting long URLs into the prose:
+
+```markdown
+Read the [conference programme](https://example.org/programme) for details.
+```
+
+> **Screenshot placeholder — news:** Insert screenshots of a correctly named `_posts` file and its rendered News page.
+
+# Replace images
+
+Images are stored under `images/`, with portraits under `images/members/`. To replace an image:
+
+1. Identify the exact source file that references it by searching the repository for its filename.
+2. Prepare an optimized JPG, PNG, SVG, or WebP appropriate to the use.
+3. Use a lowercase, descriptive filename without spaces when adding a new asset.
+4. Add the image under `images/` or its relevant subfolder.
+5. Update every reference to match the path and capitalization exactly.
+6. Review both desktop and mobile layouts in the generated preview.
+
+Example Markdown:
+
+```markdown
+![Descriptive alternative text]({{ 'images/new-image.jpg' | relative_url }})
+```
+
+Example HTML/Liquid, useful when the displayed width must be controlled:
+
+```html
+<div style="max-width: 850px; margin: 30px auto;">
+  <img
+    src="{{ 'images/team.JPG' | relative_url }}"
+    alt="MCLab team"
+    style="width: 100%; height: auto; border-radius: 4px;"
+  >
+</div>
+```
+
+Always include useful alternative text. Compress very large photographs before committing them. Be careful with `team.JPG`: changing `.JPG` to `.jpg` without renaming the actual file breaks the image on GitHub's case-sensitive environment.
+
+> **Screenshot placeholder — images:** Insert a screenshot showing an image file and the exact matching path in the page source.
+
+# GitHub Actions and deployment
+
+Deployment is automatic. Contributors normally edit source files and should not manually edit the generated `gh-pages` branch.
+
+The current workflow is:
+
+1. A pull request triggers `.github/workflows/on-pull-request.yaml`.
+2. Citation-related processing runs, and `build-preview.yaml` builds a Jekyll preview for review.
+3. When approved changes are merged or pushed to `main`, `.github/workflows/on-push.yaml` runs.
+4. `build-site.yaml` installs the Ruby dependencies, builds the production Jekyll site, and deploys the generated `_site` folder to `gh-pages`.
+5. GitHub Pages serves the content from the deployment branch.
+
+There are also scheduled citation-update and URL-maintenance workflows. These template and automation files may not correspond to visible pages, but they support maintenance and deployment.
+
+To inspect a run:
+
+1. Open the repository on GitHub.
+2. Select the **Actions** tab.
+3. Open the most recent workflow run.
+4. Expand the failed job and step if a red failure icon appears.
+
+Do not commit `_site/` to `main`; it is generated during the workflow. Do not make manual fixes on `gh-pages`, because a later deployment can overwrite them.
+
+> **Screenshot placeholder — deployment:** Insert screenshots of the Actions tab, a successful `on-push` run, and the deployed GitHub Pages environment.
+
+# Troubleshooting
+
+## The public site did not update
+
+Check these points in order:
+
+1. Run `git status`. Confirm the intended changes were committed, not merely saved locally.
+2. Run `git log -1 --oneline`. Confirm the latest local commit is the expected one.
+3. Confirm the commit was pushed and appears on GitHub.
+4. Confirm the change was merged into `main`; a branch or open pull request does not update the live site.
+5. Open GitHub **Actions** and check the latest `on-push` and build jobs.
+6. Wait a few minutes after a successful deployment, then reload the site.
+7. Perform a hard refresh or use a private browser window to rule out cached content or images.
+8. Confirm that the expected URL is being viewed, not an old pull-request preview.
+
+Useful comparison commands:
+
+```{bash}
+git status
+git branch --show-current
+git log -1 --oneline
+git fetch origin
+git status -sb
+```
+
+## Jekyll or Liquid build error
+
+Open the failed GitHub Actions step and read the first meaningful error, including its file and line number. Later messages are often consequences of the first problem.
+
+Common causes include:
+
+- missing or unmatched `---` around YAML front matter;
+- incorrect YAML indentation or a colon in unquoted text;
+- an invalid role, missing required value, or malformed list;
+- unclosed Liquid syntax such as `{% ... %}` or `{{ ... }}`;
+- an unclosed HTML tag;
+- a missing include or layout;
+- a filename/path capitalization mismatch; and
+- references to an image that was not committed.
+
+Inspect the precise change:
+
+```{bash}
+git diff
+git diff --check
+```
+
+If Ruby and Bundler are installed locally, reproduce the production build from the repository root:
+
+```{bash}
+bundle install
+bundle exec jekyll build
+```
+
+For a local server:
+
+```{bash}
+bundle exec jekyll serve
+```
+
+Then open the local address reported in Terminal. Stop the server with **Control-C**. Local build tooling is helpful but not required for ordinary edits because the pull-request workflow provides a preview.
+
+## SSH authentication fails
+
+```{bash}
+ssh -T git@github.com
+ssh-add -l
+git remote -v
+```
+
+Confirm that the public key is attached to the correct GitHub account, the private key is loaded, and the remote begins with `git@github.com:`. If Git uses an HTTPS remote, either authenticate over HTTPS or deliberately change it to SSH:
+
+```{bash}
+git remote set-url origin git@github.com:MCLabToronto/lab-website.git
+```
+
+## Push is rejected
+
+A rejection often means that GitHub contains newer commits or the branch is protected. Do not force-push to `main`.
+
+For a normal working branch, first save/commit the current work, update `main`, and integrate it carefully:
+
+```{bash}
+git switch main
+git pull origin main
+git switch your-branch-name
+git merge main
+```
+
+Resolve any conflicts, test the files, then commit the resolution and push. If branch protection requires a pull request, open one rather than pushing directly to `main`.
+
+## Merge conflict
+
+Git marks conflicting areas with `<<<<<<<`, `=======`, and `>>>>>>>`. Read both versions, keep the correct combined content, remove all markers, then stage and commit the resolved file.
+
+```{bash}
+git status
+git add path/to/resolved-file
+git commit -m "Resolve merge conflict"
+git push
+```
+
+Ask another maintainer for review if the conflict affects templates, workflows, configuration, or unfamiliar code.
+
+## Image is missing or outdated
+
+- Verify the path and exact capitalization.
+- Confirm the image was included in the commit and push.
+- Check that the page references the repository-relative image path.
+- Reload without cache or use a new filename if a same-name replacement is cached.
+- Avoid spaces and special characters in new filenames.
+
+# Git command reference
+
+| Command | Purpose |
+|---|---|
+| `git clone git@github.com:MCLabToronto/lab-website.git` | Create the initial local copy |
+| `git status` | Show branch and working-tree state without changing anything |
+| `git switch main` | Switch to the main branch |
+| `git pull origin main` | Download and integrate the latest `main` commits |
+| `git switch -c branch-name` | Create and switch to a new branch |
+| `git branch --show-current` | Print the current branch name |
+| `git diff` | Review unstaged changes |
+| `git diff --staged` | Review staged changes |
+| `git add path/to/file` | Stage a selected file for the next commit |
+| `git commit -m "Message"` | Record staged changes locally |
+| `git push -u origin branch-name` | Publish a new branch and set its upstream |
+| `git push` | Publish later commits on a tracked branch |
+| `git fetch origin` | Download remote information without integrating it |
+| `git log --oneline --decorate -10` | Show a compact recent history |
+| `git remote -v` | Show remote repository addresses |
+| `git restore --staged path/to/file` | Remove a file from staging without deleting its edits |
+| `git branch -d branch-name` | Delete a fully merged local branch |
+
+Use destructive or history-rewriting commands only when their consequences are fully understood. In particular, colleagues should not use `git push --force`, `git reset --hard`, or manual changes to `gh-pages` as routine troubleshooting.
+
+# Final pre-pull-request checklist
+
+- The branch began from an up-to-date `main`.
+- Only files relevant to the change were edited.
+- New filenames contain no spaces and use consistent capitalization.
+- YAML front matter has valid delimiters and indentation.
+- Image and link paths are correct.
+- Member roles use the exact supported lowercase code.
+- Publications are in the correct year and order.
+- News filenames begin with `YYYY-MM-DD-`.
+- `git diff` and `git status` show no accidental changes.
+- The commit message clearly describes the change.
+- The branch was pushed and a pull request was opened.
+- Automated checks and the preview were reviewed before merging.
+
+# Maintaining this documentation
+
+Update this file when the website structure, member schema, contribution policy, or deployment process changes. Because the architecture may evolve in response to lab feedback, confirm examples against the current repository before relying on them for major changes. Keep screenshots current and avoid documenting template internals as public features unless those features are actually enabled on the MCLab website.
