@@ -26,7 +26,7 @@ We study neurodiversity through multidisciplinary, collaborative, and neuroaffir
 
 {%
   include feature.html
-  image="images/photo.jpg"
+  image="images/wordCLoud.png"
   link="research"
   title="Our Research"
   text=text
@@ -74,7 +74,7 @@ The MCLab brings together researchers and trainees with varied expertise, backgr
 
 {%
   include feature.html
-  image="images/photo.jpg"
+  image="images/team2025-display.jpg"
   link="team"
   title="Our Team"
   text=text
