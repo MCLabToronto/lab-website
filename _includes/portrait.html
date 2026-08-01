@@ -9,9 +9,7 @@
 
 {% assign type = site.data.types[member.role] %}
 {% assign homepage = member.links["home-page"] %}
-{% assign orcid = member.links.orcid %}
 {% assign scholar = member.links["google-scholar"] %}
-{% assign github = member.links.github %}
 
 <div class="portrait-wrapper">
 
@@ -49,7 +47,7 @@
       </span>
     {% endif %}
 
-    {% if homepage or orcid or scholar or github %}
+    {% if homepage or scholar %}
       <div class="portrait-links" aria-label="Links for {{ member.name }}">
 
       {% if homepage %}
@@ -60,19 +58,7 @@
           aria-label="{{ member.name }} website"
           title="Website"
         >
-          {% include icon.html icon="fa-solid fa-globe" %}
-        </a>
-      {% endif %}
-
-      {% if orcid %}
-        <a
-          href="https://orcid.org/{{ orcid }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="{{ member.name }} ORCID"
-          title="ORCID"
-        >
-          {% include icon.html icon="fa-brands fa-orcid" %}
+          Website
         </a>
       {% endif %}
 
@@ -84,19 +70,7 @@
           aria-label="{{ member.name }} Google Scholar"
           title="Google Scholar"
         >
-          {% include icon.html icon="fa-solid fa-graduation-cap" %}
-        </a>
-      {% endif %}
-
-      {% if github %}
-        <a
-          href="https://github.com/{{ github }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="{{ member.name }} GitHub"
-          title="GitHub"
-        >
-          {% include icon.html icon="fa-brands fa-github" %}
+          Google Scholar
         </a>
       {% endif %}
 

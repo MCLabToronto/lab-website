@@ -18,15 +18,11 @@ role:
 description: >
 
 links:
-  # Personal or institutional website
+  # Optional links displayed below the member description
+
+  # Personal or institutional website (complete URL)
   home-page:
 
-  # ORCID ID (e.g. 0000-0002-4655-3773)
-  orcid:
-
-  # Google Scholar ID (e.g. tfJPoc4AAAAJ)
+  # Google Scholar profile ID only (e.g. tfJPoc4AAAAJ)
   google-scholar:
-
-  # GitHub username only (e.g. octocat)
-  github:
 ---
