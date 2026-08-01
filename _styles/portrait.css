@@ -97,7 +97,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 14px;
+  flex-wrap: wrap;
+  gap: 8px 14px;
   margin-top: 14px;
 }
 
@@ -105,19 +106,18 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 999px;
+  padding: 3px 0;
+  border-bottom: 1px solid currentColor;
   color: var(--primary);
-  background: var(--background-alt);
+  font-size: 0.9rem;
+  font-weight: var(--semi-bold);
   text-decoration: none;
-  transition: transform var(--transition), background var(--transition);
+  transition: color var(--transition), transform var(--transition);
 }
 
 .portrait-links a:hover,
 .portrait-links a:focus-visible {
-  color: var(--background);
-  background: var(--primary);
+  color: var(--text);
   transform: translateY(-2px);
 }
 
