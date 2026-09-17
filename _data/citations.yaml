@@ -1,282 +1,1138 @@
 # DO NOT EDIT, GENERATED AUTOMATICALLY
+# Source: Google Scholar profiles listed in _members/
 
-- id: doi:10.1016/j.patter.2026.101514
-  title: Scalable data harmonization for single-cell image-based profiling with CytoTable
+- id: scholar:a64e57ae1cde064d
+  title: '“Unwritten Rules are Everywhere”: Autistic Adults’ Social Experiences in the Transition to Adulthood'
   authors:
-  - Dave Bunten
-  - Jenna Tomkinson
-  - Erik Serrano
-  - Michael J. Lippincott
-  - Kenneth I. Brewer
-  - Vince Rubinetti
-  - Faisal Alquaddoomi
-  - Gregory P. Way
-  publisher: Patterns
-  date: '2026-05-01'
-  link: https://doi.org/hbvg3p
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1101/2025.06.19.660613
-  title: Scalable data harmonization for single-cell image-based profiling with CytoTable
-  authors:
-  - Dave Bunten
-  - Jenna Tomkinson
-  - Erik Serrano
-  - Michael J. Lippincott
-  - Kenneth I. Brewer
-  - Vince Rubinetti
-  - Faisal Alquaddoomi
-  - Gregory P. Way
-  publisher: openRxiv
-  date: '2025-06-25'
-  link: https://doi.org/g9rfr3
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1093/nar/gkad1082
-  title: "The Monarch Initiative in 2024: an analytic platform integrating phenotypes,\
-    \ genes\_and diseases across species"
-  authors:
-  - Tim E Putman
-  - Kevin Schaper
-  - Nicolas Matentzoglu
-  - "Vincent\_P Rubinetti"
-  - "Faisal\_S Alquaddoomi"
-  - Corey Cox
-  - J Harry Caufield
-  - Glass Elsarboukh
-  - Sarah Gehrke
-  - Harshad Hegde
-  - "Justin\_T Reese"
-  - Ian Braun
-  - "Richard\_M Bruskiewich"
-  - Luca Cappelletti
-  - Seth Carbon
-  - "Anita\_R Caron"
-  - "Lauren\_E Chan"
-  - "Christopher\_G Chute"
-  - "Katherina\_G Cortes"
-  - "Vin\xEDcius De\_Souza"
-  - Tommaso Fontana
-  - "Nomi\_L Harris"
-  - "Emily\_L Hartley"
-  - Eric Hurwitz
-  - "Julius\_O B Jacobsen"
-  - Madan Krishnamurthy
-  - "Bryan\_J Laraway"
-  - "James\_A McLaughlin"
-  - "Julie\_A McMurry"
-  - "Sierra\_A T Moxon"
-  - "Kathleen\_R Mullen"
-  - "Shawn\_T O\u2019Neil"
-  - "Kent\_A Shefchek"
-  - Ray Stefancsik
-  - Sabrina Toro
-  - "Nicole\_A Vasilevsky"
-  - "Ramona\_L Walls"
-  - "Patricia\_L Whetzel"
-  - David Osumi-Sutherland
-  - Damian Smedley
-  - "Peter\_N Robinson"
-  - "Christopher\_J Mungall"
-  - "Melissa\_A Haendel"
-  - "Monica\_C Munoz-Torres"
-  publisher: Nucleic Acids Research
-  date: '2023-11-24'
-  link: https://doi.org/gs6kmr
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1101/2023.10.11.560955
-  title: Integration of 168,000 samples reveals global patterns of the human gut microbiome
-  authors:
-  - Richard J. Abdill
-  - Samantha P. Graham
-  - Vincent Rubinetti
-  - Frank W. Albert
-  - Casey S. Greene
-  - Sean Davis
-  - Ran Blekhman
-  publisher: openRxiv
-  date: '2023-10-11'
-  link: https://doi.org/gsvf5z
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1093/nar/gkad289
-  title: 'MyGeneset.info: an interactive and programmatic platform for community-curated
-    and user-created collections of genes'
-  authors:
-  - Ricardo Avila
-  - Vincent Rubinetti
-  - Xinghua Zhou
-  - Dongbo Hu
-  - Zhongchao Qian
-  - Marco Alvarado Cano
-  - Everaldo Rodolpho
-  - Ginger Tsueng
-  - Casey Greene
-  - Chunlei Wu
-  publisher: Nucleic Acids Research
-  date: '2023-04-18'
-  link: https://doi.org/gr5hb5
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1101/2023.01.05.522941
-  title: Hetnet connectivity search provides rapid insights into how two biomedical
-    entities are related
-  authors:
-  - Daniel S. Himmelstein
-  - Michael Zietz
-  - Vincent Rubinetti
-  - Kyle Kloster
-  - Benjamin J. Heil
-  - Faisal Alquaddoomi
-  - Dongbo Hu
-  - David N. Nicholson
-  - Yun Hao
-  - Blair D. Sullivan
-  - Michael W. Nagle
-  - Casey S. Greene
-  publisher: openRxiv
-  date: '2023-01-07'
-  link: https://doi.org/grmcb9
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1093/gigascience/giad047
-  title: Hetnet connectivity search provides rapid insights into how biomedical entities
-    are related
-  authors:
-  - Daniel S Himmelstein
-  - Michael Zietz
-  - Vincent Rubinetti
-  - Kyle Kloster
-  - Benjamin J Heil
-  - Faisal Alquaddoomi
-  - Dongbo Hu
-  - David N Nicholson
-  - Yun Hao
-  - Blair D Sullivan
-  - Michael W Nagle
-  - Casey S Greene
-  publisher: GigaScience
-  date: '2022-12-28'
-  link: https://doi.org/gsd85n
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1101/2022.02.18.461833
-  title: 'MolEvolvR: A web-app for characterizing proteins using molecular evolution
-    and phylogeny'
-  authors:
-  - Faisal S Alquaddoomi
-  - Joseph T Burke
-  - Lo Sosinski
-  - David A Mayer
-  - Evan P Brenner
-  - Samuel Z Chen
-  - Jacob D Krol
-  - Ethan P Wolfe
-  - Vincent P Rubinetti
-  - Shaddai Amolitos
-  - Kellen M Reason
-  - John B Johnston
-  - Janani Ravi
-  publisher: openRxiv
-  date: '2022-02-22'
-  link: https://doi.org/gstx7j
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1186/s13059-020-02021-3
-  title: Compressing gene expression data using multiple latent space dimensionalities
-    learns complementary biological representations
-  authors:
-  - Gregory P. Way
-  - Michael Zietz
-  - Vincent Rubinetti
-  - Daniel S. Himmelstein
-  - Casey S. Greene
-  publisher: Genome Biology
-  date: '2020-05-11'
-  link: https://doi.org/gg2mjh
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1371/journal.pcbi.1007128
-  title: Open collaborative writing with Manubot
-  authors:
-  - Daniel S. Himmelstein
-  - Vincent Rubinetti
-  - David R. Slochower
-  - Dongbo Hu
-  - Venkat S. Malladi
-  - Casey S. Greene
-  - Anthony Gitter
-  publisher: PLOS Computational Biology
-  date: '2020-12-04'
-  link: https://doi.org/c7np
-  orcid: 0000-0002-4655-3773
-  plugin: sources.py
-  file: sources.yaml
+  - SM Wolpe
+  - IS Tien
+  publisher: International Journal of Disability, Development and Education, 1-21, 2026
+  date: '2026-01-01'
+  year: '2026'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:Zph67rFs4hoC
   type: paper
-  description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed
-    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  image: https://journals.plos.org/ploscompbiol/article/figure/image?size=inline&id=info:doi/10.1371/journal.pcbi.1007128.g001&rev=2
-  buttons:
-  - type: manubot
-    link: https://greenelab.github.io/meta-review/
-  - type: source
-    text: Manuscript Source
-    link: https://github.com/greenelab/meta-review
-  - type: website
-    link: http://manubot.org/
-  tags:
-  - open science
-  - collaboration
-  repo: greenelab/meta-review
-- id: doi:10.1101/573782
-  title: Sequential compression of gene expression across dimensionalities and methods
-    reveals no single best method or dimensionality
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:b52327602870882a
+  title: '“Only boys can be autistic”: A qualitative exploration of gender stereotype and socialization on the diagnostic journey'
   authors:
-  - Gregory P. Way
-  - Michael Zietz
-  - Vincent Rubinetti
-  - Daniel S. Himmelstein
-  - Casey S. Greene
-  publisher: openRxiv
-  date: '2019-03-11'
-  link: https://doi.org/gfxjxf
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1016/j.csbj.2020.05.017
-  title: Constructing knowledge graphs and their biomedical applications
+  - I Tien
+  - A Pearson
+  - S Sozeri
+  - K Seers
+  publisher: Autism in Adulthood 8 (4), 698-709, 2026
+  date: '2026-01-01'
+  year: '2026'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:UebtZRa9Y70C
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:ff17f01d220b207e
+  title: Visualizing sex differences in school aged youth on the ADOS-2 using a latent space item response model
   authors:
-  - David N. Nicholson
-  - Casey S. Greene
-  publisher: Computational and Structural Biotechnology Journal
+  - I Tien
+  - J Luo
+  - Y Huang
+  - M Jeon
+  publisher: Research in Autism 136, 202948, 2026
+  date: '2026-01-01'
+  year: '2026'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:ULOm3_A8WrAC
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:55ddb9b849198285
+  title: 'Subtle and unseen: Understanding the nuanced autism profiles in female individuals'
+  authors:
+  - A Lacroix
+  - MC Lai
+  publisher: Annales Médico-psychologiques, revue psychiatrique, 2026
+  date: '2026-01-01'
+  year: '2026'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:rO6llkc54NcC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:4c833aa477cef989
+  title: 'School participation in autistic girls and boys: The role of social-communication abilities and extrinsic barriers'
+  authors:
+  - A Lacroix
+  - M Burnel
+  - M Baciu
+  - P Occelli
+  - M Perrone-Bertolotti
+  - M David
+  - '...'
+  publisher: Autism 30 (5), 1242-1262, 2026
+  date: '2026-01-01'
+  year: '2026'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:HoB7MX3m0LUC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:257e0fff4ae707e3
+  title: Needs assessment of medical curricula development for patients with physical, intellectual, and/or developmental disabilities or non-english language preferences
+  authors:
+  - I Tien
+  - O Abubakare
+  - E Hotez
+  - S Duan
+  - D Nunez
+  - E Lawrence
+  - S Steffin
+  - '...'
+  publisher: BMC Medical Education, 2026
+  date: '2026-01-01'
+  year: '2026'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:4TOpqqG69KYC
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:f3ca5dedbc679dec
+  title: 'Gender differences: Confirmatory factor analysis of the ADOS-II'
+  authors:
+  - IS Tien
+  - J Kim
+  - AR Johnson
+  - JJ Wood
+  publisher: Journal of Autism and Developmental Disorders 56 (5), 2072-2076, 2026
+  date: '2026-01-01'
+  year: '2026'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:eQOLeE2rZwMC
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:244bca8d0583eec7
+  title: 'Divergent Perceptions of Autistic Parents Among Health Care, Social Care, and Judicial Professionals and Autistic Adults: A Participatory Study'
+  authors:
+  - A Lacroix
+  - W Vallet
+  - MC Lai
+  - D Langloys
+  - M Pignard
+  - J Brunelin
+  - '...'
+  publisher: Autism in Adulthood, 25739581261457376, 2026
+  date: '2026-01-01'
+  year: '2026'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:SeFeTyx0c_EC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:4d6f5000eeb519d2
+  title: Challenging the predictive coarse-to-fine hypothesis in emotional face perception
+  authors:
+  - A Leclerc
+  - A Lacroix
+  - M Mermillod
+  - L Kauffmann
+  - P Favre
+  publisher: Visual Cognition, 1-17, 2026
+  date: '2026-01-01'
+  year: '2026'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:M05iB0D1s5AC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:939e7aefce3c83cc
+  title: Autistic patients (vol 197, pg E722, 2025)
+  authors:
+  - LLY Man
+  - A Lacroix
+  publisher: CANADIAN MEDICAL ASSOCIATION JOURNAL 198 (4), E135-E135, 2026
+  date: '2026-01-01'
+  year: '2026'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:pqnbT2bcN3wC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:115196214dd93344
+  title: '“Neurodivergent people just get each other”: Navigating friendship and community in the transition to adulthood for autistic adults'
+  authors:
+  - SM Wolpe
+  - IS Tien
+  - MN Lee
+  - S Sozeri
+  - IM Humphrey
+  publisher: Research in Autism 128, 202692, 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:MXK_kJrjxJIC
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:a48f4026d4760a77
+  title: '“Creating a socially acceptable version of myself”: A qualitative thematic analysis of the female and nonbinary experience of navigating the autism diagnostic system'
+  authors:
+  - I Tien
+  - S Wolpe
+  - A Pearson
+  - K Seers
+  publisher: Neurodiversity 3, 27546330241306380, 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:Se3iqnhoufwC
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:580fb39df23def20
+  title: What Do Autistic Parents Really Need? a Participatory Study Revealing Diverging Perspectives between Autistic Individuals and Professionals
+  authors:
+  - A Lacroix
+  - G Lio
+  - D Langloys
+  - M Pignard
+  - M Dubreucq
+  - C Demily
+  publisher: INSAR 2025, 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:35N4QoGY0k4C
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:8edd9e7cb2756f72
+  title: Treatment of menopausal vasomotor symptoms and sensory issues in a 53-year-old autistic woman–a case report
+  authors:
+  - A Rynkiewicz
+  - E Ferensztajn-Rochowiak
+  - RL Moseley
+  - JM Gamble-Turner
+  - '...'
+  publisher: Psychiatria i Psychologia Kliniczna 24 (4), 356-362, 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:NaGl4SEjCO4C
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:56deaa113d1bab96
+  title: Sex Differences in Autism Symptoms and Mental Health Difficulties in Adolescents with Rare Genetic Disorders
+  authors:
+  - IS Tien
+  - S Orm
+  - JJ Wood
+  - EW Skogli
+  - KW Fjermestad
+  publisher: Advances in Neurodevelopmental Disorders 9 (1), 130-139, 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:WF5omc3nYNoC
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:2f32ddec6cecf2ab
+  title: Practitioner adherence and competence in MEYA, a free online self-instruction program in modular psychotherapy and counseling for children’s autism-related clinical needs
+  authors:
+  - JJ Wood
+  - KS Wood
+  - KA Rosenau
+  - AC Cho
+  - AR Johnson
+  - VS Muscatello
+  - '...'
+  publisher: Journal of Autism and Developmental Disorders 55 (2), 472-486, 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:Y0pCki6q_DkC
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:93a14f944ddef5e0
+  title: Pour une recherche participative dans le trouble du spectre de l’autisme
+  authors:
+  - M Pieron
+  - A Lacroix
+  - S Chokron
+  - C Demily
+  publisher: L'Encéphale, 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:O3NaXMp0MMsC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:c4ddaeed5f78f158
+  title: Patients et patientes autistes
+  authors:
+  - LLY Man
+  - A Lacroix
+  - MC Lai
+  publisher: Canadian Medical Association Journal 197 (31), E1020-E1021, 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:2P1L_qKh6hAC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:3a9999b62b212f56
+  title: Participatory research into autism spectrum disorder
+  authors:
+  - M Pieron
+  - A Lacroix
+  - S Chokron
+  - C Demily
+  publisher: L'encephale 51 (5), 563-565, 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:ns9cj8rnVeAC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:dda03da546c50dc2
+  title: How Diagnostically Accurate are# Autism Portrayals? A Latent Space Item Response Modeling Approach
+  authors:
+  - I Tien
+  - S Wolpe
+  - Y Huang
+  - S Sozeri
+  - M Lee
+  - M Jeong
+  publisher: Journal of Autism and Developmental Disorders, 1-14, 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:kNdYIx-mwKoC
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:1910702da9710930
+  title: Examining diagnostic trends and gender differences in the ADOS-II
+  authors:
+  - IS Tien
+  - AR Johnson
+  - J Kim
+  - JJ Wood
+  publisher: Journal of autism and developmental disorders 55 (1), 1-9, 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:Tyk-4Ss8FVUC
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:d4a13a6765ec87f2
+  title: Estimating the efficacy of CBT for children on the autism spectrum using a home-based video assessment of autism-related solitary behavior
+  authors:
+  - SM Wolpe
+  - IS Tien
+  - JJ Wood
+  publisher: Child Psychiatry & Human Development, 1-7, 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:hqOjcs7Dif8C
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:df2f97fdeef27e19
+  title: 'Disproportionate mental health risks in autistic females: A rapid review with quantitative and narrative syntheses'
+  authors:
+  - A Lacroix
+  - CC Tzang
+  - JX Yu
+  - BK Jacob
+  - M Alexandrovsky
+  - A Winge-Breen
+  - '...'
+  publisher: Frontiers in Neuroendocrinology, 101229, 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:70eg2SAEIzsC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:7aadf8e162c58201
+  title: 'Differentiation of autistic adults’ perceptions of research by gender: a mixed methods exploration'
+  authors:
+  - SM Wolpe
+  - IS Tien
+  - NM Lee
+  - S Sozeri
+  publisher: Advances in Autism 11 (3), 147-158, 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:0EnyYjriUFMC
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:1f091685029e3429
+  title: 'Differentiation of autistic adults’ perceptions of research by gender: a mixed methods'
+  authors:
+  - SM Wolpe
+  - IS Tien
+  - NM Lee
+  publisher: Advances in Autism, ahead-of-print (ahead-of-print), 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:YOwf2qJgpHMC
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:afd5ce3ff3ca5cf4
+  title: 'Designing resilient cities: Greenery, rectilinearity, and sociality as key factors in aesthetic preferences'
+  authors:
+  - R Ayral
+  - S Khazaz
+  - A Lacroix
+  - A Sharova
+  - F Dutheil
+  - M Mermillod
+  publisher: Acta Psychologica 260, 105741, 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:ldfaerwXgEUC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:e7835ab1b4494a39
+  title: 'Cognitive flexibility in autism: How task predictability and sex influence performances'
+  authors:
+  - A Lacroix
+  - E Torija
+  - A Logemann
+  - M Baciu
+  - R Cserjesi
+  - F Dutheil
+  - M Gomot
+  - '...'
+  publisher: Autism Research 18 (2), 281-294, 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:GnPB-g6toBAC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:f2365eee7966b57c
+  title: Autistic patients
+  authors:
+  - LLY Man
+  - A Lacroix
+  - MC Lai
+  publisher: Canadian Medical Association Journal 197 (25), E722-E723, 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:vV6vV6tmYwMC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:cfc662d1eba0cee9
+  title: 'Adapting the City to the Specific Sensory Needs of Autistic People: A Participatory Research Approach'
+  authors:
+  - M Pieron
+  - F Berland
+  - A Lacroix
+  - G Widmer
+  - MH Audier
+  - N Dollion
+  - '...'
+  publisher: INSAR 2025, 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:RYcK_YlVTxYC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:f0c8afd52542d36a
+  title: 'Acceptance, social preparation, and psychoeducation: Autistic young adults’ recommendations for transition to adulthood'
+  authors:
+  - SM Wolpe
+  - MN Lee
+  - J Koenig
+  - I Tien
+  - K McLean
+  publisher: Journal of autism and developmental disorders, 1-12, 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:3fE2CSJIrl8C
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:ba262f13751b8933
+  title: A qualitative exploration into diagnostic barriers of gender-diverse autistic individuals
+  authors:
+  - I Tien
+  - J Seibold
+  - A Pearson
+  - K Seers
+  publisher: Feminism & Psychology 35 (4), 555-575, 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:8k81kl-MbHgC
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:dd332755dbfd827d
+  title: A Neuro-Affirming Exploration of Friendships, Social Strengths, and Social Interactions for Autistic Youth and Young Adults
+  authors:
+  - IS Tien
+  publisher: University of California, Los Angeles, 2025
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:5nxA0vEk-isC
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:0f5585f51f6f2b25
+  title: 'Understanding cognitive flexibility in emotional evaluation in autistic males and females: The social context matters'
+  authors:
+  - A Lacroix
+  - Y Bennetot-Deveria
+  - M Baciu
+  - F Dutheil
+  - V Magnon
+  - M Gomot
+  - '...'
+  publisher: Molecular Autism 15 (1), 49, 2024
+  date: '2024-01-01'
+  year: '2024'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:BqipwSGYUEgC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:faa2ed14f3eccb64
+  title: 'Teaching parents via online asynchronous training to use speech-generating devices with their autistic children: A pilot study'
+  authors:
+  - L Fischbacher
+  - RL Dodds
+  - IS Tien
+  publisher: Children 11 (10), 1194, 2024
+  date: '2024-01-01'
+  year: '2024'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:ufrVoPGSRksC
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:ded0e3a85057d707
+  title: Special considerations for assessing and caring for autism in girls and women
+  authors:
+  - A Rynkiewicz
+  - S Zheng
+  - A Lacroix
+  publisher: Current Opinion in Psychiatry 37 (2), 71-77, 2024
+  date: '2024-01-01'
+  year: '2024'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:TFP_iSt0sucC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:6fcff01f989f5fdb
+  title: Sex modulation of faces prediction error in the autistic brain
+  authors:
+  - A Lacroix
+  - S Harquel
+  - M Mermillod
+  - M Garrido
+  - L Barbosa
+  - L Vercueil
+  - '...'
+  publisher: Communications Biology 7 (1), 127, 2024
+  date: '2024-01-01'
+  year: '2024'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:isC4tDSrTZIC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:0c6967b22b75e193
+  title: 'Reduced spatial frequency differentiation and sex‐related specificities in fearful face detection in autism: Insights from EEG and the predictive brain model'
+  authors:
+  - A Lacroix
+  - S Harquel
+  - LS Barbosa
+  - K Kovarski
+  - MI Garrido
+  - L Vercueil
+  - '...'
+  publisher: Autism Research 17 (9), 1778-1795, 2024
+  date: '2024-01-01'
+  year: '2024'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:hMod-77fHWUC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:3953929264bf60de
+  title: Leczenie objawów naczynioruchowych w menopauzie oraz problemów sensorycznych u 53-letniej autystycznej kobiety-opis przypadku.
+  authors:
+  - A Rynkiewicz
+  - E Ferensztajn-Rochowiak
+  - RL Moseley
+  - JM Gamble-Turner
+  - '...'
+  publisher: Journal of Psychiatry & Clinical Psychology/Psychiatria i Psychologia …, 2024
+  date: '2024-01-01'
+  year: '2024'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:J_g5lzvAfSwC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:d70812e94ec1069a
+  title: Autism and attention-deficit/hyperactivity symptoms as risk factors of school attendance problems in youth with rare genetic disorders
+  authors:
+  - S Orm
+  - I Tien
+  - J Wood
+  - K Fjermestad
+  publisher: Discover Psychology 4 (1), 183, 2024
+  date: '2024-01-01'
+  year: '2024'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:roLk4NBRz8UC
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:7d5f17c4c0964bdd
+  title: Viewing oneself during synchronous online learning increases appearance anxiety and decreases memory for lecture content
+  authors:
+  - IS Tien
+  - MN Imundo
+  - EL Bjork
+  publisher: Applied Cognitive Psychology 37 (2), 443-451, 2023
+  date: '2023-01-01'
+  year: '2023'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:u-x6o8ySG0sC
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:ab7af7f2c8b90eb9
+  title: Sex differences in atypical predictive processes from low spatial frequencies
+  authors:
+  - A Lacroix
+  - M Mermillod
+  - S Harquel
+  - M Garrido
+  - L Barbosa
+  - L Vercueil
+  - '...'
+  publisher: INSAR, 2023
+  date: '2023-01-01'
+  year: '2023'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:mB3voiENLucC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:38946d929fcbb484
+  title: Is the coarse-to-fine processing of fearful face impaired in autism?
+  authors:
+  - A Lacroix
+  - S Harquel
+  - K Kovarski
+  - L Barbosa
+  - M Garrido
+  - L Vercueil
+  - '...'
+  publisher: OHBM, 2023
+  date: '2023-01-01'
+  year: '2023'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:_Qo2XoVZTnwC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:5c16e3cb8272093f
+  title: Cognitive-behavioral therapy for children with autism and anxiety
+  authors:
+  - AR Johnson
+  - S Wolpe
+  - IS Tien
+  - VS Muscatello
+  - JJ Wood
+  publisher: Handbook of lifespan cognitive behavioral therapy, 181-191, 2023
+  date: '2023-01-01'
+  year: '2023'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:9yKSN-GCB0IC
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:0fd5caf1c0846857
+  title: Autisme et recherche participative
+  authors:
+  - A Lacroix
+  publisher: 'L''autisme: de l''enfance à l''âge adulte, 2023'
+  date: '2023-01-01'
+  year: '2023'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:iH-uZ7U-co4C
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:395ebb745b13e9c7
+  title: 'Autisme au féminin: Approches historique et scientifique, regards cliniques'
+  authors:
+  - A Lacroix
+  publisher: UGA Éditions, 2023
+  date: '2023-01-01'
+  year: '2023'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:RHpTSmoSYBkC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:c1feb268d3ea4b0a
+  title: 'Autism Spectrum Disorder Variation by Gender: Examining Diagnostic Trends in the Autism Diagnostic Observation Schedule II Using Multilevel Modeling and Confirmatory Factor …'
+  authors:
+  - IS Tien
+  publisher: University of California, Los Angeles, 2023
+  date: '2023-01-01'
+  year: '2023'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:LkGwnXOMwfcC
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:99a8f2da8f92cd4b
+  title: 'Autism Spectrum Disorder Variation by Gender: Examining Diagnostic Trends in the Autism'
+  authors:
+  - IS Tien
+  publisher: ''
+  date: '2023-01-01'
+  year: '2023'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:_kc_bZDykSQC
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:e098ee6a358263ca
+  title: 3 Questions à…:«Les femmes autistes sont sous-diagnostiquées»
+  authors:
+  - A Lacroix
+  - M Olano
+  publisher: Sciences Humaines 362 (9), 14-14, 2023
+  date: '2023-01-01'
+  year: '2023'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:g5m5HwL7SMYC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:4a31d7294ba3a7c4
+  title: Être femme et autiste
+  authors:
+  - A Lacroix
+  publisher: 20e Congrès de l'Encéphale, 2022
+  date: '2022-01-01'
+  year: '2022'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:j3f4tGmQtD8C
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:9d9af44ab3d116ca
+  title: 'The predictive role of low spatial frequencies in automatic face processing: A visual mismatch negativity investigation'
+  authors:
+  - A Lacroix
+  - S Harquel
+  - M Mermillod
+  - L Vercueil
+  - D Alleysson
+  - F Dutheil
+  - '...'
+  publisher: Frontiers in Human Neuroscience 16, 838454, 2022
+  date: '2022-01-01'
+  year: '2022'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:7PzlFSSx8tAC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:cec99ccf4cfe95bb
+  title: Processus prédictifs lors du traitements de stimuli socio-émotionnels chez les adultes autistes
+  authors:
+  - A Lacroix
+  publisher: Université Grenoble Alpes [2020-....], 2022
+  date: '2022-01-01'
+  year: '2022'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:-f6ydRqryjwC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:37592ae09f99efcb
+  title: 'La recherche participative: comment avoir une réelle co-construction avec les personnes autistes'
+  authors:
+  - M Dubreucq
+  - A Lacroix
+  - M Pignard
+  - D Langloys
+  - C Demily
+  publisher: Journées Neurosciences Psychiatrie Neurologie, 2022
+  date: '2022-01-01'
+  year: '2022'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:4JMBOYKVnBMC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:7627aedfa72a3d28
+  title: 'High spatial frequencies disrupt conscious visual recognition: evidence from an attentional blink paradigm'
+  authors:
+  - M Mermillod
+  - MJR Perrier
+  - A Lacroix
+  - L Kauffmann
+  - C Peyrin
+  - A Méot
+  - '...'
+  publisher: Heliyon 8 (12), 2022
+  date: '2022-01-01'
+  year: '2022'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:QIV2ME_5wuYC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:955a5a161ee320d0
+  title: Global scale ECHO Autism model enhancing healthcare for females with autism spectrum disorder (ASD) during their transition into adulthood
+  authors:
+  - A Rynkiewicz
+  - K Sohl
+  - RA Vasa
+  - AB Curran
+  - A Lacroix
+  - G Klecha
+  - J Klecha
+  - '...'
+  publisher: 13th Autism Europe International Congress, 2022
+  date: '2022-01-01'
+  year: '2022'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:e5wmG9Sq2KIC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:a27237cad3e1954e
+  title: 'Flexibility in autism during unpredictable shifts of socio-emotional stimuli: Investigation of group and sex differences'
+  authors:
+  - A Lacroix
+  - F Dutheil
+  - A Logemann
+  - R Cserjesi
+  - C Peyrin
+  - B Biro
+  - M Gomot
+  - '...'
+  publisher: Autism 26 (7), 1681-1697, 2022
+  date: '2022-01-01'
+  year: '2022'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:YOwf2qJgpHMC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:d3d77b497570c8b6
+  title: Does heart rate variability predict better executive functioning? A systematic review and meta-analysis
+  authors:
+  - V Magnon
+  - GT Vallet
+  - A Benson
+  - M Mermillod
+  - P Chausse
+  - A Lacroix
+  - '...'
+  publisher: Cortex 155, 218-236, 2022
+  date: '2022-01-01'
+  year: '2022'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:Wp0gIr-vW9MC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:34d3026685ab4a1d
+  title: Reduced flexibility in autism on an unpredicted emotional flexibility task.
+  authors:
+  - A Lacroix
+  - M Gomot
+  - A Logemann
+  - C Peyrin
+  - F Dutheil
+  - B Biro
+  - R Cserjesi
+  - '...'
+  publisher: International Society for Autism Research., 2021
+  date: '2021-01-01'
+  year: '2021'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:M3ejUd6NZC8C
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:aceda56363e13c93
+  title: High spatial frequency filtered primes hastens happy faces categorization in autistic adults
+  authors:
+  - A Lacroix
+  - L Nalborczyk
+  - F Dutheil
+  - K Kovarski
+  - S Chokron
+  - M Garrido
+  - '...'
+  publisher: Brain and Cognition 155, 105811, 2021
+  date: '2021-01-01'
+  year: '2021'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:qxL8FJ1GzNcC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:b5344c1d144bfb4c
+  title: 'Both high and low spatial frequencies are critical for visual consciousness in autism: Evidence of an emotional attentional blink paradigm.'
+  authors:
+  - A Lacroix
+  - M Gomot
+  - M Fombonne
+  - MJR Perrier
+  - C Peyrin
+  - N Vermeulen
+  - '...'
+  publisher: ''
+  date: '2021-01-01'
+  year: '2021'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:IWHjjKOFINEC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:57b2a7d13664c906
+  title: 'L’autisme au féminin: de la recherche à la pratique clinique.'
+  authors:
+  - A Lacroix
+  publisher: 18e Congrès de l’Encéphale., 2020
   date: '2020-01-01'
-  link: https://doi.org/gg7m48
-  image: https://ars.els-cdn.com/content/image/1-s2.0-S2001037020302804-gr1.jpg
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.7554/eLife.32822
-  title: Sci-Hub provides access to nearly all scholarly literature
+  year: '2020'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:TQgYirikUcIC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:3295876b51095299
+  title: What can we learn by including autistic people in the scientific process?
   authors:
-  - Daniel S Himmelstein
-  - Ariel Rodriguez Romero
-  - Jacob G Levernier
-  - Thomas Anthony Munro
-  - Stephen Reid McLaughlin
-  - Bastian Greshake Tzovaras
-  - Casey S Greene
-  publisher: eLife
-  date: '2018-03-01'
-  link: https://doi.org/ckcj
-  image: https://iiif.elifesciences.org/lax:32822%2Felife-32822-fig8-v3.tif/full/863,/0/default.webp
-  plugin: sources.py
-  file: sources.yaml
+  - A Lacroix
+  - J Cumin
+  - A Tsaag-Valren
+  - P Duret
+  - L Mottron
+  - F Cazalis
+  publisher: 12th Autism-Europe Congress, 2019
+  date: '2019-01-01'
+  year: '2019'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:L8Ckcad2t8MC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:e7def67916e6aaed
+  title: High spatial frequencies dominance for visual consciousness suggested by an attentional blink paradigm
+  authors:
+  - A Lacroix
+  - M Perrier
+  - L Kauffmann
+  - C Peyrin
+  - N Vermeulen
+  - F Dutheil
+  - '...'
+  publisher: 21st conference of the European Society for Cognitive Psychology, 2019
+  date: '2019-01-01'
+  year: '2019'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:mVmsd5A6BfQC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:c30ece25afc3c8f0
+  title: 'Exploration of the French version of the Q-ASC: a tool for investigating the female autistic profile'
+  authors:
+  - A Lacroix
+  - J Cumin
+  - P Duret
+  - A Tsaag-Valren
+  - A Rynkiewicz
+  - L Mottron
+  - '...'
+  publisher: 12th Autism-Europe Congress, 2019
+  date: '2019-01-01'
+  year: '2019'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:4TOpqqG69KYC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:3b90a8dfe9c3ee4d
+  title: Comment caractériser les femmes autistes à l'âge adulte?
+  authors:
+  - A Lacroix
+  - F Cazalis
+  publisher: XIXe Rencontres Internationales d'Orthophonie, 2019
+  date: '2019-01-01'
+  year: '2019'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:4DMP91E08xMC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:be397bb2deffb66d
+  title: The women who don’t know they’re autistic
+  authors:
+  - F Cazalis
+  - A Lacroix
+  publisher: Spectrum, 2017
+  date: '2017-01-01'
+  year: '2017'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:3s1wT3WcHBgC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:44a6066548cd058d
+  title: 'Autism spectrum conditions (ASC) in females: Clinical perspectives on diagnosis and new directions in the assessment construct'
+  authors:
+  - A Rynkiewicz
+  - M Garnett
+  - T Attwood
+  - C Brownlow
+  - S Baron-Cohen
+  - '...'
+  publisher: XXIX Ogólnopolska Konferencja Sekcji Naukowej Psychiatrii Dzieci i Młodziezy …, 2017
+  date: '2017-01-01'
+  year: '2017'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:aqlVkmm33-oC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
+- id: scholar:703c9ebaba7cdbd6
+  title: 'Virtual Friendships and Loneliness: A Mixed Methods Study'
+  authors:
+  - I Tien
+  - A Johnson
+  - J Wood
+  publisher: OSF, 0
+  date: ''
+  year: ''
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CCe8U1wAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=CCe8U1wAAAAJ:_FxGoFyzp5QC
+  type: paper
+  lab_members:
+  - Ingrid Tien
+  scholar_ids:
+  - CCe8U1wAAAAJ
+- id: scholar:7ad630d5ca6b31ae
+  title: Do Self-Diagnosed Adult Women Differ from Those Having Received a Diagnosis from a Multidisciplinary Team?
+  authors:
+  - F Cazalis
+  - A Lacroix
+  - J Cumin
+  - G Radecki
+  - P Duret
+  - L Mottron
+  publisher: INSAR 2020 Virtual Meeting, 0
+  date: ''
+  year: ''
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:qUcmZB5y_30C
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
