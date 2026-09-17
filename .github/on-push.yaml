@@ -1,0 +1,17 @@
+name: on-push
+run-name: build website after push to main
+
+on:
+  push:
+    branches:
+      - main
+
+  # Allow manual site builds
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-site:
+    uses: ./.github/workflows/build-site.yaml
