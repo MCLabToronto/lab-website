@@ -1,15 +1,13 @@
 name: update-publications
-run-name: update publications from Google Scholar
+run-name: update publications from member Google Scholar profiles
 
 on:
-  # Allow this workflow to be called by another workflow
   workflow_call:
     outputs:
       changed:
         description: Whether the publication database changed
         value: ${{ jobs.update-publications.outputs.changed }}
 
-  # Also allow manual runs from the Actions tab
   workflow_dispatch:
 
 permissions:
@@ -24,17 +22,17 @@ jobs:
     timeout-minutes: 30
 
     outputs:
-      changed: ${{ steps.changed.outputs.files_changed }}
+      changed: ${{ steps.check-changes.outputs.changed }}
 
     steps:
-      - name: Checkout main branch
-        uses: actions/checkout@v4
+      - name: Checkout main
+        uses: actions/checkout@v7
         with:
           ref: main
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.11"
           cache: "pip"
@@ -45,20 +43,25 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install --requirement _cite/requirements.txt
 
-      - name: Update publications from Google Scholar
+      - name: Update publications from member Google Scholar profiles only
         run: |
           python _cite/update_publications.py
 
       - name: Check whether publications changed
-        id: changed
-        uses: tj-actions/verify-changed-files@v18
-        with:
-          files: |
-            _data/citations.yaml
+        id: check-changes
+        shell: bash
+        run: |
+          if git diff --quiet -- _data/citations.yaml; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No publication changes detected."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "Publication changes detected."
+          fi
 
-      - name: Commit updated publications
-        if: steps.changed.outputs.files_changed == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Commit updated publications directly to main
+        if: steps.check-changes.outputs.changed == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           file_pattern: "_data/citations.yaml"
-          commit_message: "Update publications from Google Scholar"
+          commit_message: "Update publications from member Google Scholar profiles"

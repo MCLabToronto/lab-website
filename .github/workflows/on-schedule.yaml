@@ -1,16 +1,10 @@
 name: weekly-publication-update
-run-name: weekly Google Scholar publication update
+run-name: weekly member Google Scholar publication update
 
 on:
-  # Every Monday at 12:00 UTC
-  #
-  # Approximately:
-  # 8:00 AM Toronto during daylight saving time
-  # 7:00 AM Toronto during standard time
   schedule:
     - cron: "0 12 * * 1"
 
-  # Allow manual runs from GitHub Actions
   workflow_dispatch:
 
 permissions:
@@ -24,9 +18,5 @@ jobs:
   build-site:
     needs:
       - update-publications
-
-    # No need to rebuild when Scholar returned exactly the
-    # same publication database.
     if: needs.update-publications.outputs.changed == 'true'
-
     uses: ./.github/workflows/build-site.yaml
