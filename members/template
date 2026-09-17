@@ -450,6 +450,8 @@
 
   <script src="/lab-website/_scripts/fetch-tags.js"></script>
 
+  <script src="/lab-website/_scripts/infinity-video.js"></script>
+
   <script src="/lab-website/_scripts/search.js"></script>
 
   <script src="/lab-website/_scripts/site-search.js"></script>

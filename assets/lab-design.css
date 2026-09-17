@@ -51,7 +51,7 @@ body:not(.lab-home) main > section:first-child h1 .icon { display: none; }
 .lab-actions { display: flex; gap: 20px; flex-wrap: wrap; }
 .lab-team-heading { text-transform: uppercase; font-size: 26px; margin: 55px 0 0; padding-bottom: 25px; border-bottom: 2px solid var(--light-gray); }
 .lab-member { display: grid; grid-template-columns: 210px minmax(0,1fr); gap: 55px; align-items: center; text-align: left; margin: 60px 0 80px; }
-.lab-member > img { width: 210px; aspect-ratio: 1; object-fit: cover; border-radius: 50%; filter: grayscale(1); }
+.lab-member > img { width: 210px; aspect-ratio: 1; object-fit: cover; border-radius: 50%;  }
 .lab-member h3 { margin: 0 0 8px; font-size: 25px; font-weight: 800; }
 .lab-member-role { font-style: italic; margin: 0 0 24px; font-size: 19px; }
 .lab-member-bio { font-size: 18px; }
@@ -67,3 +67,6 @@ footer a { color: #fff; }
 .lab-page-banner h1 { margin: 0; text-align: left; font-size: clamp(32px,4vw,52px); font-weight: 900; }
 .lab-team-page main > section:first-of-type { padding-bottom: 0; }
 @media(max-width:600px) { .lab-page-banner { border-bottom-width: 32px; padding-top: 36px; padding-bottom: 36px; } }
+
+/* The recorded ribbon supplies its own 3D motion. */
+.lab-infinity-video { animation: none; aspect-ratio: 4 / 3; object-fit: contain; background: #000; }

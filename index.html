@@ -362,6 +362,8 @@
 
   <script src="/lab-website/_scripts/fetch-tags.js"></script>
 
+  <script src="/lab-website/_scripts/infinity-video.js"></script>
+
   <script src="/lab-website/_scripts/search.js"></script>
 
   <script src="/lab-website/_scripts/site-search.js"></script>
@@ -538,27 +540,9 @@
     <div class="lab-art">
       <input type="checkbox" id="pause-infinity" class="motion-toggle">
       <label for="pause-infinity" class="motion-label"><span class="motion-pause">Pause animation</span><span class="motion-play">Resume animation</span></label>
-      <svg class="lab-infinity" viewbox="0 0 600 380" aria-hidden="true" focusable="false">
-  <defs>
-    <lineargradient id="iridescent" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#8ddedb"></stop><stop offset=".23" stop-color="#a19cdd"></stop><stop offset=".46" stop-color="#e266fa"></stop><stop offset=".68" stop-color="#fb90cf"></stop><stop offset="1" stop-color="#ffd4bb"></stop>
-    </lineargradient>
-    <lineargradient id="front-ribbon" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#bbdedd"></stop><stop offset=".3" stop-color="#fff0c1"></stop><stop offset=".6" stop-color="#ffa5a0"></stop><stop offset="1" stop-color="#ffc2dc"></stop>
-    </lineargradient>
-    <filter id="ribbon-light" x="-25%" y="-35%" width="150%" height="170%">
-      <fegaussianblur in="SourceAlpha" stddeviation="5" result="blur"></fegaussianblur>
-      <fespecularlighting in="blur" surfacescale="5" specularconstant=".6" specularexponent="16" lighting-color="#ffffff" result="light"><fedistantlight azimuth="225" elevation="55"></fedistantlight></fespecularlighting>
-      <fecomposite in="light" in2="SourceAlpha" operator="in" result="clipped"></fecomposite>
-      <fecomposite in="SourceGraphic" in2="clipped" operator="arithmetic" k1="0" k2="1" k3=".65" k4="0"></fecomposite>
-    </filter>
-  </defs>
-  <g transform="rotate(15 300 190)" fill="none" stroke-linecap="round" filter="url(#ribbon-light)">
-    <path d="M300 190 C230 90 188 65 135 85 C44 120 65 280 155 280 C220 280 254 235 300 190 C370 90 412 65 465 85 C556 120 535 280 445 280 C380 280 346 235 300 190Z" stroke="url(#iridescent)" stroke-width="66"></path>
-    <path d="M158 81 C211 79 248 121 300 190 C346 251 390 279 444 280" stroke="url(#front-ribbon)" stroke-width="66"></path>
-  </g>
-</svg>
-
+      <video class="lab-infinity lab-infinity-video" muted="" loop="" playsinline="" preload="metadata" poster="/lab-website/assets/infinity-poster.png" aria-hidden="true" tabindex="-1">
+        <source src="/lab-website/assets/infinity-loop.mp4" type="video/mp4"></source>
+      </video>
     </div>
   </div>
 </div>
