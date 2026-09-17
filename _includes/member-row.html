@@ -1,0 +1,15 @@
+{% assign role = site.data.types[include.role] %}
+<article class="lab-member">
+  <img src="{{ include.image | default: 'images/fallback.svg' | relative_url }}" alt="Portrait of {{ include.name | escape }}" loading="lazy" {% include fallback.html %}>
+  <div>
+    <h3>{{ include.name }}</h3>
+    {% if role %}<p class="lab-member-role">{{ role.description }}</p>{% endif %}
+    {% if include.description %}<p class="lab-member-bio">{{ include.description }}</p>{% endif %}
+    {% if include.content %}<div class="lab-member-bio">{{ include.content | markdownify }}</div>{% endif %}
+    {% if include.affiliation %}<p>{{ include.affiliation }}</p>{% endif %}
+    <div class="portrait-links">
+      {% if include.links.home-page %}<a href="{{ include.links.home-page }}">Website</a>{% endif %}
+      {% if include.links.google-scholar %}<a href="https://scholar.google.com/citations?user={{ include.links.google-scholar }}">Google Scholar</a>{% endif %}
+    </div>
+  </div>
+</article>

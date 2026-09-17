@@ -1,32 +1,30 @@
 ---
-title: People
+title: Team
 nav:
   order: 3
   tooltip: Meet our team
 ---
 
-# {% include icon.html icon="fa-solid fa-users" %} People
-
 The MCLab brings together researchers and trainees with diverse backgrounds, expertise, and perspectives.
 
 {% include section.html %}
 
-## Lab Head
+<h2 class="lab-team-heading">Lab Head</h2>
 
-{% include list.html data="members" component="portrait" filter="role == 'pi'" %}
+{% include list.html data="members" component="member-row" filter="role == 'pi'" %}
 
-## Postdoctoral Fellows
+<h2 class="lab-team-heading">Postdoctoral Fellows</h2>
 
-{% include list.html data="members" component="portrait" filter="role == 'postdoc'" %}
+{% include list.html data="members" component="member-row" filter="role == 'postdoc'" %}
 
-## PhD Students
+<h2 class="lab-team-heading">PhD Students</h2>
 
-{% include list.html data="members" component="portrait" filter="role == 'phd'" %}
+{% include list.html data="members" component="member-row" filter="role == 'phd'" %}
 
-## Master's Students
+<h2 class="lab-team-heading">Master's Students</h2>
 
-{% include list.html data="members" component="portrait" filter="role == 'master'" %}
+{% include list.html data="members" component="member-row" filter="role == 'master'" %}
 
-## Research Staff
+<h2 class="lab-team-heading">Research Staff</h2>
 
-{% include list.html data="members" component="portrait" filter="role == 'staff'" %}
+{% include list.html data="members" component="member-row" filter="role == 'staff'" %}

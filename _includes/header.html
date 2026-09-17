@@ -12,9 +12,6 @@
   {% if dark == true or dark == false %}
     data-dark="{{ dark }}"
   {% endif %}
-  {% if page.url == "/" %}
-    data-big
-  {% endif %}
 >
   <a href="{{ "/" | relative_url }}" class="home">
     {% if logo %}
@@ -40,7 +37,8 @@
 
   <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
 
-  <nav>
+  <nav aria-label="Main navigation">
+    <a href="{{ "/" | relative_url }}">Home</a>
     {% assign pages = site.pages
       | where_exp: "page", "page.nav"
       | sort: "nav.order"

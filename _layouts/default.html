@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" data-dark="false">
   {% include head.html %}
-  <body>
+  <body{% if page.url == "/" %} class="lab-home"{% elsif page.url contains "/team/" %} class="lab-team-page"{% endif %}>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     {% include header.html %}
-    <main>
+    <main id="main-content">
+      {% if page.url contains "/team/" %}<div class="lab-page-banner"><h1>Meet our team</h1></div>{% endif %}
       {% include content.html content=content %}
     </main>
     {% include footer.html %}

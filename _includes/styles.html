@@ -26,3 +26,6 @@
 {% for style in styles %}
   <link href="{{ style.path | relative_url }}" rel="stylesheet" />
 {% endfor %}
+
+<!-- Lab visual identity: loaded last to override template defaults. -->
+<link href="{{ "/assets/lab-design.css" | relative_url }}" rel="stylesheet">

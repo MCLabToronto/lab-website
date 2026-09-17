@@ -1,0 +1,20 @@
+<svg class="lab-infinity" viewBox="0 0 600 380" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="iridescent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8ddedb"/><stop offset=".23" stop-color="#a19cdd"/><stop offset=".46" stop-color="#e266fa"/><stop offset=".68" stop-color="#fb90cf"/><stop offset="1" stop-color="#ffd4bb"/>
+    </linearGradient>
+    <linearGradient id="front-ribbon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#bbdedd"/><stop offset=".3" stop-color="#fff0c1"/><stop offset=".6" stop-color="#ffa5a0"/><stop offset="1" stop-color="#ffc2dc"/>
+    </linearGradient>
+    <filter id="ribbon-light" x="-25%" y="-35%" width="150%" height="170%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur"/>
+      <feSpecularLighting in="blur" surfaceScale="5" specularConstant=".6" specularExponent="16" lighting-color="#ffffff" result="light"><feDistantLight azimuth="225" elevation="55"/></feSpecularLighting>
+      <feComposite in="light" in2="SourceAlpha" operator="in" result="clipped"/>
+      <feComposite in="SourceGraphic" in2="clipped" operator="arithmetic" k1="0" k2="1" k3=".65" k4="0"/>
+    </filter>
+  </defs>
+  <g transform="rotate(15 300 190)" fill="none" stroke-linecap="round" filter="url(#ribbon-light)">
+    <path d="M300 190 C230 90 188 65 135 85 C44 120 65 280 155 280 C220 280 254 235 300 190 C370 90 412 65 465 85 C556 120 535 280 445 280 C380 280 346 235 300 190Z" stroke="url(#iridescent)" stroke-width="66"/>
+    <path d="M158 81 C211 79 248 121 300 190 C346 251 390 279 444 280" stroke="url(#front-ribbon)" stroke-width="66"/>
+  </g>
+</svg>
