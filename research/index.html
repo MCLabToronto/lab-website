@@ -345,6 +345,9 @@
 
 
 
+<!-- Lab visual identity: loaded last to override template defaults. -->
+<link href="/lab-website/assets/lab-design.css" rel="stylesheet">
+
   <!-- third party scripts -->
 <script src="https://unpkg.com/@popperjs/core@2" defer></script>
 <script src="https://unpkg.com/tippy.js@6" defer></script>
@@ -371,6 +374,7 @@
 </head>
 
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     
 
 
@@ -457,7 +461,8 @@
 
   <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
 
-  <nav>
+  <nav aria-label="Main navigation">
+    <a href="/lab-website/">Home</a>
     
     
       
@@ -474,7 +479,7 @@
     
       
         <a href="/lab-website/team/" data-tooltip="Meet our team">
-          People
+          Team
         </a>
       
     
@@ -499,7 +504,8 @@
   </nav>
 </header>
 
-    <main>
+    <main id="main-content">
+      
       <!--
   modify main content of page:
   - add section breaks

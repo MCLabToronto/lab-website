@@ -43,21 +43,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>People | MCLab</title>
+<title>Team | MCLab</title>
 
 <link rel="icon" href="/lab-website/images/icon.png">
 
-<meta name="title" content="People">
+<meta name="title" content="Team">
 <meta name="description" content="The MCLab is a multidisciplinary and collaborative research team committed to advancing a rigorous, neuroaffirmative understanding of neurodiversity.">
 
-<meta property="og:title" content="People">
+<meta property="og:title" content="Team">
 <meta property="og:site_title" content="MCLab">
 <meta property="og:description" content="The MCLab is a multidisciplinary and collaborative research team committed to advancing a rigorous, neuroaffirmative understanding of neurodiversity.">
 <meta property="og:url" content="https://mclabtoronto.github.io/lab-website">
 <meta property="og:image" content="/lab-website/images/share.jpg">
 <meta property="og:locale" content="en_US">
 
-<meta property="twitter:title" content="People">
+<meta property="twitter:title" content="Team">
 <meta property="twitter:description" content="The MCLab is a multidisciplinary and collaborative research team committed to advancing a rigorous, neuroaffirmative understanding of neurodiversity.">
 <meta property="twitter:url" content="https://mclabtoronto.github.io/lab-website">
 <meta property="twitter:card" content="summary_large_image">
@@ -73,9 +73,9 @@
     
       "@type": "WebSite",
     
-    "name": "People",
+    "name": "Team",
     "description": "The MCLab is a multidisciplinary and collaborative research team committed to advancing a rigorous, neuroaffirmative understanding of neurodiversity.",
-    "headline": "People",
+    "headline": "Team",
     "publisher": {
       "@type": "Organization",
       "logo": { "@type": "ImageObject", "url": "/lab-website/images/icon.png" }
@@ -345,6 +345,9 @@
 
 
 
+<!-- Lab visual identity: loaded last to override template defaults. -->
+<link href="/lab-website/assets/lab-design.css" rel="stylesheet">
+
   <!-- third party scripts -->
 <script src="https://unpkg.com/@popperjs/core@2" defer></script>
 <script src="https://unpkg.com/tippy.js@6" defer></script>
@@ -370,7 +373,8 @@
 
 </head>
 
-  <body>
+  <body class="lab-team-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     
 
 
@@ -457,7 +461,8 @@
 
   <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
 
-  <nav>
+  <nav aria-label="Main navigation">
+    <a href="/lab-website/">Home</a>
     
     
       
@@ -474,7 +479,7 @@
     
       
         <a href="/lab-website/team/" data-tooltip="Meet our team">
-          People
+          Team
         </a>
       
     
@@ -499,7 +504,8 @@
   </nav>
 </header>
 
-    <main>
+    <main id="main-content">
+      <div class="lab-page-banner"><h1>Meet our team</h1></div>
       <!--
   modify main content of page:
   - add section breaks
@@ -517,10 +523,7 @@
   
 
   <section class="background" data-size="page">
-    <h1 id="-people">
-<i class="icon fa-solid fa-users"></i> People</h1>
-
-<p>The MCLab brings together researchers and trainees with diverse backgrounds, expertise, and perspectives.</p>
+    <p>The MCLab brings together researchers and trainees with diverse backgrounds, expertise, and perspectives.</p>
   </section>
 
   
@@ -534,164 +537,85 @@
   <size></size>
 -->
 
-<h2 id="lab-head">Lab Head</h2>
+<h2 class="lab-team-heading">Lab Head</h2>
 
-<h2 id="postdoctoral-fellows">Postdoctoral Fellows</h2>
+<h2 class="lab-team-heading">Postdoctoral Fellows</h2>
 
-<div class="portrait-wrapper">
-
-  <div class="portrait" data-style="">
-    
-      <i class="icon fa-solid fa-glasses"></i>
-    
-
-    <img src="/lab-website/images/members/adeline-lacroix.jpg" class="portrait-image" alt="Portrait of Adeline Lacroix" loading="lazy" onerror="this.src = '/lab-website/images/fallback.svg'; this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Adeline Lacroix
-      </span>
-    
-
-    
-      <span class="portrait-description">
-        Adeline investigates sex-related differences in autism, with a particular focus on autistic females and the heterogeneity of autistic presentations. Her research combines neuroimaging, cognitive neuroscience, participatory approaches, and large-scale datasets to better understand neurodiversity and improve autism identification and support.
-
-      </span>
-    
-
-    
-
-    
-      <div class="portrait-links" aria-label="Links for Adeline Lacroix">
-
-      
-        <a href="https://adeline-lacroix.github.io" target="_blank" rel="noopener noreferrer" aria-label="Adeline Lacroix website" title="Website">
-          Website
-        </a>
-      
-
-      
-        <a href="https://scholar.google.com/citations?user=tfJPoc4AAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Adeline Lacroix Google Scholar" title="Google Scholar">
-          Google Scholar
-        </a>
-      
-
-      </div>
-    
-
-  </div>
-
+<article class="lab-member">
+  <img src="/lab-website/images/members/adeline-lacroix.jpg" alt="Portrait of Adeline Lacroix" loading="lazy" onerror="this.src = '/lab-website/images/fallback.svg'; this.onerror = null;">
+  <div>
+    <h3>Adeline Lacroix</h3>
+    <p class="lab-member-role">Postdoctoral Researcher</p>
+    <p class="lab-member-bio">Adeline investigates sex-related differences in autism, with a particular focus on autistic females and the heterogeneity of autistic presentations. Her research combines neuroimaging, cognitive neuroscience, participatory approaches, and large-scale datasets to better understand neurodiversity and improve autism identification and support.
+</p>
+    <div class="lab-member-bio">
 </div>
-
-<div class="portrait-wrapper">
-
-  <div class="portrait" data-style="">
     
-      <i class="icon fa-solid fa-glasses"></i>
-    
+    <div class="portrait-links">
+      <a href="https://adeline-lacroix.github.io">Website</a>
+      <a href="https://scholar.google.com/citations?user=tfJPoc4AAAAJ">Google Scholar</a>
+    </div>
+  </div>
+</article>
 
-    <img src="/lab-website/images/members/ingrid-tien.jpg" class="portrait-image" alt="Portrait of Ingrid Tien" loading="lazy" onerror="this.src = '/lab-website/images/fallback.svg'; this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Ingrid Tien
-      </span>
-    
-
-    
-      <span class="portrait-description">
-        Hello! I am a BRIDGES-funded postdoctoral research fellow at the Centre for Addiction &amp; Mental Health, studying sex and gender-based diagnostic and service disparities in autism, the intersection of autistic and gender diverse identities, mental health trajectories of autistic youth, and neuroaffirming autism research and co-production. 
+<article class="lab-member">
+  <img src="/lab-website/images/members/ingrid-tien.jpg" alt="Portrait of Ingrid Tien" loading="lazy" onerror="this.src = '/lab-website/images/fallback.svg'; this.onerror = null;">
+  <div>
+    <h3>Ingrid Tien</h3>
+    <p class="lab-member-role">Postdoctoral Researcher</p>
+    <p class="lab-member-bio">Hello! I am a BRIDGES-funded postdoctoral research fellow at the Centre for Addiction &amp; Mental Health, studying sex and gender-based diagnostic and service disparities in autism, the intersection of autistic and gender diverse identities, mental health trajectories of autistic youth, and neuroaffirming autism research and co-production. 
 I recently received my PhD (2025) from UCLA under Jeffrey Wood, where I coordinated a community-based evidence-based treatment trial for autistic youth. Employing both quantitative and qualitative methodology, I have published over a dozen peer reviewed articles. 
 I graduated as a psychology undergraduate at UCLA (2021), where I published an award-winning Honors Thesis examining appearance anxiety, attention, and cognitive interference when learning via Zoom under Elizabeth Bjork.
-
-      </span>
-    
-
-    
-
-    
-      <div class="portrait-links" aria-label="Links for Ingrid Tien">
-
-      
-
-      
-        <a href="https://scholar.google.com/citations?user=CCe8U1wAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Ingrid Tien Google Scholar" title="Google Scholar">
-          Google Scholar
-        </a>
-      
-
-      </div>
-    
-
-  </div>
-
+</p>
+    <div class="lab-member-bio">
 </div>
-
-<h2 id="phd-students">PhD Students</h2>
-
-<div class="portrait-wrapper">
-
-  <div class="portrait" data-style="">
     
-      <i class="icon fa-solid fa-graduation-cap"></i>
-    
-
-    <img src="/lab-website/images/photo.jpg" class="portrait-image" alt="Portrait of John Doe" loading="lazy" onerror="this.src = '/lab-website/images/fallback.svg'; this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        John Doe
-      </span>
-    
-
-    
-      <span class="portrait-description">
-        PhD Student
-      </span>
-    
-
-    
-
-    
-
+    <div class="portrait-links">
+      
+      <a href="https://scholar.google.com/citations?user=CCe8U1wAAAAJ">Google Scholar</a>
+    </div>
   </div>
+</article>
 
+<h2 class="lab-team-heading">PhD Students</h2>
+
+<article class="lab-member">
+  <img src="/lab-website/images/photo.jpg" alt="Portrait of John Doe" loading="lazy" onerror="this.src = '/lab-website/images/fallback.svg'; this.onerror = null;">
+  <div>
+    <h3>John Doe</h3>
+    <p class="lab-member-role">PhD Student</p>
+    
+    <div class="lab-member-bio">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 </div>
-
-<div class="portrait-wrapper">
-
-  <div class="portrait" data-style="">
     
-      <i class="icon fa-solid fa-graduation-cap"></i>
-    
-
-    <img src="/lab-website/images/members/julie-lee.jpg" class="portrait-image" alt="Portrait of Julie Lee" loading="lazy" onerror="this.src = '/lab-website/images/fallback.svg'; this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Julie Lee
-      </span>
-    
-
-    
-      <span class="portrait-description">
-        My research focuses on understanding suicide and self-harm risk among neurodivergent individuals, particularly autistic people and those with ADHD. I study how clinical, psychological, social, developmental, and healthcare-related factors may contribute to risk, and whether these factors differ across populations and settings. Using clinical records, population-based datasets, and longitudinal health data from Canada and the United States, my work aims to identify modifiable factors that can inform more targeted approaches to suicide prevention, assessment, and care.
-
-      </span>
-    
-
-    
-
-    
-
+    <div class="portrait-links">
+      
+      
+    </div>
   </div>
+</article>
 
+<article class="lab-member">
+  <img src="/lab-website/images/members/julie-lee.jpg" alt="Portrait of Julie Lee" loading="lazy" onerror="this.src = '/lab-website/images/fallback.svg'; this.onerror = null;">
+  <div>
+    <h3>Julie Lee</h3>
+    <p class="lab-member-role">PhD Student</p>
+    <p class="lab-member-bio">My research focuses on understanding suicide and self-harm risk among neurodivergent individuals, particularly autistic people and those with ADHD. I study how clinical, psychological, social, developmental, and healthcare-related factors may contribute to risk, and whether these factors differ across populations and settings. Using clinical records, population-based datasets, and longitudinal health data from Canada and the United States, my work aims to identify modifiable factors that can inform more targeted approaches to suicide prevention, assessment, and care.
+</p>
+    <div class="lab-member-bio">
 </div>
+    
+    <div class="portrait-links">
+      
+      
+    </div>
+  </div>
+</article>
 
-<h2 id="masters-students">Master’s Students</h2>
+<h2 class="lab-team-heading">Master's Students</h2>
 
-<h2 id="research-staff">Research Staff</h2>
+<h2 class="lab-team-heading">Research Staff</h2>
   </section>
 
 

@@ -345,6 +345,9 @@
 
 
 
+<!-- Lab visual identity: loaded last to override template defaults. -->
+<link href="/lab-website/assets/lab-design.css" rel="stylesheet">
+
   <!-- third party scripts -->
 <script src="https://unpkg.com/@popperjs/core@2" defer></script>
 <script src="https://unpkg.com/tippy.js@6" defer></script>
@@ -370,7 +373,8 @@
 
 </head>
 
-  <body>
+  <body class="lab-home">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     
 
 
@@ -379,7 +383,7 @@
 
 
 
-<header class="background" style="--image: url('/lab-website/images/background.jpg')" data-dark="true" data-big>
+<header class="background" style="--image: url('/lab-website/images/background.jpg')" data-dark="true">
   <a href="/lab-website/" class="home">
     
       <span class="logo">
@@ -457,7 +461,8 @@
 
   <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
 
-  <nav>
+  <nav aria-label="Main navigation">
+    <a href="/lab-website/">Home</a>
     
     
       
@@ -474,7 +479,7 @@
     
       
         <a href="/lab-website/team/" data-tooltip="Meet our team">
-          People
+          Team
         </a>
       
     
@@ -499,7 +504,8 @@
   </nav>
 </header>
 
-    <main>
+    <main id="main-content">
+      
       <!--
   modify main content of page:
   - add section breaks
@@ -517,9 +523,39 @@
   
 
   <section class="background" data-size="page">
-    <h1 id="mclab">MCLab</h1>
+    <div class="lab-hero">
+  <div class="lab-hero-inner">
+    <div class="lab-hero-copy">
+      <span class="lab-label">● MCLab</span>
+      <h1>Mental health, Child Development, and Lifespan Autism Bioecological Lab.</h1>
+    </div>
+    <div class="lab-art">
+      <input type="checkbox" id="pause-infinity" class="motion-toggle">
+      <label for="pause-infinity" class="motion-label"><span class="motion-pause">Pause animation</span><span class="motion-play">Resume animation</span></label>
+      <svg class="lab-infinity" viewbox="0 0 600 380" aria-hidden="true" focusable="false">
+  <defs>
+    <lineargradient id="iridescent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8ddedb"></stop><stop offset=".23" stop-color="#a19cdd"></stop><stop offset=".46" stop-color="#e266fa"></stop><stop offset=".68" stop-color="#fb90cf"></stop><stop offset="1" stop-color="#ffd4bb"></stop>
+    </lineargradient>
+    <lineargradient id="front-ribbon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#bbdedd"></stop><stop offset=".3" stop-color="#fff0c1"></stop><stop offset=".6" stop-color="#ffa5a0"></stop><stop offset="1" stop-color="#ffc2dc"></stop>
+    </lineargradient>
+    <filter id="ribbon-light" x="-25%" y="-35%" width="150%" height="170%">
+      <fegaussianblur in="SourceAlpha" stddeviation="5" result="blur"></fegaussianblur>
+      <fespecularlighting in="blur" surfacescale="5" specularconstant=".6" specularexponent="16" lighting-color="#ffffff" result="light"><fedistantlight azimuth="225" elevation="55"></fedistantlight></fespecularlighting>
+      <fecomposite in="light" in2="SourceAlpha" operator="in" result="clipped"></fecomposite>
+      <fecomposite in="SourceGraphic" in2="clipped" operator="arithmetic" k1="0" k2="1" k3=".65" k4="0"></fecomposite>
+    </filter>
+  </defs>
+  <g transform="rotate(15 300 190)" fill="none" stroke-linecap="round" filter="url(#ribbon-light)">
+    <path d="M300 190 C230 90 188 65 135 85 C44 120 65 280 155 280 C220 280 254 235 300 190 C370 90 412 65 465 85 C556 120 535 280 445 280 C380 280 346 235 300 190Z" stroke="url(#iridescent)" stroke-width="66"></path>
+    <path d="M158 81 C211 79 248 121 300 190 C346 251 390 279 444 280" stroke="url(#front-ribbon)" stroke-width="66"></path>
+  </g>
+</svg>
 
-<p>The MCLab is a multidisciplinary and collaborative research team committed to advancing a rigorous, neuroaffirmative understanding of neurodiversity.</p>
+    </div>
+  </div>
+</div>
   </section>
 
   
@@ -533,77 +569,68 @@
   <size></size>
 -->
 
-<h2 id="highlights">Highlights</h2>
-
-<div class="feature">
-  <a href="/lab-website/research" class="feature-image" aria-label="Our Research">
-    <img src="/lab-website/images/wordCLoud.png" loading="lazy" alt="Our Research" onerror="this.src = '/lab-website/images/fallback.svg'; this.onerror = null;">
-  </a>
-  <div class="feature-text">
-    
-      <p class="feature-title">Our Research</p>
-    
-    
-<p>We study neurodiversity through multidisciplinary, collaborative, and neuroaffirmative research. Our work brings together complementary perspectives to better understand diverse developmental experiences and needs.</p>
-
-<div class="button-wrapper">
-    <a class="button" href="/lab-website/research" data-style="bare" data-flip="" aria-label="fa-solid fa-arrow-right">
-      <i class="icon fa-solid fa-arrow-right"></i>
-      
-        <span>Explore our research</span>
-      
-    </a>
-  </div>
-
-
+<div class="lab-row">
+  <h2>Our mission</h2>
+  <div>
+    <p class="lab-intro">The MCLab is a multidisciplinary and collaborative research team committed to advancing a rigorous, neuroaffirmative understanding of neurodiversity.</p>
+    <div class="lab-pillars">
+      <div>
+<h3>Multidisciplinary</h3>
+<p>We bring together complementary perspectives to better understand diverse developmental experiences and needs.</p>
+</div>
+      <div>
+<h3>Collaborative</h3>
+<p>Our projects combine neuroimaging, cognitive neuroscience, participatory research, and large-scale data analysis.</p>
+</div>
+      <div>
+<h3>Neuroaffirmative</h3>
+<p>We aim to produce rigorous knowledge with meaningful scientific and community impact.</p>
+</div>
+    </div>
+    <a class="lab-button" href="/lab-website/about/">Learn more about us</a>
   </div>
 </div>
+  </section>
 
-<div class="feature" data-flip="">
-  <a href="/lab-website/projects" class="feature-image" aria-label="Our Projects">
-    <img src="/lab-website/images/photo.jpg" loading="lazy" alt="Our Projects" onerror="this.src = '/lab-website/images/fallback.svg'; this.onerror = null;">
-  </a>
-  <div class="feature-text">
-    
-      <p class="feature-title">Our Projects</p>
-    
-    
-<p>Our projects combine methods such as neuroimaging, cognitive neuroscience, participatory research, and large-scale data analysis. We aim to produce rigorous knowledge with meaningful scientific and community impact.</p>
+  
+  
+  
 
-<div class="button-wrapper">
-    <a class="button" href="/lab-website/projects" data-style="bare" data-flip="" aria-label="fa-solid fa-arrow-right">
-      <i class="icon fa-solid fa-arrow-right"></i>
-      
-        <span>Browse our projects</span>
-      
-    </a>
-  </div>
+  <section class="background" data-size="page">
+    <!--
+  <background></background>
+  <dark></dark>
+  <size></size>
+-->
 
-
+<div class="lab-row">
+  <h2>Our team</h2>
+  <div>
+    <p class="lab-intro">The MCLab brings together researchers and trainees with varied expertise, backgrounds, and lived perspectives. We value collaboration, curiosity, inclusion, and respectful engagement across disciplines.</p>
+    <img class="lab-team-photo" src="/lab-website/images/team2025-display.jpg" alt="Members of the MCLab team" loading="lazy">
+    <a class="lab-button" href="/lab-website/team/">Meet our team</a>
   </div>
 </div>
+  </section>
 
-<div class="feature">
-  <a href="/lab-website/team" class="feature-image" aria-label="Our Team">
-    <img src="/lab-website/images/team2025-display.jpg" loading="lazy" alt="Our Team" onerror="this.src = '/lab-website/images/fallback.svg'; this.onerror = null;">
-  </a>
-  <div class="feature-text">
-    
-      <p class="feature-title">Our Team</p>
-    
-    
-<p>The MCLab brings together researchers and trainees with varied expertise, backgrounds, and lived perspectives. We value collaboration, curiosity, inclusion, and respectful engagement across disciplines.</p>
+  
+  
+  
 
-<div class="button-wrapper">
-    <a class="button" href="/lab-website/team" data-style="bare" data-flip="" aria-label="fa-solid fa-arrow-right">
-      <i class="icon fa-solid fa-arrow-right"></i>
-      
-        <span>Meet our team</span>
-      
-    </a>
-  </div>
+  <section class="background" data-size="page">
+    <!--
+  <background></background>
+  <dark></dark>
+  <size></size>
+-->
 
-
+<div class="lab-row">
+  <h2>Our research</h2>
+  <div>
+    <p class="lab-intro">We study neurodiversity through multidisciplinary, collaborative, and neuroaffirmative research. Our work brings together complementary perspectives to better understand diverse developmental experiences and needs.</p>
+    <div class="lab-actions">
+<a class="lab-button" href="/lab-website/research/">Explore our research</a><a class="lab-button" href="/lab-website/projects/">Browse our projects</a>
+</div>
   </div>
 </div>
   </section>
