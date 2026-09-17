@@ -9,7 +9,9 @@
     <div class="lab-art">
       <input type="checkbox" id="pause-infinity" class="motion-toggle">
       <label for="pause-infinity" class="motion-label"><span class="motion-pause">Pause animation</span><span class="motion-play">Resume animation</span></label>
-      {% include infinity.html %}
+      <video class="lab-infinity lab-infinity-video" muted loop playsinline preload="metadata" poster="{{ '/assets/infinity-poster.png' | relative_url }}" aria-hidden="true" tabindex="-1">
+        <source src="{{ '/assets/infinity-loop.mp4' | relative_url }}" type="video/mp4">
+      </video>
     </div>
   </div>
 </div>
