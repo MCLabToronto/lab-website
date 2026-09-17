@@ -7,11 +7,94 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-book-open" %} Publications
 
-## 2026
+Publications are updated automatically from the Google Scholar profiles of MCLab members.
 
-- Iturmendi-Sabater, I., Jain, S., Turcany-Diaz, S., Besa, R., Anagnostou, E., Fournier, M. A., Lin, H.-Y., & Lai, M.-C. (2026). *The conceptual landscape of self-regulation in neurodevelopmental conditions: An overview of reviews*. *Nature Human Behaviour, 10*(7), 1274–1296. [https://doi.org/10.1038/s41562-026-02410-x](https://doi.org/10.1038/s41562-026-02410-x)
+{% assign publications = site.data.citations | sort: "date" | reverse %}
+{% assign current_year = "" %}
 
-- Lacroix, A., Tzang, C.-C., Yu, J. X., Jacob, B. K., Alexandrovsky, M., Winge-Breen, A., Rodak, T., & Lai, M.-C. (2026). Disproportionate mental health risks in autistic females: A rapid review with quantitative and narrative syntheses. *Frontiers in Neuroendocrinology*, *80*, 101229. [https://doi.org/10.1016/j.yfrne.2025.101229](https://doi.org/10.1016/j.yfrne.2025.101229)
+{% if publications.size == 0 %}
 
-- Lacroix, A., Vallet, W., Lai, M.-C., Langloys, D., Pignard, M., Brunelin, J., Dubreucq, M., & Demily, C. (2026). Divergent Perceptions of Autistic Parents Among Health Care, Social Care, and Judicial Professionals and Autistic Adults: A Participatory Study. *Autism in Adulthood*, 25739581261457376. [https://doi.org/10.1177/25739581261457376](https://doi.org/10.1177/25739581261457376)
+_No publications are currently available._
 
+{% else %}
+
+{% for publication in publications %}
+
+  {% assign publication_year = publication.year | default: "Undated" %}
+
+  {% if publication_year != current_year %}
+
+    <h2>{{ publication_year }}</h2>
+
+    {% assign current_year = publication_year %}
+
+  {% endif %}
+
+  <div class="citation-container">
+
+    <div class="citation">
+
+      <div class="citation-text">
+
+        {% if publication.link %}
+
+          <a
+            href="{{ publication.link | xml_escape }}"
+            class="citation-title"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ publication.title }}
+          </a>
+
+        {% else %}
+
+          <span class="citation-title">
+            {{ publication.title }}
+          </span>
+
+        {% endif %}
+
+        {% if publication.authors.size > 0 %}
+
+          <div class="citation-authors">
+            {{ publication.authors | join: ", " }}
+          </div>
+
+        {% endif %}
+
+        <div class="citation-details">
+
+          {% if publication.publisher %}
+
+            <span class="citation-publisher">
+              {{ publication.publisher }}
+            </span>
+
+          {% endif %}
+
+          {% if publication.publisher and publication_year %}
+
+            &nbsp;·&nbsp;
+
+          {% endif %}
+
+          {% if publication_year %}
+
+            <span class="citation-date">
+              {{ publication_year }}
+            </span>
+
+          {% endif %}
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+{% endfor %}
+
+{% endif %}
