@@ -107,9 +107,40 @@ blockquote {
 blockquote p:last-child { margin-bottom: 0; }
 
 pre {
+  position: relative;
+  padding-top: 42px;
   border: 1px solid var(--doc-border);
   border-radius: 8px;
   box-shadow: none;
+}
+
+.code-copy-button {
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  padding: 4px 10px;
+  border: 1px solid var(--doc-border);
+  border-radius: 6px;
+  color: var(--doc-heading);
+  background: #ffffff;
+  font-family: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.3;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.code-copy-button:hover,
+.code-copy-button:focus-visible {
+  color: #ffffff;
+  background: var(--doc-accent);
+  outline: none;
+}
+
+.code-copy-button[data-copied="true"] {
+  color: #ffffff;
+  background: #3f7d63;
 }
 
 table { border-color: var(--doc-border); }
@@ -142,9 +173,57 @@ table { border-color: var(--doc-border); }
 }
 </style>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("pre > code").forEach(function (code) {
+    var pre = code.parentElement;
+    var button = document.createElement("button");
+
+    button.type = "button";
+    button.className = "code-copy-button";
+    button.textContent = "Copy";
+    button.setAttribute("aria-label", "Copy this code");
+
+    button.addEventListener("click", function () {
+      var text = code.textContent;
+
+      function showSuccess() {
+        button.textContent = "Copied!";
+        button.setAttribute("data-copied", "true");
+        window.setTimeout(function () {
+          button.textContent = "Copy";
+          button.removeAttribute("data-copied");
+        }, 1600);
+      }
+
+      function fallbackCopy() {
+        var textarea = document.createElement("textarea");
+        textarea.value = text;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        document.body.appendChild(textarea);
+        textarea.select();
+        var copied = document.execCommand("copy");
+        document.body.removeChild(textarea);
+        if (copied) showSuccess();
+      }
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(showSuccess).catch(fallbackCopy);
+      } else {
+        fallbackCopy();
+      }
+    });
+
+    pre.appendChild(button);
+  });
+});
+</script>
+
 # Purpose
 
-This document explains how MCLab members can maintain the laboratory website safely and collaboratively. It is intended for both first-time contributors and regular editors. The source file is editable in RStudio and can be rendered as an HTML document with a floating table of contents.
+This document explains how MCLab members can maintain the laboratory website safely and collaboratively. It is intended for both first-time contributors and regular editors. If anyone wants to modify this document, the source file is editable in RStudio and can be rendered as an HTML document with a floating table of contents.
 
 The website repository is hosted in the **MCLabToronto** GitHub organization. The public website is currently available at:
 
@@ -167,11 +246,11 @@ These two structures are related, but they are not the same.
 
 ## Public website structure
 
-The public structure is the set of pages and navigation items seen by visitors in a browser. At present, it includes the home page and sections such as About, Research, Projects, People, Publications, News, Resources, and Contact. A visitor does not need to know how these pages are assembled.
+The public structure is the set of pages and navigation items seen by visitors in a browser. At present, it includes the home page and sections such as About, Research, Projects, People, Publications, News, and Resources.
 
 ## Repository architecture
 
-The repository contains source content, configuration, templates, styling, scripts, and automation. Jekyll combines these elements to generate the public site.
+The repository you will access using GitHub and/or R (see screenshots below) contains source content, configuration, templates, styling, scripts, and automation. Jekyll is a tool that combines these elements to generate the public site.
 
 | Repository path | Main purpose | Publicly visible as-is? |
 |---|---|---|
@@ -188,15 +267,37 @@ The repository contains source content, configuration, templates, styling, scrip
 | `.github/workflows/` | GitHub Actions for building, previews, and deployment | No |
 | `Gemfile` and `Gemfile.lock` | Ruby/Jekyll dependencies | No |
 
-Folders beginning with an underscore usually have a special role in Jekyll. Do not delete template files simply because they are not displayed in the navigation.
+Folders beginning with an underscore usually have a special role in Jekyll. **Do not delete template files** simply because they are not displayed in the navigation.
 
-> **Screenshot placeholder — repository:** Insert a screenshot of the repository file list on GitHub or in RStudio's Files pane here.
+<div style="display: flex; align-items: flex-start; justify-content: center; gap: 20px; flex-wrap: wrap;">
+  <figure style="flex: 1 1 500px; margin: 0;">
+    <img
+      src="images/documentation/RepoGit.png"
+      alt="MCLab website repository on GitHub"
+      style="width: 100%; height: auto; border: 1px solid #dce5ec; border-radius: 8px;"
+    >
+    <figcaption style="margin-top: 8px; text-align: center;">
+      Repository on GitHub
+    </figcaption>
+  </figure>
+
+  <figure style="flex: 0 1 350px; margin: 0;">
+    <img
+      src="images/documentation/RepoR.png"
+      alt="MCLab website repository in RStudio"
+      style="width: 60%; height: auto; border: 1px solid #dce5ec; border-radius: 8px;"
+    >
+    <figcaption style="margin-top: 8px; text-align: center;">
+      Repository in RStudio
+    </figcaption>
+  </figure>
+</div>
 
 # First-time setup
 
 Complete this section once on each computer used to edit the website. The GitHub account, organization membership, Git concepts, repository content, and daily workflow are the same on macOS, Linux, and Windows. The main differences concern installation, the terminal application, and secure storage of credentials.
 
-**Shared prerequisite: create a GitHub account**
+**Shared prerequisite: create a GitHub account (if you do not have one yet)**
 
 1. Go to <https://github.com> and create an account, preferably using a professional email address.
 2. Verify the email address.
@@ -210,6 +311,22 @@ An owner of **MCLabToronto** must invite the contributor. The invitation may arr
 Accept the invitation and confirm that the repository is visible. The account must have suitable repository permission to push a branch or open a pull request. If the invitation has expired, ask an organization owner to resend it.
 
 > **Screenshot placeholder — organization invitation:** Insert a screenshot showing where to accept the MCLabToronto invitation.
+
+**Choose how Git connects to GitHub**
+
+Git can connect to the MCLab repository using either **HTTPS** or **SSH** (section 3.1.2). Both methods provide access to the same files and use the same daily commands. The choice only changes how GitHub authenticates the contributor.
+
+| | HTTPS | SSH |
+|---|---|---|
+| Recommended for | Most contributors and first-time Git users | Contributors who already use SSH or prefer key-based access |
+| Initial setup | Minimal | Requires creating and registering an SSH key |
+| Daily editing in RStudio | Identical | Identical |
+| Authentication | GitHub may open a browser when authentication is required; credentials are normally remembered securely | The computer uses the registered SSH key; its passphrase may be remembered by a keychain or agent |
+| Repository address | `https://github.com/MCLabToronto/lab-website.git` | `git@github.com:MCLabToronto/lab-website.git` |
+
+> **Recommended for most contributors:** Start with HTTPS. It is simpler and does not require creating an SSH key. SSH is optional and can be configured later without recloning the repository.
+
+The choice does **not** affect how website files are edited, saved, committed, reviewed, or deployed. After authentication is configured, the everyday workflow is the same.
 
 ## Setup on macOS
 
@@ -227,7 +344,7 @@ If macOS prompts for the Command Line Tools, accept the installation. Git can al
 brew install git
 ```
 
-Set the name and email that will appear on commits. Use an email connected to the GitHub account, or a GitHub-provided private `noreply` address.
+Set the name and email. Use an email connected to the GitHub account.
 
 ```{bash}
 git config --global user.name "Your Full Name"
@@ -235,15 +352,15 @@ git config --global user.email "your-email@example.com"
 git config --global init.defaultBranch main
 ```
 
-Check the settings:
+Check the settings (should be the same as set above):
 
 ```{bash}
 git config --global --list
 ```
 
-### Configure SSH access
+### Optional: configure SSH access
 
-SSH allows Git to authenticate securely without requesting a password for every operation.
+Skip this subsection when using the recommended HTTPS method. SSH allows Git to authenticate using a registered key instead of a browser-based HTTPS sign-in.
 
 First, check for an existing key:
 
@@ -293,11 +410,28 @@ ssh -T git@github.com
 
 The first connection may ask whether to trust GitHub's host key. Verify the fingerprint against GitHub's documentation before accepting it. A successful test identifies the GitHub username and notes that GitHub does not provide shell access.
 
-> **Screenshot placeholder — SSH key:** Insert screenshots of the GitHub “New SSH key” page and a successful Terminal test.
 
 ### Clone the repository
 
-Choose a parent folder, such as `~/Documents/GitHub`, then clone with the SSH address:
+Cloning creates a complete local working copy (with its Git history) on your computer that you can work on anytime. Do not download a ZIP for routine collaboration because a ZIP is not connected to the Git repository.
+
+Choose a parent folder, such as `~/Documents/GitHub`.
+
+**Option A — HTTPS (recommended):**
+
+```{bash}
+mkdir -p ~/Documents/GitHub
+cd ~/Documents/GitHub
+git clone https://github.com/MCLabToronto/lab-website.git
+cd lab-website
+git status
+```
+
+
+When authentication is required (usually during the first `git pull` or `git push` that yo will discover later), GitHub will normally open a browser window. Sign in to your GitHub account and follow the instructions shown on screen.
+
+
+**Option B — SSH (only after completing the optional SSH setup above):**
 
 ```{bash}
 mkdir -p ~/Documents/GitHub
@@ -307,7 +441,7 @@ cd lab-website
 git status
 ```
 
-Cloning creates a complete local working copy with its Git history. Do not download a ZIP for routine collaboration because a ZIP is not connected to the Git repository.
+
 
 ### Open the repository in RStudio
 
@@ -320,31 +454,42 @@ The repository already contains `lab-website.Rproj`. It can be opened directly. 
 
 Confirm that the Files pane shows repository items such as `_members`, `_posts`, `images`, and `_config.yaml`. The Git pane should also be available once Git is detected.
 
-> **Screenshot placeholder — RStudio:** Insert a screenshot of “Existing Directory” and another showing the open project with its Git pane.
+<div style="text-align: center;">
+  <img
+    src="images/documentation/LocalRepo.png"
+    alt="Local MCLab website repository"
+    style="width: 100%; max-width: 1200px; height: auto; border: 1px solid #dce5ec; border-radius: 8px;"
+  >
+  <p style="margin-top: 8px;">
+    Local copy of the MCLab website repository with the R project
+  </p>
+</div>
+
+
 
 ## Setup on Linux
 
 On Linux, the GitHub account, MCLabToronto invitation, repository address, branch workflow, and RStudio workflow are the same. Package installation varies by distribution.
 
-### Install Git and the SSH client
+### Install Git
 
 On Ubuntu, Debian, Linux Mint, or a related distribution:
 
 ```{bash}
 sudo apt update
-sudo apt install git openssh-client
+sudo apt install git
 ```
 
 On Fedora or a related distribution:
 
 ```{bash}
-sudo dnf install git openssh-clients
+sudo dnf install git
 ```
 
 On Arch Linux or Manjaro:
 
 ```{bash}
-sudo pacman -S git openssh
+sudo pacman -S git
 ```
 
 Verify Git and configure the contributor identity:
@@ -356,9 +501,9 @@ git config --global user.email "your-email@example.com"
 git config --global init.defaultBranch main
 ```
 
-### Configure SSH access
+### Optional: configure SSH access
 
-Check whether an appropriate GitHub key already exists before creating a new one:
+Skip this subsection when using HTTPS. When using SSH, first install the SSH client if it is not already available (`openssh-client` on Ubuntu/Debian, `openssh-clients` on Fedora, or `openssh` on Arch Linux). Then check whether an appropriate GitHub key already exists before creating a new one:
 
 ```{bash}
 ls -al ~/.ssh
@@ -390,7 +535,21 @@ Some Linux desktop environments provide a keyring that can remember the SSH pass
 
 ### Clone and open the project
 
-Choose a suitable folder and clone the repository:
+Choose a suitable folder.
+
+**Option A — HTTPS (recommended):**
+
+```{bash}
+mkdir -p ~/Documents/GitHub
+cd ~/Documents/GitHub
+git clone https://github.com/MCLabToronto/lab-website.git
+cd lab-website
+git status
+```
+
+Depending on the Linux distribution and credential manager, GitHub may open a browser or request that authentication be completed through a browser. The normal GitHub account password cannot be used as a Git password.
+
+**Option B — SSH (only after completing the optional SSH setup above):**
 
 ```{bash}
 mkdir -p ~/Documents/GitHub
@@ -404,7 +563,6 @@ Install the current Linux version of RStudio Desktop appropriate for the distrib
 
 After setup, the daily Git commands in the next section are the same on Linux, macOS, and Windows.
 
-> **Screenshot placeholder — Linux:** Insert screenshots of Git installation, the SSH test, and the project open in RStudio on Linux.
 
 ## Setup on Windows
 
@@ -429,9 +587,9 @@ git config --global user.email "your-email@example.com"
 git config --global init.defaultBranch main
 ```
 
-### Configure SSH on Windows
+### Optional: configure SSH on Windows
 
-In Git Bash, check for an existing key and create one only if needed:
+Skip this subsection when using HTTPS. Git for Windows includes Git Credential Manager, which normally handles HTTPS authentication through the browser and stores the resulting credential securely. To use SSH instead, open Git Bash, check for an existing key, and create one only if needed:
 
 ```{bash}
 ls -al ~/.ssh
@@ -461,7 +619,22 @@ Windows does not use the macOS Keychain. Git for Windows includes Windows-compat
 
 ### Clone and open the project on Windows
 
-In Git Bash, a convenient location is the `Documents/GitHub` folder:
+In Git Bash, a convenient location is the `Documents/GitHub` folder.
+
+**Option A — HTTPS (recommended):**
+
+```{bash}
+cd ~/Documents
+mkdir -p GitHub
+cd GitHub
+git clone https://github.com/MCLabToronto/lab-website.git
+cd lab-website
+git status
+```
+
+Git Credential Manager should open a browser when GitHub authentication is required. Sign in to the correct GitHub account and authorize access. It normally remembers the credential, so this is not repeated for every `pull` or `push`.
+
+**Option B — SSH (only after completing the optional SSH setup above):**
 
 ```{bash}
 cd ~/Documents
@@ -474,90 +647,152 @@ git status
 
 Then open `lab-website.Rproj`, or use **File > New Project > Existing Directory** in RStudio and select the cloned `lab-website` folder. After setup, the daily Git commands below are the same on macOS, Linux, and Windows when entered in Terminal or Git Bash.
 
-> **Screenshot placeholder — Windows:** Insert screenshots of Git for Windows, Git Bash, the SSH key setup, and the project open in RStudio on Windows.
 
 # Daily workflow
 
-Always synchronize before editing. The recommended collaboration workflow is: pull the latest `main`, create a branch, edit and review, commit, push the branch, then open a pull request.
+The Git commands in this guide can be entered in the **Terminal tab in RStudio** or in the computer's regular terminal application.
 
-## 1. Update the local copy with `git pull`
+This guide shows the terminal commands because they are consistent across macOS, Linux, and Windows. The website files themselves are created and edited in RStudio's **Source pane**, not in the terminal.
+
+<div style="text-align: center;">
+  <img
+    src="images/documentation/RStudioPanes.png"
+    alt="Files, Source, Terminal, and Git panes in RStudio"
+    style="width: 100%; max-width: 1200px; height: auto; border: 1px solid #dce5ec; border-radius: 8px;"
+  >
+  <p style="margin-top: 8px;">
+    Main RStudio panes used to edit the website and run Git commands
+  </p>
+</div>
+
+There are two possible workflows. The **simple workflow** is suitable for small, routine content updates when direct changes to `main` are allowed. The **branch workflow** provides an additional review step and is safer for larger or structural changes.
+
+## Workflow A — Direct changes to `main` (simplest)
+
+Use this workflow for small updates such as editing your profile, adding a publication, correcting text, or replacing an image.
+
+1. **Pull** — update the website copy on your computer.
+2. **Edit and save** — modify the relevant files in RStudio.
+3. **Check and stage** — review the changed files and select them for the commit.
+4. **Commit** — save a named record of the changes on your computer.
+5. **Pull again** — check whether someone published changes while you were working.
+6. **Push** — send the commit directly to `main` on GitHub.
+
+### A1. Update the local copy
 
 ```{bash}
 git switch main
 git pull origin main
 ```
 
-`git pull origin main` contacts GitHub, downloads commits that are not yet local, and integrates them into the currently checked-out branch. Starting with an up-to-date `main` reduces conflicts and prevents work from being based on obsolete files.
+`git switch main` moves to the main version of the website. `git pull origin main` updates the copy on your computer with the latest changes from GitHub. Always do this before editing.
 
-Do not run `git pull` with unsaved work that you do not understand. First save files and inspect `git status`. If local uncommitted changes would conflict with incoming work, Git may stop and ask you to resolve the situation.
+### A2. Create or edit the website files
 
-## 2. Create a working branch
+In RStudio:
+
+1. Use the **Files pane** to locate the relevant file.
+2. Click the file to open it in the **Source pane**.
+3. Edit the text or code. More detailed examples for member profiles, publications, news, and images are provided in later sections.
+4. Save the file.
+
+New files can be created with **File > New File > Text File** and then saved in the appropriate repository folder with the correct filename and extension.
+
+<div style="text-align: center;">
+  <img
+    src="images/documentation/CreateNewFile.png"
+    alt="Creating a new file in RStudio"
+    style="width: 60%; max-width: 250px; height: auto; border: 1px solid #dce5ec; border-radius: 8px;"
+  >
+  <p style="margin-top: 8px;">
+    Create a new file
+  </p>
+</div>
+
+### A3. Check and stage the changes
+
+```{bash}
+git status
+git add .
+
+```
+
+- `git status` lists the files that have changed.
+- `git diff` (optionnal) displays the changed lines for review. to quit: q
+- `git add .` selects all new and modified files for the next commit. It does not upload them.
+- The final `git status` shows exactly what will be included in the commit.
+
+To select only specific files instead, use:
+
+```{bash}
+git add path/to/file
+```
+
+> **Added the wrong file?**
+>
+> Use `git restore --staged path/to/file` to remove one file from the next commit, or `git restore --staged .` to remove all staged files. The edits remain saved on the computer.
+
+### A4. Commit the changes
+
+```{bash}
+git commit -m "Update my profile"
+```
+
+The `-m` option adds a short description to the commit. The commit is still stored only on the computer at this stage.
+
+### A5. Check for recent changes and push
+
+Before publishing, check once more whether someone else updated `main` while you were working:
+
+```{bash}
+git pull origin main
+git push origin main
+```
+
+If no conflicting changes are found, Git combines compatible updates automatically and the push proceeds normally. If Git reports a **merge conflict**, do not force the push. Review the conflicting file with the colleague involved or ask the website administrator for help.
+
+Once the push succeeds, GitHub automatically rebuilds the public website. The update may take a few minutes to appear.
+
+## Workflow B — Branch and pull request
+
+Use this workflow for larger changes, changes to the website structure or styling, work that should be reviewed before publication, or situations where several people may edit the same area.
+
+A branch is a separate workspace based on `main`. Changes pushed to the branch do not appear on the public website until the branch is reviewed and merged into `main`.
+
+1. **Update `main`**:
+
+```{bash}
+git switch main
+git pull origin main
+```
+
+2. **Create a working branch** with a short, meaningful name:
 
 ```{bash}
 git switch -c update-adeline-profile
 ```
 
-Use a short, meaningful branch name such as `add-jane-profile`, `news-conference-2026`, or `update-publications`. One branch should address one coherent change.
+3. **Edit, save, check, stage, and commit** the files as described in steps A2–A4 above.
 
-Branches and pull requests are the **recommended workflow for lab colleagues** because they isolate changes, enable review and preview, and protect the live site. Direct pushes to `main` should be reserved for maintainers and simple changes when explicitly agreed by the team.
-
-## 3. Inspect changes with `git status`
-
-```{bash}
-git status
-```
-
-`git status` is a safe, read-only command. It reports the current branch, modified files, new untracked files, and changes already staged for the next commit. Run it before and after every important Git step.
-
-For a line-by-line review:
-
-```{bash}
-git diff
-git diff --staged
-```
-
-## 4. Select changes with `git add`
-
-```{bash}
-git add _members/jane-doe.md images/members/jane-doe.jpg
-```
-
-`git add` places the current version of selected files in the staging area for the next commit. It does not upload anything and does not permanently save a commit. Prefer explicit file paths because they help prevent unrelated changes from being included. Use `git add .` only after carefully reviewing `git status` and confirming that every change belongs in the same commit.
-
-## 5. Record changes with `git commit -m`
-
-```{bash}
-git commit -m "Add Jane Doe to People page"
-```
-
-A commit records the staged snapshot in the local history. The message after `-m` should be concise, specific, and written as an action. A commit still exists only on the local computer until it is pushed.
-
-## 6. Upload the branch with `git push`
-
-For the first push of a new branch:
+4. **Push the new branch** to GitHub:
 
 ```{bash}
 git push -u origin update-adeline-profile
 ```
 
-`git push` sends local commits to GitHub. The `-u` option links the local branch to its remote counterpart, so later pushes can normally be shortened to:
+The `-u` option links the local branch to the corresponding branch on GitHub. Later pushes from the same branch can normally use only `git push`.
 
-```{bash}
-git push
-```
+5. **Open a pull request on GitHub**:
 
-## 7. Open and merge a pull request
+   - Open the repository on GitHub.
+   - Select **Compare & pull request**, or open **Pull requests > New pull request**.
+   - Confirm that the base is `main` and the comparison branch is your working branch.
+   - Review the changed files and automated checks.
+   - Select **Merge pull request** when the changes are ready.
 
-1. Open the repository on GitHub.
-2. Select **Compare & pull request**, or open **Pull requests > New pull request**.
-3. Set the base branch to `main` and the compare branch to the working branch.
-4. Give the pull request a clear title and explain what changed.
-5. Check the automated workflow results and the generated preview when available.
-6. Request review from a colleague or maintainer.
-7. Make corrections on the same local branch, commit them, and push again; the pull request updates automatically.
-8. Merge only after review and successful checks.
+A pull request is created once for the complete branch, not after every individual edit or commit. Additional commits pushed to the same branch are automatically added to the open pull request.
 
-After merging, update and clean up locally:
+After the pull request has been merged:
 
 ```{bash}
 git switch main
@@ -565,7 +800,11 @@ git pull origin main
 git branch -d update-adeline-profile
 ```
 
-> **Screenshot placeholder — pull request:** Insert screenshots of the “Compare & pull request” button, successful checks, preview link, and merge button.
+> **What happens if two people work at the same time?**
+>
+> If they edit different files or different parts of a file, Git can usually combine the changes automatically. If they edit the same lines, Git reports a **merge conflict** during a pull or merge. A branch does not completely prevent conflicts, but it allows the changes to be reviewed and resolved before they affect the public website. In either workflow, communicate about major changes and pull the latest `main` before starting.
+
+> **Using RStudio's Git pane:** Contributors can use the Git pane for common actions such as Pull, Diff, Commit, and Push. The terminal commands are shown here because they remain consistent across macOS, Linux, and Windows.
 
 # Website pages
 
@@ -601,7 +840,7 @@ name: Jane Doe
 # Profile photo
 image: images/members/jane-doe.jpg
 
-# Member role (choose ONE): pi, postdoc, phd, master, or staff
+# Member role (choose ONE ; it will be used to classify members): pi, postdoc, phd, master, or staff
 role: phd
 
 # Short research description (2–4 sentences)
@@ -651,7 +890,29 @@ Edit the person's existing file rather than creating a duplicate. If the portrai
 
 Validate the opening and closing `---`, indentation, colon placement, and spelling of `role`. YAML errors can stop the site build.
 
-> **Screenshot placeholder — member update:** Insert screenshots of a member file, its portrait in `images/members/`, and the resulting People card.
+<div style="display: flex; align-items: flex-start; justify-content: center; gap: 20px; flex-wrap: wrap;">
+  <figure style="flex: 1 1 500px; margin: 0;">
+    <img
+      src="images/documentation/MemberFile.png"
+      alt="Example of a member file"
+      style="width: 100%; height: auto; border: 1px solid #dce5ec; border-radius: 8px;"
+    >
+    <figcaption style="margin-top: 8px; text-align: center;">
+      Example of a member file
+    </figcaption>
+  </figure>
+
+  <figure style="flex: 0 1 500px; margin: 0;">
+    <img
+      src="images/documentation/MemberPic.png"
+      alt="Where to add ember pic"
+      style="width: 100%; height: auto; border: 1px solid #dce5ec; border-radius: 8px;"
+    >
+    <figcaption style="margin-top: 8px; text-align: center;">
+      Where to add your pic
+    </figcaption>
+  </figure>
+</div>
 
 # Add a publication
 
@@ -677,7 +938,7 @@ Keep reverse chronological order: newest year first and, preferably, newest item
 
 The repository also contains citation automation and data under `_cite/` and `_data/`. Those template mechanisms exist even though the current public publications page is maintained as a single year-organized page. Do not edit generated citation data unless the selected maintenance workflow specifically requires it.
 
-> **Screenshot placeholder — publication:** Insert before-and-after screenshots of the relevant year in `publications/index.md` and the rendered Publications page.
+
 
 # Add a news item
 
@@ -715,7 +976,6 @@ Use meaningful link text rather than pasting long URLs into the prose:
 Read the [conference programme](https://example.org/programme) for details.
 ```
 
-> **Screenshot placeholder — news:** Insert screenshots of a correctly named `_posts` file and its rendered News page.
 
 # Replace images
 
@@ -734,7 +994,12 @@ Example Markdown:
 ![Descriptive alternative text]({{ 'images/new-image.jpg' | relative_url }})
 ```
 
-Example HTML/Liquid, useful when the displayed width must be controlled:
+
+Always include useful alternative text. Compress very large photographs before committing them. Be careful with `team.JPG`: changing `.JPG` to `.jpg` without renaming the actual file breaks the image on GitHub's case-sensitive environment.
+
+## Control the displayed image size
+
+HTML/Liquid can be used when the displayed width or alignment of an image must be controlled.
 
 ```html
 <div style="max-width: 850px; margin: 30px auto;">
@@ -746,34 +1011,90 @@ Example HTML/Liquid, useful when the displayed width must be controlled:
 </div>
 ```
 
-Always include useful alternative text. Compress very large photographs before committing them. Be careful with `team.JPG`: changing `.JPG` to `.jpg` without renaming the actual file breaks the image on GitHub's case-sensitive environment.
+In this example:
 
-> **Screenshot placeholder — images:** Insert a screenshot showing an image file and the exact matching path in the page source.
+- `max-width: 850px` sets the maximum displayed width of the image container.
+- `width: 100%` makes the image fill the available width of its container.
+- `height: auto` preserves the original proportions of the image.
+- `margin: 30px auto` adds vertical space and centres the image horizontally.
+- `border-radius: 4px` slightly rounds the corners.
 
-# GitHub Actions and deployment
+To display a smaller image, reduce `max-width`:
 
-Deployment is automatic. Contributors normally edit source files and should not manually edit the generated `gh-pages` branch.
+```html
+<div style="max-width: 500px; margin: 30px auto;">
+```
 
-The current workflow is:
+To display a larger image, increase it:
 
-1. A pull request triggers `.github/workflows/on-pull-request.yaml`.
-2. Citation-related processing runs, and `build-preview.yaml` builds a Jekyll preview for review.
-3. When approved changes are merged or pushed to `main`, `.github/workflows/on-push.yaml` runs.
-4. `build-site.yaml` installs the Ruby dependencies, builds the production Jekyll site, and deploys the generated `_site` folder to `gh-pages`.
-5. GitHub Pages serves the content from the deployment branch.
+```html
+<div style="max-width: 1000px; margin: 30px auto;">
+```
 
-There are also scheduled citation-update and URL-maintenance workflows. These template and automation files may not correspond to visible pages, but they support maintenance and deployment.
+In most cases, keep `height: auto`. Setting both a fixed width and a fixed height can stretch or distort the image.
 
-To inspect a run:
+### Display two images side by side
+
+Use a flexible container to place two images on the same row:
+
+```html
+<div style="display: flex; align-items: flex-start; justify-content: center; gap: 20px; flex-wrap: wrap;">
+
+  <figure style="flex: 1 1 500px; margin: 0;">
+    <img
+      src="{{ 'images/first-image.png' | relative_url }}"
+      alt="Description of the first image"
+      style="width: 100%; height: auto; border-radius: 8px;"
+    >
+    <figcaption style="margin-top: 8px; text-align: center;">
+      Caption for the first image
+    </figcaption>
+  </figure>
+
+  <figure style="flex: 1 1 350px; margin: 0;">
+    <img
+      src="{{ 'images/second-image.png' | relative_url }}"
+      alt="Description of the second image"
+      style="width: 100%; height: auto; border-radius: 8px;"
+    >
+    <figcaption style="margin-top: 8px; text-align: center;">
+      Caption for the second image
+    </figcaption>
+  </figure>
+
+</div>
+```
+
+In this example:
+
+- `display: flex` places the images next to each other.
+- `gap: 20px` controls the space between them.
+- `flex-wrap: wrap` moves the second image below the first on a narrow screen.
+- `flex: 1 1 500px` and `flex: 1 1 350px` give the images different preferred widths.
+- Use the same value for both figures if the images should have approximately equal widths.
+- The `<figcaption>` elements are optional and can be removed when captions are not needed.
+
+# Website publication
+
+Changes made on your computer do not immediately appear on the public website.
+
+The website is updated automatically after the changes have been:
+
+1. committed;
+2. pushed to GitHub; and
+3. merged into the `main` branch.
+
+GitHub then rebuilds and publishes the website. This process is called **deployment** and may take a few minutes.
+
+To check whether the update was successful:
 
 1. Open the repository on GitHub.
 2. Select the **Actions** tab.
-3. Open the most recent workflow run.
-4. Expand the failed job and step if a red failure icon appears.
+3. Open the most recent workflow.
 
-Do not commit `_site/` to `main`; it is generated during the workflow. Do not make manual fixes on `gh-pages`, because a later deployment can overwrite them.
+A green check mark means that the website was built successfully. A red cross means that an error occurred. If an error appears, contact the website administrator and share a screenshot or link to the failed workflow.
 
-> **Screenshot placeholder — deployment:** Insert screenshots of the Actions tab, a successful `on-push` run, and the deployed GitHub Pages environment.
+> Do not manually modify the `gh-pages` branch or the generated `_site` folder. These are managed automatically.
 
 # Troubleshooting
 
@@ -837,6 +1158,22 @@ bundle exec jekyll serve
 
 Then open the local address reported in Terminal. Stop the server with **Control-C**. Local build tooling is helpful but not required for ordinary edits because the pull-request workflow provides a preview.
 
+## HTTPS authentication fails
+
+```{bash}
+git remote -v
+```
+
+Confirm that the remote address begins with `https://github.com/`. When GitHub opens a browser, sign in with the GitHub account that belongs to MCLabToronto and authorize access. If the terminal requests a password, the normal GitHub account password will not work. Use the browser-based flow provided by the system's credential manager, or ask the website administrator for help configuring it.
+
+To deliberately change an existing SSH remote to the recommended HTTPS address:
+
+```{bash}
+git remote set-url origin https://github.com/MCLabToronto/lab-website.git
+```
+
+Changing the remote address does not delete local files, branches, or commits.
+
 ## SSH authentication fails
 
 ```{bash}
@@ -891,7 +1228,8 @@ Ask another maintainer for review if the conflict affects templates, workflows, 
 
 | Command | Purpose |
 |---|---|
-| `git clone git@github.com:MCLabToronto/lab-website.git` | Create the initial local copy |
+| `git clone https://github.com/MCLabToronto/lab-website.git` | Create the initial local copy using HTTPS (recommended) |
+| `git clone git@github.com:MCLabToronto/lab-website.git` | Create the initial local copy using SSH (optional) |
 | `git status` | Show branch and working-tree state without changing anything |
 | `git switch main` | Switch to the main branch |
 | `git pull origin main` | Download and integrate the latest `main` commits |
