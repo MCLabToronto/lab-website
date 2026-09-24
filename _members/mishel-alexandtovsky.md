@@ -1,6 +1,6 @@
 ---
 # Full name
-name: "Mishel Alexandtovsky"
+name: "Mishel Alexandrovsky"
 
 # Profile photo
 image: images/members/mishel-alexandtovsky.png
