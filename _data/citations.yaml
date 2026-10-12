@@ -2233,7 +2233,7 @@
   publisher: INSAR 2024, 2024
   date: '2024-01-01'
   year: '2024'
-  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:QD3KBmkZPeQC
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:QD3KBmkZPeQC
   type: paper
   lab_members:
   - Meng-Chuan Lai
@@ -2818,6 +2818,26 @@
   - Meng-Chuan Lai
   scholar_ids:
   - G_U8QgMAAAAJ
+- id: scholar:83992306de369ca9
+  title: Characterizing the Role of Autistic Traits in the Recalled Gender Experiences of Adolescents Seeking Gender-Related Medical Services in the Netherlands
+  authors:
+  - MI Pascoe
+  - MC Lai
+  - A Kooke
+  - ALC de Vries
+  - T Steensma
+  - '...'
+  publisher: INSAR 2024, 2024
+  date: '2024-01-01'
+  year: '2024'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:hvmnpdAuIbkC
+  type: paper
+  lab_members:
+  - Meng-Chuan Lai
+  - Molly Pascoe
+  scholar_ids:
+  - G_U8QgMAAAAJ
+  - uo3k04UAAAAJ
 - id: scholar:e9195d7a2b1ca1b9
   title: Camouflaging, internalized stigma, and mental health in the general population
   authors:
@@ -5319,7 +5339,7 @@
   publisher: Biological Psychiatry 89 (9), S212-S213, 2021
   date: '2021-01-01'
   year: '2021'
-  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:tYavs44e6CUC
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:tYavs44e6CUC
   type: paper
   lab_members:
   - Meng-Chuan Lai
@@ -7347,7 +7367,7 @@
   publisher: Human brain mapping 38 (3), 1208-1223, 2017
   date: '2017-01-01'
   year: '2017'
-  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:dfsIfKJdRG4C
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:dfsIfKJdRG4C
   type: paper
   lab_members:
   - Meng-Chuan Lai
@@ -9230,7 +9250,7 @@
   publisher: INSAR 2020 Virtual Meeting, 0
   date: ''
   year: ''
-  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:z_wVstp3MssC
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:z_wVstp3MssC
   type: paper
   lab_members:
   - Meng-Chuan Lai
