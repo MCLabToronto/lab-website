@@ -150,6 +150,26 @@
   - Meng-Chuan Lai
   scholar_ids:
   - G_U8QgMAAAAJ
+- id: scholar:a67bcd70cbd92089
+  title: Transdiagnostic neurobiology of social cognition and individual variability as measured by fractional amplitude of low-frequency fluctuation in autism and schizophrenia …
+  authors:
+  - S Bagheri
+  - JC Yu
+  - J Gallucci
+  - V Tan
+  - LD Oliver
+  - EW Dickie
+  - AG Rashidi
+  - '...'
+  publisher: 'Biological Psychiatry: Cognitive Neuroscience and Neuroimaging 11 (8), 941-951, 2026'
+  date: '2026-01-01'
+  year: '2026'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:4xDN1ZYqzskC
+  type: paper
+  lab_members:
+  - Meng-Chuan Lai
+  scholar_ids:
+  - G_U8QgMAAAAJ
 - id: scholar:62c892083c65315e
   title: Towards Context-Responsive, Evidence-Informed Care for Transgender and Gender Diverse Young People
   authors:
@@ -373,6 +393,25 @@
   scholar_ids:
   - -_m-7XAAAAAJ
   - G_U8QgMAAAAJ
+- id: scholar:b12cf45e49b7fb1f
+  title: 'Professionals Underestimate the Practical Support Needs of Autistic Parents: A Large Co-Designed Study of Autistic Adults and Professionals'
+  authors:
+  - A Lacroix
+  - W Vallet
+  - M Lai
+  - D Langloys
+  - M Pignard
+  - J Brunelin
+  - '...'
+  publisher: ''
+  date: '2026-01-01'
+  year: '2026'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:fPk4N6BV_jEC
+  type: paper
+  lab_members:
+  - Adeline Lacroix
+  scholar_ids:
+  - tfJPoc4AAAAJ
 - id: scholar:257e0fff4ae707e3
   title: Needs assessment of medical curricula development for patients with physical, intellectual, and/or developmental disabilities or non-english language preferences
   authors:
@@ -569,7 +608,7 @@
   - M Mermillod
   - L Kauffmann
   - P Favre
-  publisher: Visual Cognition, 1-17, 2026
+  publisher: Visual Cognition 34 (1), 67-83, 2026
   date: '2026-01-01'
   year: '2026'
   link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfJPoc4AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=tfJPoc4AAAAJ:M05iB0D1s5AC
@@ -579,17 +618,17 @@
   scholar_ids:
   - tfJPoc4AAAAJ
 - id: scholar:14a662d052325e24
-  title: 'Breaking barriers to accessing mental healthcare for autistic people: the Autistic SPACE Framework for adult mental health settings'
+  title: 'Breaking barriers to accessing mental healthcare for autistic people: the autistic SPACE framework for adult mental health settings'
   authors:
   - C Dakin
   - D Davies
   - J Lang
-  - B Groasjean
   - M Kinnear
-  - MC Lai
+  - M Lai
   - S Porter
+  - A Rebowska
   - '...'
-  publisher: OSF, 2026
+  publisher: ''
   date: '2026-01-01'
   year: '2026'
   link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:eAlLMO4JVmQC
@@ -901,26 +940,6 @@
   - Adeline Lacroix
   scholar_ids:
   - tfJPoc4AAAAJ
-- id: scholar:a67bcd70cbd92089
-  title: Transdiagnostic neurobiology of social cognition and individual variability as measured by fractional amplitude of low-frequency fluctuation in autism and schizophrenia …
-  authors:
-  - S Bagheri
-  - JC Yu
-  - J Gallucci
-  - V Tan
-  - LD Oliver
-  - EW Dickie
-  - AG Rashidi
-  - '...'
-  publisher: 'Biological Psychiatry: Cognitive Neuroscience and Neuroimaging, 2025'
-  date: '2025-01-01'
-  year: '2025'
-  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:4xDN1ZYqzskC
-  type: paper
-  lab_members:
-  - Meng-Chuan Lai
-  scholar_ids:
-  - G_U8QgMAAAAJ
 - id: scholar:83709f9446fba701
   title: Towards an Intersectional Understanding of Sexual Identity, Mental Health, Neurodivergence, and Beyond
   authors:
@@ -1176,7 +1195,7 @@
   - P Howlin
   - MC Lai
   - '...'
-  publisher: 'Autism: the International Journal of Research and Practice …, 2025'
+  publisher: 'Autism: the International Journal of Research and Practice 29 (10), 2618-2631, 2025'
   date: '2025-01-01'
   year: '2025'
   link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:NMlhSUseqAsC
@@ -1557,6 +1576,25 @@
   - Adeline Lacroix
   scholar_ids:
   - tfJPoc4AAAAJ
+- id: scholar:1384c5dd63a4ff4d
+  title: 'Decomposing the brain in autism: Linking behavioral domains to neuroanatomical variation and genomic underpinnings'
+  authors:
+  - H Seelemeyer
+  - C Gurr
+  - J Leyhausen
+  - LM Berg
+  - CM Pretzsch
+  - T Schäfer
+  - '...'
+  publisher: 'Biological Psychiatry: Cognitive Neuroscience and Neuroimaging 10 (10), 1067 …, 2025'
+  date: '2025-01-01'
+  year: '2025'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:MpfHP-DdYjUC
+  type: paper
+  lab_members:
+  - Meng-Chuan Lai
+  scholar_ids:
+  - G_U8QgMAAAAJ
 - id: scholar:0ba85b8e9fe86a57
   title: Contribution of autosomal rare and de novo variants to sex differences in autism
   authors:
@@ -2685,25 +2723,6 @@
   - Meng-Chuan Lai
   scholar_ids:
   - G_U8QgMAAAAJ
-- id: scholar:1384c5dd63a4ff4d
-  title: 'Decomposing the brain in autism: Linking behavioral domains to neuroanatomical variation and genomic underpinnings'
-  authors:
-  - H Seelemeyer
-  - C Gurr
-  - J Leyhausen
-  - LM Berg
-  - CM Pretzsch
-  - T Schäfer
-  - '...'
-  publisher: 'Biological Psychiatry: Cognitive Neuroscience and Neuroimaging, 2024'
-  date: '2024-01-01'
-  year: '2024'
-  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:MpfHP-DdYjUC
-  type: paper
-  lab_members:
-  - Meng-Chuan Lai
-  scholar_ids:
-  - G_U8QgMAAAAJ
 - id: scholar:d76932a27562539c
   title: Country-Based Differences Among Autistic Transgender Adults in the United States and the Netherlands; The Gender Diversity and Autism Questionnaire
   authors:
@@ -2903,6 +2922,23 @@
   date: '2024-01-01'
   year: '2024'
   link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:2tRrZ1ZAMYUC
+  type: paper
+  lab_members:
+  - Meng-Chuan Lai
+  scholar_ids:
+  - G_U8QgMAAAAJ
+- id: scholar:93124f298d3ba7e7
+  title: 'Article reuse guidelines: sagepub. com/journals-permissions'
+  authors:
+  - SJ Støre
+  - N Van Zalk
+  - WG Schwartz
+  - V Nilsson
+  - M Tillfors
+  publisher: Journal of Attention Disorders 28 (9), 1299-1319, 2024
+  date: '2024-01-01'
+  year: '2024'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:H_jBuBxbQIAC
   type: paper
   lab_members:
   - Meng-Chuan Lai
@@ -3887,25 +3923,6 @@
   - Meng-Chuan Lai
   scholar_ids:
   - G_U8QgMAAAAJ
-- id: scholar:93124f298d3ba7e7
-  title: 'Article reuse guidelines: sagepub. com/journals-permissions'
-  authors:
-  - A Tint
-  - H Chung
-  - MC Lai
-  - R Balogh
-  - E Lin
-  - A Durbin
-  - Y Lunsky
-  publisher: Autism 27 (6), 1641-1657, 2023
-  date: '2023-01-01'
-  year: '2023'
-  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:H_jBuBxbQIAC
-  type: paper
-  lab_members:
-  - Meng-Chuan Lai
-  scholar_ids:
-  - G_U8QgMAAAAJ
 - id: scholar:058fd23debb845f5
   title: 'A coping subscale for autistic children: Revisiting the dimensionality of the emotion regulation and social skills questionnaire'
   authors:
@@ -4510,8 +4527,8 @@
   - B Hong
   - C Pace-Tonna
   - M Barense
-  - M Mack
-  publisher: OSF, 2022
+  - ML Mack
+  publisher: ''
   date: '2022-01-01'
   year: '2022'
   link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-_m-7XAAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=-_m-7XAAAAAJ:d1gkVwhDpl0C
@@ -5897,14 +5914,14 @@
 - id: scholar:e1a84dedfe4cace3
   title: Intranasal oxytocin differentially affects resting-state functional connectivity of social brain regions in autistic and non-autistic women
   authors:
-  - T Procyshyn
+  - TL Procyshyn
   - M Lombardo
   - MC Lai
   - B Auyeung
   - S Crockford
   - J Deakin
   - '...'
-  publisher: OSF, 2020
+  publisher: OSF Prepr 10, 2020
   date: '2020-01-01'
   year: '2020'
   link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:XD-gHx7UXLsC
