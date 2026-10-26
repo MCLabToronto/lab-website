@@ -90,6 +90,25 @@
   - Ingrid Tien
   scholar_ids:
   - CCe8U1wAAAAJ
+- id: scholar:c3b4071afd092b2f
+  title: 'Validating gene-brain-behavior associations in autism: A replication study'
+  authors:
+  - D Zhou
+  - T Mei
+  - M Oldehinkel
+  - M Mennes
+  - NJ Forde
+  - F Dell’Acqua
+  - '...'
+  publisher: 'Biological Psychiatry: Cognitive Neuroscience and Neuroimaging, 2026'
+  date: '2026-01-01'
+  year: '2026'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:G1UMdFYMoxkC
+  type: paper
+  lab_members:
+  - Meng-Chuan Lai
+  scholar_ids:
+  - G_U8QgMAAAAJ
 - id: scholar:94e2f70e2e79893a
   title: Untangling sex and gender differences in impression management and associated autism features in French autistic adults
   authors:
@@ -523,6 +542,26 @@
   - Ingrid Tien
   scholar_ids:
   - CCe8U1wAAAAJ
+- id: scholar:5c87349cf91fc53a
+  title: 'Flow and Similar Attentional States in Autism and ADHD: A Scoping Review of Similarities and Differences'
+  authors:
+  - C Pace-Tonna
+  - M Murtaza
+  - T Rodak
+  - N Farb
+  - W Ryan
+  - MC Lai
+  publisher: Perspectives on Psychological Science, 17456916261470783, 2026
+  date: '2026-01-01'
+  year: '2026'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-_m-7XAAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=-_m-7XAAAAAJ:qjMakFHDy7sC
+  type: paper
+  lab_members:
+  - Carleigh Pace-Tonna
+  - Meng-Chuan Lai
+  scholar_ids:
+  - -_m-7XAAAAAJ
+  - G_U8QgMAAAAJ
 - id: scholar:244bca8d0583eec7
   title: 'Divergent Perceptions of Autistic Parents Among Health Care, Social Care, and Judicial Professionals and Autistic Adults: A Participatory Study'
   authors:
@@ -618,17 +657,17 @@
   scholar_ids:
   - tfJPoc4AAAAJ
 - id: scholar:14a662d052325e24
-  title: 'Breaking barriers to accessing mental healthcare for autistic people: the autistic SPACE framework for adult mental health settings'
+  title: 'Breaking barriers to accessing mental healthcare for autistic people: the Autistic SPACE Framework for adult mental health settings'
   authors:
   - C Dakin
   - D Davies
   - J Lang
+  - B Groasjean
   - M Kinnear
-  - M Lai
+  - MC Lai
   - S Porter
-  - A Rebowska
   - '...'
-  publisher: ''
+  publisher: OSF, 2026
   date: '2026-01-01'
   year: '2026'
   link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:eAlLMO4JVmQC
@@ -1381,26 +1420,6 @@
   scholar_ids:
   - G_U8QgMAAAAJ
   - uo3k04UAAAAJ
-- id: scholar:5c87349cf91fc53a
-  title: 'Flow and Similar Attentional States in Autism and ADHD: A Scoping Review of Similarities and Differences'
-  authors:
-  - C Pace-Tonna
-  - M Murtaza
-  - T Rodak
-  - N Farb
-  - W Ryan
-  - MC Lai
-  publisher: Perspectives on Psychological Science, 17456916261470783, 2025
-  date: '2025-01-01'
-  year: '2025'
-  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-_m-7XAAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=-_m-7XAAAAAJ:qjMakFHDy7sC
-  type: paper
-  lab_members:
-  - Carleigh Pace-Tonna
-  - Meng-Chuan Lai
-  scholar_ids:
-  - -_m-7XAAAAAJ
-  - G_U8QgMAAAAJ
 - id: scholar:0c777320ad770c90
   title: 'Five-Year Trend in the Incidence of Physical Health Conditions Following Autism Diagnosis: A Nationwide Cohort Study in Taiwan'
   authors:
@@ -2453,7 +2472,7 @@
   publisher: INSAR 2024, 2024
   date: '2024-01-01'
   year: '2024'
-  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:kVjdVfd2voEC
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:kVjdVfd2voEC
   type: paper
   lab_members:
   - Meng-Chuan Lai
@@ -2922,23 +2941,6 @@
   date: '2024-01-01'
   year: '2024'
   link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:2tRrZ1ZAMYUC
-  type: paper
-  lab_members:
-  - Meng-Chuan Lai
-  scholar_ids:
-  - G_U8QgMAAAAJ
-- id: scholar:93124f298d3ba7e7
-  title: 'Article reuse guidelines: sagepub. com/journals-permissions'
-  authors:
-  - SJ Støre
-  - N Van Zalk
-  - WG Schwartz
-  - V Nilsson
-  - M Tillfors
-  publisher: Journal of Attention Disorders 28 (9), 1299-1319, 2024
-  date: '2024-01-01'
-  year: '2024'
-  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:H_jBuBxbQIAC
   type: paper
   lab_members:
   - Meng-Chuan Lai
@@ -3923,6 +3925,25 @@
   - Meng-Chuan Lai
   scholar_ids:
   - G_U8QgMAAAAJ
+- id: scholar:93124f298d3ba7e7
+  title: 'Article reuse guidelines: sagepub. com/journals-permissions'
+  authors:
+  - A Tint
+  - H Chung
+  - MC Lai
+  - R Balogh
+  - E Lin
+  - A Durbin
+  - Y Lunsky
+  publisher: Autism 27 (6), 1641-1657, 2023
+  date: '2023-01-01'
+  year: '2023'
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:H_jBuBxbQIAC
+  type: paper
+  lab_members:
+  - Meng-Chuan Lai
+  scholar_ids:
+  - G_U8QgMAAAAJ
 - id: scholar:058fd23debb845f5
   title: 'A coping subscale for autistic children: Revisiting the dimensionality of the emotion regulation and social skills questionnaire'
   authors:
@@ -4527,8 +4548,8 @@
   - B Hong
   - C Pace-Tonna
   - M Barense
-  - ML Mack
-  publisher: ''
+  - M Mack
+  publisher: OSF, 2022
   date: '2022-01-01'
   year: '2022'
   link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-_m-7XAAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=-_m-7XAAAAAJ:d1gkVwhDpl0C
@@ -4941,7 +4962,7 @@
   publisher: Biological Psychiatry 89 (9), S363, 2021
   date: '2021-01-01'
   year: '2021'
-  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:TIZ-Mc8IlK0C
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:TIZ-Mc8IlK0C
   type: paper
   lab_members:
   - Meng-Chuan Lai
@@ -5914,14 +5935,14 @@
 - id: scholar:e1a84dedfe4cace3
   title: Intranasal oxytocin differentially affects resting-state functional connectivity of social brain regions in autistic and non-autistic women
   authors:
-  - TL Procyshyn
+  - T Procyshyn
   - M Lombardo
   - MC Lai
   - B Auyeung
   - S Crockford
   - J Deakin
   - '...'
-  publisher: OSF Prepr 10, 2020
+  publisher: OSF, 2020
   date: '2020-01-01'
   year: '2020'
   link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:XD-gHx7UXLsC
@@ -7257,7 +7278,7 @@
   publisher: Psychological Medicine 47 (4), 639-654, 2017
   date: '2017-01-01'
   year: '2017'
-  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:a0OBvERweLwC
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:a0OBvERweLwC
   type: paper
   lab_members:
   - Meng-Chuan Lai
@@ -9058,7 +9079,7 @@
   publisher: INSAR 2020 Virtual Meeting, 0
   date: ''
   year: ''
-  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:ipzZ9siozwsC
+  link: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=G_U8QgMAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=G_U8QgMAAAAJ:ipzZ9siozwsC
   type: paper
   lab_members:
   - Meng-Chuan Lai
