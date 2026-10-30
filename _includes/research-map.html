@@ -1,6 +1,6 @@
 <div class="research-framework">
   <figure class="research-map" aria-labelledby="research-map-caption">
-    <img src="{{ '/images/research-framework.png' | relative_url }}" width="1637" height="961" alt="Five connected research themes around Autism &amp; Neurodivergence: Harmonizing Models. The full text of each theme follows below.">
+    <img src="{{ '/images/optimized/research-framework.webp' | relative_url }}" decoding="async" fetchpriority="high" width="1637" height="961" alt="Five connected research themes around Autism &amp; Neurodivergence: Harmonizing Models. The full text of each theme follows below.">
     {% assign linked_themes = site.data.research_themes | where_exp: "theme", "theme.url != nil and theme.url != ''" %}
     {% if linked_themes.size > 0 %}
     <svg class="research-map-links" viewBox="0 0 1637 961" aria-label="Research theme projects">

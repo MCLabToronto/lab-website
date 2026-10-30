@@ -11,7 +11,7 @@ The MCLab is a multidisciplinary and collaborative research team committed to ad
 
 <div style="max-width: 500px; margin: 30px auto;">
   <img
-    src="{{ 'images/team.JPG' | relative_url }}"
+    src="{{ 'images/optimized/team.webp' | relative_url }}"
     alt="MCLab team"
     style="width: 100%; height: auto; border-radius: 4px;"
   >

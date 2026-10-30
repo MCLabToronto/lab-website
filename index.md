@@ -37,7 +37,7 @@
   <h2>Our team</h2>
   <div>
     <p class="lab-intro">The MCLab brings together researchers and trainees with varied expertise, backgrounds, and lived perspectives. We value collaboration, curiosity, inclusion, and respectful engagement across disciplines.</p>
-    <img class="lab-team-photo" src="{{ '/images/team2025-display.jpg' | relative_url }}" alt="Members of the MCLab team" loading="lazy">
+    <img class="lab-team-photo" src="{{ '/images/optimized/team2025-display.webp' | relative_url }}" alt="Members of the MCLab team" loading="lazy">
     <a class="lab-button" href="{{ '/team/' | relative_url }}">Meet our team</a>
   </div>
 </div>

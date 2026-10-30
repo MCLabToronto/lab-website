@@ -1,6 +1,8 @@
+{% assign original_image = include.image | default: "images/fallback.svg" %}
+{% assign display_image = site.data.image_variants[original_image] | default: original_image %}
 {% assign role = site.data.types[include.role] %}
 <article class="lab-member">
-  <img src="{{ include.image | default: 'images/fallback.svg' | relative_url }}" alt="Portrait of {{ include.name | escape }}" loading="lazy" {% include fallback.html %}>
+  <img src="{{ display_image | relative_url }}" alt="Portrait of {{ include.name | escape }}" loading="lazy" decoding="async" {% include fallback.html %}>
   <div>
     <h3>{{ include.name }}</h3>
     {% if role %}<p class="lab-member-role">{{ role.description }}</p>{% endif %}

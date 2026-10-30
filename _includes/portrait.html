@@ -11,6 +11,7 @@
 {% assign homepage = member.links["home-page"] %}
 {% assign scholar = member.links["google-scholar"] %}
 
+{% assign display_image = site.data.image_variants[member.image] | default: member.image %}
 <div class="portrait-wrapper">
 
   <div
@@ -22,10 +23,10 @@
     {% endif %}
 
     <img
-      src="{{ member.image | relative_url | uri_escape }}"
+      src="{{ display_image | relative_url | uri_escape }}"
       class="portrait-image"
       alt="Portrait of {{ member.name }}"
-      loading="lazy"
+      loading="lazy" decoding="async"
       {% include fallback.html %}
     >
 
