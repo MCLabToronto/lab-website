@@ -666,7 +666,7 @@
   <div class="portrait" data-style="">
     
 
-    <img src="/lab-website/images/members/firstname-lastname.jpg" class="portrait-image" alt="Portrait of template" loading="lazy" onerror="this.src = '/lab-website/images/fallback.svg'; this.onerror = null;" />
+    <img src="/lab-website/images/members/firstname-lastname.jpg" class="portrait-image" alt="Portrait of template" loading="lazy" decoding="async" onerror="this.src = '/lab-website/images/fallback.svg'; this.onerror = null;" />
 
     
       <span class="portrait-name">

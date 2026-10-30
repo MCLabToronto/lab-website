@@ -672,7 +672,7 @@
       <i class="icon fa-solid fa-glasses"></i>
     
 
-    <img src="/lab-website/images/members/adeline-lacroix.jpg" class="portrait-image" alt="Portrait of Adeline Lacroix" loading="lazy" onerror="this.src = '/lab-website/images/fallback.svg'; this.onerror = null;" />
+    <img src="/lab-website/images/optimized/adeline-lacroix.webp" class="portrait-image" alt="Portrait of Adeline Lacroix" loading="lazy" decoding="async" onerror="this.src = '/lab-website/images/fallback.svg'; this.onerror = null;" />
 
     
       <span class="portrait-name">
