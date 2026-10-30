@@ -622,7 +622,7 @@
       
         <a
           href="/lab-website/resources/"
-          data-tooltip=""
+          data-tooltip="Explore our resources"
         >
           Resources
         </a>
