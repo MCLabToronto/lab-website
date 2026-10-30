@@ -27,7 +27,7 @@
       <div><h3>Collaborative</h3><p>Our projects combine neuroimaging, cognitive neuroscience, participatory research, and large-scale data analysis.</p></div>
       <div><h3>Neuroaffirmative</h3><p>We aim to produce rigorous knowledge with meaningful scientific and community impact.</p></div>
     </div>
-    <a class="lab-button" href="{{ '/about/' | relative_url }}">Learn more about us</a>
+    <a class="lab-button" href="{{ '/research/' | relative_url }}">Explore our research</a>
   </div>
 </div>
 

@@ -1,8 +1,5 @@
 ---
 title: About
-nav:
-  order: 1
-  tooltip: About the MCLab
 ---
 
 # {% include icon.html icon="fa-solid fa-circle-info" %} About

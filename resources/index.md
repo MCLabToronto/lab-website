@@ -2,7 +2,7 @@
 title: Resources
 stylesheet: /assets/resources.css
 nav:
-  order: 6
+  order: 7
   tooltip: Explore our resources
 ---
 
