@@ -1,5 +1,6 @@
 ---
 title: Research
+stylesheet: /assets/research-map.css
 nav:
   order: 2
   tooltip: Explore our research
@@ -7,10 +8,6 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-microscope" %} Research
 
-Our research is organized around several complementary themes.
+<p class="research-intro">Our research brings together five complementary themes to harmonize models of autism and neurodivergence.</p>
 
-{% include section.html %}
-
-## Research Themes
-
-Content coming soon.
+{% include research-map.html %}

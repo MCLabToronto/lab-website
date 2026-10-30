@@ -1,0 +1,28 @@
+<div class="research-framework">
+  <figure class="research-map" aria-labelledby="research-map-caption">
+    <img src="{{ '/images/research-framework.png' | relative_url }}" width="1637" height="961" alt="Five connected research themes around Autism &amp; Neurodivergence: Harmonizing Models. The full text of each theme follows below.">
+    {% assign linked_themes = site.data.research_themes | where_exp: "theme", "theme.url != nil and theme.url != ''" %}
+    {% if linked_themes.size > 0 %}
+    <svg class="research-map-links" viewBox="0 0 1637 961" aria-label="Research theme projects">
+      {% for theme in linked_themes %}
+      <a href="{{ theme.url | relative_url }}" aria-label="{{ theme.title | escape }} — related projects">
+        <title>{{ theme.title | escape }} — related projects</title>
+        <polygon points="{{ theme.points }}" />
+      </a>
+      {% endfor %}
+    </svg>
+    {% endif %}
+    <figcaption id="research-map-caption" class="research-sr-only">Autism &amp; Neurodivergence: Harmonizing Models</figcaption>
+  </figure>
+  <div class="research-theme-text">
+    <h2 class="research-mobile-title">Autism &amp; Neurodivergence:<br>Harmonizing Models</h2>
+    <div class="research-theme-grid">
+      {% for theme in site.data.research_themes %}
+      <article class="research-theme" style="--theme-color: {{ theme.color }};" aria-labelledby="theme-{{ theme.id }}">
+        <h3 id="theme-{{ theme.id }}">{% if theme.url != '' and theme.url != nil %}<a href="{{ theme.url | relative_url }}">{{ theme.title | escape }}</a>{% else %}{{ theme.title | escape }}{% endif %}</h3>
+        <ul>{% for topic in theme.topics %}<li>{{ topic | escape }}</li>{% endfor %}</ul>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</div>

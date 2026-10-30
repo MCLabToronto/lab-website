@@ -1,0 +1,71 @@
+[
+  {
+    "id": "sex-gender",
+    "title": "Sex & Gender",
+    "color": "#F1BB9E",
+    "points": "24,354 818,21 818,443 590,443 566,467",
+    "topics": [
+      "development",
+      "neurobiology",
+      "presentation & measurement",
+      "experience",
+      "recognition & diagnosis",
+      "gender diversity"
+    ],
+    "url": ""
+  },
+  {
+    "id": "cognition",
+    "title": "Equitable Understanding of Cognition",
+    "color": "#EEA1B7",
+    "points": "820,21 1614,354 1072,468 1046,443 820,443",
+    "topics": [
+      "impression management",
+      "social process",
+      "flow-like states"
+    ],
+    "url": ""
+  },
+  {
+    "id": "health",
+    "title": "Health",
+    "color": "#BAA3D6",
+    "points": "24,354 565,468 565,610 590,638 681,638 326,938",
+    "topics": [
+      "mental health",
+      "physical health",
+      "women’s health",
+      "rare conditions",
+      "gender-related care",
+      "suicidality",
+      "self-regulation"
+    ],
+    "url": ""
+  },
+  {
+    "id": "support",
+    "title": "Intervention & Support",
+    "color": "#97B9DE",
+    "points": "1072,468 1614,354 1297,938 958,638 1046,638 1072,610",
+    "topics": [
+      "equity",
+      "context-focused",
+      "neuro-affirmative",
+      "social support",
+      "ACT"
+    ],
+    "url": ""
+  },
+  {
+    "id": "culture-society",
+    "title": "Culture & Society",
+    "color": "#9DD4CA",
+    "points": "681,638 958,638 1297,938 326,938",
+    "topics": [
+      "identity",
+      "stigma",
+      "minority stress"
+    ],
+    "url": ""
+  }
+]

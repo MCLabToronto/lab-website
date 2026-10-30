@@ -29,3 +29,7 @@
 
 <!-- Lab visual identity: loaded last to override template defaults. -->
 <link href="{{ "/assets/lab-design.css" | relative_url }}" rel="stylesheet">
+
+{% if page.stylesheet %}
+<link href="{{ page.stylesheet | relative_url }}" rel="stylesheet">
+{% endif %}

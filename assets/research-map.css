@@ -1,0 +1,25 @@
+/* A faithful full-size figure, with readable semantic theme cards on small screens. */
+.research-intro { max-width: 760px; font-size: 1.2rem; line-height: 1.65; margin: 0 0 38px; }
+.research-framework { margin: 0 auto; }
+.research-map { display: block; position: relative; width: 100%; margin: 0; padding: 0; background: #fff; border-radius: 12px; overflow: hidden; }
+.research-map > img { display: block; width: 100%; max-width: none; height: auto; margin: 0; border-radius: 0; box-shadow: none; }
+.research-map-links { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.research-map-links a { pointer-events: auto; }
+.research-map-links polygon { fill: transparent; stroke: transparent; stroke-width: 5; stroke-linejoin: round; transition: fill .2s; }
+.research-map-links a:hover polygon { fill: #ffffff25; stroke: #302238; }
+.research-map-links a:focus-visible { outline: none; }
+.research-map-links a:focus-visible polygon { fill: #ffffff40; stroke: #302238; stroke-width: 7; }
+.research-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+@media (min-width: 901px) {
+  .research-theme-text:not(:focus-within) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+}
+.research-mobile-title { padding: 26px; margin: 0 0 22px; border: 0; border-radius: 12px; background: #fff6ea; color: #202027; font-size: 26px; line-height: 1.35; text-align: center; }
+.research-theme-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
+.research-theme { min-width: 0; padding: 26px; border-radius: 12px; background: var(--theme-color); color: #202027; text-align: left; }
+.research-theme h3 { margin: 0 0 14px; font-size: 22px; line-height: 1.3; font-weight: 800; }
+.research-theme h3 a { color: inherit; text-decoration: underline; text-underline-offset: 4px; }
+.research-theme ul { margin: 0; padding-left: 21px; line-height: 1.65; }
+.research-theme li { padding: 0; margin: 3px 0; }
+@media (max-width: 900px) { .research-map { display: none; } }
+@media (max-width: 560px) { .research-theme-grid { grid-template-columns: 1fr; } .research-theme { padding: 24px; } .research-mobile-title { font-size: 23px; padding: 24px 18px; } }
+@media (prefers-reduced-motion: reduce) { .research-map-links polygon { transition: none; } }
