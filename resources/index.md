@@ -1,6 +1,6 @@
 ---
 title: Resources
-stylesheet: /assets/resources.css
+stylesheet: /assets/resources.css?v=2
 nav:
   order: 7
   tooltip: Explore our resources
