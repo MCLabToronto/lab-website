@@ -20,3 +20,10 @@
   .resource-poster-preview { flex-basis: 64px; width: 64px; }
   .resource-poster-preview img { width: 64px; }
 }
+
+.resource-questionnaire-links { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+.resource-questionnaire-links a { display: inline-block; padding: 7px 11px; border: 1px solid var(--light-gray); border-radius: 6px; text-decoration: none; }
+.resource-questionnaire-links a:hover { background: var(--background-alt); }
+.resource-permission { margin: 18px 0; padding: 16px 20px; border-left: 3px solid var(--primary); background: var(--background-alt); }
+.resource-permission p { margin: 0; }
+@media(max-width:600px) { .resource-questionnaire-links { flex-direction: column; align-items: flex-start; } }

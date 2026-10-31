@@ -12,6 +12,26 @@ Practical resources from the MCLab for autistic people, families, and health car
 
 {% include section.html %}
 
+## Scales and questionnaires
+
+### Camouflaging Autistic Traits Questionnaire—Chinese (CAT-Q-Ch)
+
+The CAT-Q-Ch is the Chinese version of the Camouflaging Autistic Traits Questionnaire. The two forms are available as Word documents for academic use under the conditions stated by the translator.
+
+<div class="resource-questionnaire-links">
+  <a href="{{ "/resources/scales/cat-q-ch-self-report.docx" | relative_url }}" download>Self-report questionnaire (Word)</a>
+  <a href="{{ "/resources/scales/cat-q-ch-parent-report.docx" | relative_url }}" download>Parent-report questionnaire (Word)</a>
+</div>
+
+<blockquote class="resource-permission">The CAT-Q-Ch may be freely used by others for academic use, provided that the text is not modified. The translator (Chun-Hao Liu) also welcomes improvements to the layout and typography for enhanced readability and appearance.</blockquote>
+
+For scoring instructions, please refer to the original CAT-Q article listed below.
+
+**References**
+
+- Hull, L., Mandy, W., Lai, M. C., Baron-Cohen, S., Allison, C., Smith, P., & Petrides, K. V. (2019). Development and Validation of the Camouflaging Autistic Traits Questionnaire (CAT-Q). *Journal of autism and developmental disorders, 49*(3), 819–833. [https://doi.org/10.1007/s10803-018-3792-6](https://doi.org/10.1007/s10803-018-3792-6)
+- Liu, C. H., Chen, Y. L., Chen, P. J., Ni, H. C., & Lai, M. C. (2024). Exploring camouflaging by the Chinese version Camouflaging Autistic Traits Questionnaire in Taiwanese autistic and non-autistic adolescents: An initial development. *Autism: the international journal of research and practice, 28*(3), 690–704. [https://doi.org/10.1177/13623613231181732](https://doi.org/10.1177/13623613231181732)
+
 ## Posters and handouts
 
 ### Five ways to support autistic patients
