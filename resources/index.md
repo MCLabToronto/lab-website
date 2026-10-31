@@ -14,9 +14,7 @@ Practical resources from the MCLab for autistic people, families, and health car
 
 ### Camouflaging Autistic Traits Questionnaire—Chinese (CAT-Q-Ch)
 
-The CAT-Q-Ch is the Chinese version of the Camouflaging Autistic Traits Questionnaire.
-
-<blockquote class="resource-permission">The CAT-Q-Ch may be freely used by others for academic use, provided that the text is not modified. The translator (Chun-Hao Liu) also welcomes improvements to the layout and typography for enhanced readability and appearance.</blockquote>
+The CAT-Q-Ch is the Chinese version of the Camouflaging Autistic Traits Questionnaire. The CAT-Q-Ch may be freely used by others for academic use, provided that the text is not modified. The translator (Chun-Hao Liu) also welcomes improvements to the layout and typography for enhanced readability and appearance.
 
 <div class="resource-references">
   <p><strong>References</strong></p>
