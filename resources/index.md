@@ -44,6 +44,7 @@ Developed from our article in the *Canadian Medical Association Journal* (CMAJ),
   <p><strong>Reference</strong></p>
   <ul>
     <li>Man, L. L. Y., Lacroix, A., &amp; Lai, M.-C. (2025). Autistic patients. <em>Canadian Medical Association Journal, 197</em>(25), E722–E723. <a href="https://doi.org/10.1503/cmaj.250152">https://doi.org/10.1503/cmaj.250152</a></li>
+    <li>Man, L. L. Y., Lacroix, A., &amp; Lai, M.-C. (2025). Patients et patientes autistes. <em>Canadian Medical Association Journal, 197</em>(31), E1020–E1021. <a href="https://doi.org/10.1503/cmaj.250152-f">https://doi.org/10.1503/cmaj.250152-f</a></li>
   </ul>
 </div>
 
