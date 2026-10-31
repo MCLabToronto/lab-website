@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="240" viewBox="0 0 180 240" role="img" aria-labelledby="title desc">
+  <title id="title">CAT-Q-Ch questionnaire preview</title>
+  <desc id="desc">Illustrated miniature of a Chinese self-report questionnaire page with seven-point response rows.</desc>
+  <rect x="2" y="2" width="176" height="236" rx="5" fill="#fff" stroke="#d8d5dc" stroke-width="2"/>
+  <rect x="2" y="2" width="176" height="10" rx="5" fill="#694479"/>
+  <text x="16" y="34" fill="#28252b" font-family="Arial, sans-serif" font-size="12" font-weight="700">CAT-Q-Ch</text>
+  <text x="16" y="49" fill="#6b6670" font-family="Arial, sans-serif" font-size="8">Chinese self-report form</text>
+  <path d="M16 60h148" stroke="#dedbe1"/>
+  <text x="16" y="74" fill="#51485a" font-family="Arial, sans-serif" font-size="7">Choose one response for each item</text>
+  <g fill="#a9a4ad" font-family="Arial, sans-serif" font-size="6" text-anchor="middle">
+    <text x="99" y="91">1</text><text x="111" y="91">2</text><text x="123" y="91">3</text><text x="135" y="91">4</text><text x="147" y="91">5</text><text x="159" y="91">6</text><text x="171" y="91">7</text>
+  </g>
+  <g fill="#f5f2f7" stroke="#e5e0e9">
+    <rect x="14" y="98" width="152" height="25" rx="2"/><rect x="14" y="128" width="152" height="25" rx="2"/>
+    <rect x="14" y="158" width="152" height="25" rx="2"/><rect x="14" y="188" width="152" height="25" rx="2"/>
+  </g>
+  <g fill="#a9a4ad">
+    <rect x="20" y="107" width="54" height="3" rx="1.5"/><rect x="20" y="114" width="43" height="3" rx="1.5"/>
+    <rect x="20" y="137" width="50" height="3" rx="1.5"/><rect x="20" y="144" width="45" height="3" rx="1.5"/>
+    <rect x="20" y="167" width="58" height="3" rx="1.5"/><rect x="20" y="174" width="38" height="3" rx="1.5"/>
+    <rect x="20" y="197" width="48" height="3" rx="1.5"/><rect x="20" y="204" width="52" height="3" rx="1.5"/>
+  </g>
+  <g fill="#fff" stroke="#9a8aa4" stroke-width="1">
+    <circle cx="99" cy="111" r="3"/><circle cx="111" cy="111" r="3"/><circle cx="123" cy="111" r="3"/><circle cx="135" cy="111" r="3"/><circle cx="147" cy="111" r="3"/><circle cx="159" cy="111" r="3"/><circle cx="171" cy="111" r="3"/>
+    <circle cx="99" cy="141" r="3"/><circle cx="111" cy="141" r="3"/><circle cx="123" cy="141" r="3"/><circle cx="135" cy="141" r="3"/><circle cx="147" cy="141" r="3"/><circle cx="159" cy="141" r="3"/><circle cx="171" cy="141" r="3"/>
+    <circle cx="99" cy="171" r="3"/><circle cx="111" cy="171" r="3"/><circle cx="123" cy="171" r="3"/><circle cx="135" cy="171" r="3"/><circle cx="147" cy="171" r="3"/><circle cx="159" cy="171" r="3"/><circle cx="171" cy="171" r="3"/>
+    <circle cx="99" cy="201" r="3"/><circle cx="111" cy="201" r="3"/><circle cx="123" cy="201" r="3"/><circle cx="135" cy="201" r="3"/><circle cx="147" cy="201" r="3"/><circle cx="159" cy="201" r="3"/><circle cx="171" cy="201" r="3"/>
+  </g>
+  <circle cx="135" cy="171" r="2" fill="#694479"/>
+</svg>
