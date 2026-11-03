@@ -48,6 +48,6 @@
   <h2>Our research</h2>
   <div>
     <p class="lab-intro">We study neurodiversity through multidisciplinary, collaborative, and neuroaffirmative research. Our work brings together complementary perspectives to better understand diverse developmental experiences and needs.</p>
-    <div class="lab-actions"><a class="lab-button" href="{{ '/research/' | relative_url }}">Explore our research</a><a class="lab-button" href="{{ '/projects/' | relative_url }}">Browse our projects</a></div>
+    <a class="lab-button" href="{{ '/research/' | relative_url }}">Explore our research</a>
   </div>
 </div>
